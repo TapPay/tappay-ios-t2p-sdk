@@ -235,3 +235,29 @@
   | signatureImage  | UIImage | 簽名圖檔 |
   | receiptId  | String | 簽單編號 |
 ---
+
+---
+  ## Receipt
+  ### Get receipt
+  #### Function
+  ```swift
+  func getReceipt(receiptId: String, type: Int, email: String?) async throws -> String
+  ```
+  #### Sample
+  ```swift
+  // Sample code
+  Task {
+      do {
+          let receiptUrl = try await TPReader.shared.getReceipt(receiptId: "123456", type: 1, email: "test@test.com")
+      }catch {
+          // error handling
+      }
+  }
+  ```
+  #### Parameters
+  |  Parameter   | Type  |  Description   | 
+  |  :----  | :----  | :---- |
+  | receiptId  | String | 簽單編號 |
+  | type  | Int | 簽單瀏覽格式<br>1 : html<br>2 : pkpass |
+  | email  | String | 用於SDK的驗證金鑰(取得方式待補) |
+---
