@@ -3,6 +3,35 @@
 ### The TapPay iOS SDK helps you build Tap to Pay on iPhone into your iOS app
 
 ---
+## How to start
+### Get your App key
+#### (TO DO)
+### Install the SDK
+#### (TO DO)
+
+### Setup entitlement file
+1. 新增T2P功能到開發用的Apple ID
+    - 登入[Apple Developer](https://developer.apple.com/account)帳號，點選Certificates, Identifiers & Profiles
+    - 在側邊欄點選Identifiers
+    - 從列表中選取要導入T2P功能的App
+    - 選擇Additional Capabilities<br><br>
+    ![](./Images/App_ID_Configuration.png)<br><br>
+    - 勾選T2P
+    - 儲存設定
+    - 新增配置該App ID的provisioning profile，下載並開啟，在App專案內選擇使用該provisioning profile (如果已經新增過該provisioning profile，重新下載即可)<br><br>
+2. 新增entitlements file到App專案內<br><br>
+![](./Images/Create_Entitlements_File.png)<br><br>
+    - 在App專案內新增檔案，新增一個property list
+    - 將檔名替換為 ___________.entitlements (檔案格式依舊為.plist)，空白部分請填入App專案名稱
+    - 到Project Editor，點選Build Settings
+    - 點選All和點選Combined
+    - 搜尋Code Signing Entitlements<br><br>
+    ![](./Images/Setup_Entitlements_Path.png)<br><br>
+    - 輸入剛剛產生的檔案的路徑
+    - 開啟該檔案，新增key為com.apple.developer.proximity-reader.payment.acceptance，value type為Boolean，value設定為true (P.S. 如果你的專案內已有.entitlements檔案，直接執行最後一步即可)<br><br>
+    ![](./Images/Setup_Entitlements_File.png)
+
+---
 ## SDK initialize
 ![](./Images/SDK_Initialize.png) <br><br>
 ## Start to use SDK
@@ -56,7 +85,6 @@
   | email  | String | 建立於TapPay portal的email |
   | password  | String | 建立於TapPay portal的密碼 |
   | serverType  | TPServerType | 使用的伺服器種類<br>測試時請使用 Sandbox 環境 (TPServerType.sandbox, .sandbox)<br>實體上線後請切換至 Production 環境 (TPServerType.production, .production) |
-  ---
 
   ---
   ## Bind
@@ -148,7 +176,6 @@
   }
   ```
 ---
----
   ## Prepare reader
   ### Prepare reader
   #### Function
@@ -166,8 +193,6 @@
       }
   }
   ```
----
-
 ---
   ## Transaction
   ### Transaction authorization
@@ -241,7 +266,6 @@
   |  :----  | :----  | :---- |
   | signatureImage  | UIImage | 簽名圖檔 |
   | receiptId  | String | 簽單編號 |
----
 
 ---
   ## Receipt
