@@ -140,4 +140,98 @@
       }
   }
   ```
-  ---
+---
+---
+  ## Prepare reader
+  ### Prepare reader
+  #### Function
+  ```swift
+  func prepareReader() async throws
+  ```
+  #### Sample
+  ```swift
+  // Sample code
+  Task {
+      do {
+          try await TPReader.shared.prepareReader()
+      }catch {
+          // error handling
+      }
+  }
+  ```
+---
+
+---
+  ## Transaction
+  ### Transaction authorization
+  #### Function
+  ```swift
+  func transactionAuthorization(amount: Decimal) async throws -> TransactionDetail?
+  ```
+  #### Sample
+  ```swift
+  // Sample code
+  Task {
+      do {
+          let transactionResult = try await TPReader.shared.transactionAuthorization(amount: 100)
+      }catch {
+          // error handling
+      }
+  }
+  ```
+  #### Parameters
+  |  Parameter   | Type  |  Description   | 
+  |  :----  | :----  | :---- |
+  | amount  | Decimal | 交易金額 |
+  
+  #### Item detail
+  ```swift
+  struct TransactionDetail: Codable {
+    public let receiptId: String
+    public let transactionId: String
+    public let bankTransactionId: String
+    public let orderNumber: String
+    public let state: Int
+    public let createTime: CLong
+    public let amount: Double
+    public let currency: String
+    public let cardMask : String
+    public let authCode: String
+  }
+  ```
+  #### Parameters
+  |  Parameter   | Type  |  Description   | 
+  |  :----  | :----  | :---- |
+  | receiptId  | String | 簽單編號 |
+  | transactionId  | String | 交易編號 |
+  | bankTransactionId  | String | 銀行交易編號 |
+  | orderNumber  | String | 訂單編號（商戶系統帶入）|
+  | state  | Int | 交易狀態<br>-1  : ERROR<br>0   : AUTH_SUCCESS<br>1   : SETTLE_SUCCESS<br>3  : CANCEL_SUCCESS |
+  | createTime  | CLong | 訂單時間 |
+  | amount  | Double | 交易金額 |
+  | currency  | String | 幣別 |
+  | cardMask  | String | 卡號資訊（屏蔽）|
+  | authCode  | String | 授權碼 |
+
+  ### Upload signature
+  #### Function
+  ```swift
+  func uploadSignature(signatureImage: UIImage, receiptId: String) async throws
+  ```
+  #### Sample
+  ```swift
+  // Sample code
+  Task {
+      do {
+          try await TPReader.shared.uploadSignature(signatureImage: UIImage, receiptId: "123")
+      }catch {
+          // error handling
+      }
+  }
+  ```
+  #### Parameters
+  |  Parameter   | Type  |  Description   | 
+  |  :----  | :----  | :---- |
+  | signatureImage  | UIImage | 簽名圖檔 |
+  | receiptId  | String | 簽單編號 |
+---
