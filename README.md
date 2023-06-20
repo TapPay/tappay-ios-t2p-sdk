@@ -28,5 +28,29 @@
   |  ----  | ----  | ---- |
   | appKey  | String | 用於SDK的驗證金鑰(取得方式待補) |
   | serverType  | TPServerType | 使用的伺服器種類<br>測試時請使用 Sandbox 環境 (TPServerType.sandbox, .sandbox)<br>實體上線後請切換至 Production 環境 (TPServerType.production, .production) |
+
+  ### Initialize service with TapPay portal account
+  #### Function
+  ```swift
+  func setupWithAppKey(partnerAccount: String, email: String, password: String, serverType: TPServerType) async throws
+  ```
+  #### Sample
+  ```swift
+  // Sample code
+  Task {
+      do {
+          try await TPReader.shared.setupWithAppKey(partnerAccount: "Test", email: "Test@test.com", password: "Test", serverType: .production)
+      }catch {
+          // error handling
+      }
+  }
+  ```
+  #### Parameters
+  |  Parameter   | Type  |  Description   | 
+  |  ----  | ----  | ---- |
+  | partnerAccount  | String | 建立於TapPay portal的partner account |
+  | email  | String | 建立於TapPay portal的email |
+  | password  | String | 建立於TapPay portal的密碼 |
+  | serverType  | TPServerType | 使用的伺服器種類<br>測試時請使用 Sandbox 環境 (TPServerType.sandbox, .sandbox)<br>實體上線後請切換至 Production 環境 (TPServerType.production, .production) |
   ---
 </details>
