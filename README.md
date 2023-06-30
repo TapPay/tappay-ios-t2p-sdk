@@ -43,14 +43,14 @@
   ### Initialize service with app key
   #### Function
   ```swift
-  func setupWithAppKey(appKey: String, serverType: TPServerType) async throws
+  func setupWithAppKey(_ registeredAppKey: String!, _ environment: Environment!) async throws
   ```
   #### Sample
   ```swift
   // Sample code
   Task {
       do {
-          try await TPReader.shared.setupWithAppKey(appKey: "123456789", serverType: .production)
+          try await TPT2PManager.shared.setupWithAppKey("123456789", .production)
       }catch {
           // error handling
       }
@@ -59,39 +59,15 @@
   #### Parameters
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
-  | appKey  | String | 用於SDK的驗證金鑰(取得方式待補) |
-  | serverType  | TPServerType | 使用的伺服器種類<br>測試時請使用 Sandbox 環境 (TPServerType.sandbox, .sandbox)<br>實體上線後請切換至 Production 環境 (TPServerType.production, .production) |
-
-  ### Initialize service with TapPay portal account
-  #### Function
-  ```swift
-  func setupWithAppKey(partnerAccount: String, email: String, password: String, serverType: TPServerType) async throws
-  ```
-  #### Sample
-  ```swift
-  // Sample code
-  Task {
-      do {
-          try await TPReader.shared.setupWithAppKey(partnerAccount: "Test", email: "Test@test.com", password: "Test", serverType: .production)
-      }catch {
-          // error handling
-      }
-  }
-  ```
-  #### Parameters
-  |  Parameter   | Type  |  Description   | 
-  |  :----  | :----  | :---- |
-  | partnerAccount  | String | 建立於TapPay portal的partner account |
-  | email  | String | 建立於TapPay portal的email |
-  | password  | String | 建立於TapPay portal的密碼 |
-  | serverType  | TPServerType | 使用的伺服器種類<br>測試時請使用 Sandbox 環境 (TPServerType.sandbox, .sandbox)<br>實體上線後請切換至 Production 環境 (TPServerType.production, .production) |
+  | registeredAppKey  | String | 用於SDK的驗證金鑰(取得方式待補) |
+  | environment  | Environment | 使用的伺服器種類<br>測試時請使用 Sandbox 環境 (TPServerType.sandbox, .sandbox)<br>實體上線後請切換至 Production 環境 (TPServerType.production, .production) |
 
   ---
   ## Bind
   ### Get binding list
   #### Function
   ```swift
-  func getBindingList(page: Int, countPerPage: Int) async throws -> Array<BindItem>
+  func getBindingList(page: Int, countPerPage: Int) async throws -> [BindItem]?
   ```
   #### Sample
   ```swift
@@ -99,7 +75,7 @@
   Task {
       do {
           // Get 10 bind items per page, the first page of list
-          let bindList = try await TPReader.shared.getBindingList(page: 0, countPerPage: 10)
+          let bindList = try await TPT2PService.shared.getBindingList(page: 0, countPerPage: 10)
       }catch {
           // error handling
       }
@@ -122,6 +98,7 @@
     public let merchantId: String?
     public let merchantAccount: String?
     public let terminalId: String?
+    public let hash: String?
   }
   ```
   #### Parameters
@@ -135,19 +112,19 @@
   | merchantId  | String | TapPay商店代碼 |
   | merchantAccount  | String | 商店代號 |
   | terminalId  | String | 端末機代號 |
-  | bindingInfo  | String | 綁定資訊 |
+  | hash  | String | 綁定資訊 |
 
   ### Bind
   #### Function
   ```swift
-  func bind(bindingInfo: String, description: String?) async throws
+  func bind(bindItem: BindItem, description: String?) async throws
   ```
   #### Sample
   ```swift
   // Sample code
   Task {
       do {
-          try await TPReader.shared.bind(bindingInfo: "123456", description: "123456")
+          try await TPT2PService.shared.bind(bindItem: BindItem(), description: "123456")
       }catch {
           // error handling
       }
@@ -156,7 +133,7 @@
   #### Parameters
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
-  | bindingInfo  | String | 綁定資訊 |
+  | bindItem  | BindItem | 綁定資訊 |
   | description  | String | 端末機備註 |
 
   ### Bind delete
@@ -169,7 +146,7 @@
   // Sample code
   Task {
       do {
-          try await TPReader.shared.bindDelete()
+          try await TPT2PService.shared.bindDelete()
       }catch {
           // error handling
       }
@@ -180,14 +157,14 @@
   ### Prepare reader
   #### Function
   ```swift
-  func prepareReader() async throws
+  func configureReader() async throws
   ```
   #### Sample
   ```swift
   // Sample code
   Task {
       do {
-          try await TPReader.shared.prepareReader()
+          try await TPT2PReader.shared.configureReader()
       }catch {
           // error handling
       }
@@ -198,14 +175,14 @@
   ### Transaction authorization
   #### Function
   ```swift
-  func transactionAuthorization(amount: Decimal) async throws -> TransactionDetail?
+  func readCardAndAuthorization(amount: Decimal) async throws -> Transaction?
   ```
   #### Sample
   ```swift
   // Sample code
   Task {
       do {
-          let transactionResult = try await TPReader.shared.transactionAuthorization(amount: 100)
+          let transactionResult = try await TPT2PReader.shared.readCardAndAuthorization(amount: 100)
       }catch {
           // error handling
       }
@@ -218,7 +195,7 @@
   
   #### Item detail
   ```swift
-  struct TransactionDetail: Codable {
+  struct Transaction: Codable {
     public let receiptId: String
     public let transactionId: String
     public let bankTransactionId: String
@@ -248,14 +225,14 @@
   ### Upload signature
   #### Function
   ```swift
-  func uploadSignature(signatureImage: UIImage, receiptId: String) async throws
+  func createElectronicSignature(receiptIdentifier: String, signCanvas: PKCanvasView) async throws
   ```
   #### Sample
   ```swift
   // Sample code
   Task {
       do {
-          try await TPReader.shared.uploadSignature(signatureImage: UIImage, receiptId: "123")
+          try await TPT2PService.shared.createElectronicSignature(receiptIdentifier: "123", signCanvas: PKCanvasView())
       }catch {
           // error handling
       }
@@ -264,22 +241,22 @@
   #### Parameters
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
-  | signatureImage  | UIImage | 簽名圖檔 |
-  | receiptId  | String | 簽單編號 |
+  | receiptIdentifier  | String | 簽單編號 |
+  | signCanvas  | PKCanvasView | 簽名 |
 
 ---
   ## Receipt
   ### Get receipt
   #### Function
   ```swift
-  func getReceipt(receiptId: String, type: Int, email: String?) async throws -> String
+  func getReceipt(receiptIdentifier: String, type: Int, email: String?) async throws -> String
   ```
   #### Sample
   ```swift
   // Sample code
   Task {
       do {
-          let receiptUrl = try await TPReader.shared.getReceipt(receiptId: "123456", type: 1, email: "test@test.com")
+          let receiptUrl = try await TPT2PService.shared.getReceipt(receiptIdentifier: "123456", type: 1, email: "test@test.com")
       }catch {
           // error handling
       }
@@ -288,7 +265,7 @@
   #### Parameters
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
-  | receiptId  | String | 簽單編號 |
+  | receiptIdentifier  | String | 簽單編號 |
   | type  | Int | 簽單瀏覽格式<br>1 : html<br>2 : pkpass |
   | email  | String | 用於SDK的驗證金鑰(取得方式待補) |
 ---
