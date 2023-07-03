@@ -7,7 +7,8 @@
 ### Get your App key
 #### (TO DO)
 ### Install the SDK
-#### (TO DO)
+1. 進入TPT2P-Example，複製TPSDKT2P.framework到您的專案下
+2. 開啟您的專案，到Build Phases下，展開Link Binary With Libraries，點擊"+"並加入TPSDKT2P.framework和TPT2PModel.framework
 
 ### Setup entitlement file
 1. 新增T2P功能到開發用的Apple ID
@@ -30,6 +31,9 @@
     - 輸入剛剛產生的檔案的路徑
     - 開啟該檔案，新增key為com.apple.developer.proximity-reader.payment.acceptance，value type為Boolean，value設定為true (P.S. 如果你的專案內已有.entitlements檔案，直接執行最後一步即可)<br><br>
     ![](./Images/Setup_Entitlements_File.png)
+
+### Setup Location Privacy Settings
+由於使用此SDK必須開啟GPS的功能，故須到Info.plist新增NSLocationWhenInUseUsageDescription
 
 ---
 ## SDK initialize
