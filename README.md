@@ -40,6 +40,7 @@
 ![](./Images/SDK_Initialize.png) <br><br>
 ## Start to use SDK
 ![](./Images/T2P_SDK_Flow.svg)
+![](./Images/TPSDKT2P_Flow.png)
 ---
 
 ---
