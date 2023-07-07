@@ -6,7 +6,6 @@
 
 import UIKit
 import TPSDKT2P
-import TPT2PModel
 
 class ViewController: UIViewController {
     
