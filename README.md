@@ -8,7 +8,7 @@
 #### (TO DO)
 ### Install the SDK
 1. 進入TPT2P-Example，複製TPSDKT2P.framework到您的專案下
-2. 開啟您的專案，到Build Phases下，展開Link Binary With Libraries，點擊"+"並加入TPSDKT2P.framework和TPT2PModel.framework
+2. 開啟您的專案，到Build Phases下，展開Link Binary With Libraries，點擊"+"並加入TPSDKT2P.framework
 
 ### Setup entitlement file
 1. 新增T2P功能到開發用的Apple ID
