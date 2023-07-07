@@ -65,7 +65,7 @@
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
   | registeredAppKey  | String | 用於SDK的驗證金鑰(取得方式待補) |
-  | environment  | Environment | 使用的伺服器種類<br>測試時請使用 Sandbox 環境 (TPServerType.sandbox, .sandbox)<br>實體上線後請切換至 Production 環境 (TPServerType.production, .production) |
+  | environment  | Environment | 使用的伺服器種類<br>測試時請使用 Sandbox 環境 (Environment.sandbox, .sandbox)<br>實體上線後請切換至 Production 環境 (Environment.production, .production) |
 
   ---
   ## Bind
@@ -272,5 +272,5 @@
   |  :----  | :----  | :---- |
   | receiptIdentifier  | String | 簽單編號 |
   | type  | Int | 簽單瀏覽格式<br>1 : html<br>2 : pkpass |
-  | email  | String | 用於SDK的驗證金鑰(取得方式待補) |
+  | email  | String | 欲收到簽單的信箱 |
 ---
