@@ -2,7 +2,7 @@
 //  TPSDKT2P.h
 //  TPSDKT2P
 //
-//  Created by Luke Cho on 2023/6/7.
+//  Copyright © 2023年 Cherri Tech, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
