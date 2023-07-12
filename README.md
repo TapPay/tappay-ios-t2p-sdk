@@ -211,6 +211,7 @@
     public let currency: String
     public let cardMask : String
     public let authCode: String
+    public let needSignature: Bool
   }
   ```
   #### Parameters
@@ -226,6 +227,7 @@
   | currency  | String | 幣別 |
   | cardMask  | String | 卡號資訊（屏蔽）|
   | authCode  | String | 授權碼 |
+  | needSignature  | Bool | 交易需要簽名與否 |
 
   ### Upload signature
   #### Function
