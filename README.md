@@ -5,10 +5,10 @@
 ---
 ## How to start
 ### Get your App key
-#### (TO DO)
+#### 請洽TapPay業務
 ### Install the SDK
 1. 進入TPT2P-Example，複製TPSDKT2P.framework到您的專案下
-2. 開啟您的專案，到Build Phases下，展開Link Binary With Libraries，點擊"+"並加入TPSDKT2P.framework和TPT2PModel.framework
+2. 開啟您的專案，到Build Phases下，展開Link Binary With Libraries，點擊"+"並加入TPSDKT2P.framework
 
 ### Setup entitlement file
 1. 新增T2P功能到開發用的Apple ID
@@ -65,7 +65,7 @@
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
   | registeredAppKey  | String | 用於SDK的驗證金鑰(取得方式待補) |
-  | environment  | Environment | 使用的伺服器種類<br>測試時請使用 Sandbox 環境 (TPServerType.sandbox, .sandbox)<br>實體上線後請切換至 Production 環境 (TPServerType.production, .production) |
+  | environment  | Environment | 使用的伺服器種類<br>測試時請使用 Sandbox 環境 (Environment.sandbox, .sandbox)<br>實體上線後請切換至 Production 環境 (Environment.production, .production) |
 
   ---
   ## Bind
@@ -274,5 +274,5 @@
   |  :----  | :----  | :---- |
   | receiptIdentifier  | String | 簽單編號 |
   | type  | Int | 簽單瀏覽格式<br>1 : html<br>2 : pkpass |
-  | email  | String | 用於SDK的驗證金鑰(取得方式待補) |
+  | email  | String | 欲收到簽單的信箱 |
 ---
