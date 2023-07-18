@@ -9,7 +9,7 @@
 2. 依序填寫必要資訊
 3. 在PSP的欄位中，於下圖中框選的區域填入 **"TapPay"** <br><br>
 ![](./Images/Tap_to_Pay_on_iPhone_Entitlement_application_PSP.png)<br><br>
-4. 填寫完畢後送出，申請結果通知約需等待兩個工作天
+4. 填寫完畢後送出，申請結果通知約需等待2~5個工作天
 ### Get your App key
 #### 請洽TapPay業務
 ### Install the SDK
