@@ -98,6 +98,7 @@
   | page  | Int | 第幾頁 |
   | countPerPage  | Int | 每頁筆數 |
 
+  ### Response
   #### Item detail
   ```swift
   struct BindItem: Codable {
@@ -203,7 +204,8 @@
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
   | amount  | Decimal | 交易金額 |
-  
+
+  ### Response
   #### Item detail
   ```swift
   struct Transaction: Codable {
@@ -281,4 +283,10 @@
   | receiptIdentifier  | String | 簽單編號 |
   | type  | Int | 簽單瀏覽格式<br>1 : html<br>2 : pkpass |
   | email  | String | 欲收到簽單的信箱 |
+
+  ### Response
+  #### Item detail
+  |  Parameter   | Type  |  Description   | 
+  |  :----  | :----  | :---- |
+  | receiptUrl  | String | 簽單URL |
 ---
