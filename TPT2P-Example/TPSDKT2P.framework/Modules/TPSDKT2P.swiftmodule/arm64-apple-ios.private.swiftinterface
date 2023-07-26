@@ -9,7 +9,6 @@ import PencilKit
 import ProximityReader
 import Swift
 @_exported import TPSDKT2P
-import TPT2PModel
 import UIKit
 import _Concurrency
 import _StringProcessing
@@ -94,8 +93,6 @@ public enum TPT2PError : Swift.Error, Swift.Sendable, Swift.Equatable {
   case paymentCardDeclined
   public static func == (a: TPSDKT2P.TPT2PError, b: TPSDKT2P.TPT2PError) -> Swift.Bool
 }
-public typealias BindItem = TPT2PModel.BindItem
-public typealias Transaction = TPT2PModel.Transaction
 public enum Environment {
   case sandbox
   case production
@@ -115,7 +112,7 @@ public enum Language {
   }
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class TPT2PManager : ObjectiveC.NSObject {
-  public var merchantInfo: TPT2PModel.MerchantInfo?
+  public var merchantInfo: TPSDKT2P.MerchantInfo?
   public var language: TPSDKT2P.Language?
   public var minimumSDKVersion: Swift.String?
   public var minimumiOSVersion: Swift.String?
@@ -154,6 +151,93 @@ extension TPSDKT2P.TPT2PManager : CoreLocation.CLLocationManagerDelegate {
   #endif
   @objc deinit
 }
+public struct TransactionBody : Swift.Codable {
+  public init(paymentData: Swift.String? = nil, orderNumber: Swift.String? = nil, orderUpdateTime: Swift.CLong? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Transaction : Swift.Codable {
+  public let receiptId: Swift.String
+  public let transactionId: Swift.String
+  public let bankTransactionId: Swift.String?
+  public let orderNumber: Swift.String
+  public let state: Swift.Int
+  public let createTime: Swift.CLong
+  public let amount: Swift.Double
+  public let currency: Swift.String
+  public let cardMask: Swift.String
+  public let authCode: Swift.String
+  public let needSignature: Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum TransactionStateType : Swift.Codable {
+  case errorCase
+  case authSuccess
+  case voidSuccess
+  case settleSuccess
+  public static func == (a: TPSDKT2P.TransactionStateType, b: TPSDKT2P.TransactionStateType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TransactionList : Swift.Codable {
+  public var itemList: [TPSDKT2P.TransactionItem] {
+    get
+  }
+  public var moreData: Swift.Bool {
+    get
+  }
+  public var totalCount: Swift.Int {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TransactionItem : Swift.Codable {
+  public let receiptId: Swift.String?
+  public let transactionId: Swift.String?
+  public let bankTransactionId: Swift.String?
+  public let orderNumber: Swift.String?
+  public let state: TPSDKT2P.TransactionStateType?
+  public let createTime: Swift.CLong?
+  public let amount: Swift.Double?
+  public let currency: Swift.String?
+  public let cardMask: Swift.String?
+  public let voidable: Swift.Bool?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct BindList : Swift.Codable {
+  public var itemList: [TPSDKT2P.BindItem] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct BindItem : Swift.Codable {
+  public let id: Swift.String?
+  public let partnerId: Swift.Int
+  public let acquirerId: Swift.Int
+  public let acquirerName: Swift.String?
+  public let acquirerIcon: Swift.String?
+  public let merchantId: Swift.String?
+  public let merchantAccount: Swift.String?
+  public let terminalId: Swift.String?
+  public let hash: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ApiErrorResponse : Swift.Codable, Swift.Error {
+  public let errorCode: Swift.Int
+  public let errorMessage: Swift.String
+  public let errorDetail: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 extension TPSDKT2P.TPT2PReader {
   public enum Event : Swift.Sendable, Swift.Equatable {
     case updateProgress(Swift.Int)
@@ -175,7 +259,20 @@ extension TPSDKT2P.TPT2PReader {
     public static func == (a: TPSDKT2P.TPT2PReader.Event, b: TPSDKT2P.TPT2PReader.Event) -> Swift.Bool
   }
 }
+public struct MerchantInfo : Swift.Codable {
+  public let partnerName: Swift.String?
+  public let acquirerName: Swift.String?
+  public let acquirerIcon: Swift.String?
+  public let terminalId: Swift.String?
+  public let description: Swift.String?
+  public let partnerIcon: Swift.String?
+  public init(partnerName: Swift.String? = nil, acquirerName: Swift.String? = nil, acquirerIcon: Swift.String? = nil, terminalId: Swift.String? = nil, description: Swift.String? = nil, partnerIcon: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 extension TPSDKT2P.Environment : Swift.Equatable {}
 extension TPSDKT2P.Environment : Swift.Hashable {}
 extension TPSDKT2P.Language : Swift.Equatable {}
 extension TPSDKT2P.Language : Swift.Hashable {}
+extension TPSDKT2P.TransactionStateType : Swift.Equatable {}
+extension TPSDKT2P.TransactionStateType : Swift.Hashable {}
