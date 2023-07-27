@@ -10,12 +10,13 @@
 3. 在PSP的欄位中，於下圖中框選的區域填入 **"TapPay"** <br><br>
 ![](./Images/Tap_to_Pay_on_iPhone_Entitlement_application_PSP.png)<br><br>
 4. 填寫完畢後送出，申請結果通知約需等待2~5個工作天
+---
 ### Get your App key
 #### 請洽TapPay業務
+---
 ### Install the SDK
 1. 進入TPT2P-Example，複製TPSDKT2P.framework到您的專案下
 2. 開啟您的專案，到Build Phases下，展開Link Binary With Libraries，點擊"+"並加入TPSDKT2P.framework
-
 ---
 
 ### Setup entitlement file
