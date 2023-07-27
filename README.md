@@ -2,8 +2,8 @@
 
 ### The TapPay iOS SDK helps you build Tap to Pay on iPhone into your iOS app
 
----
 ## How to start
+---
 ### Apply for Tap to Pay on iPhone entitlement
 1. 使用account holder的帳號登入[申請頁面](https://developer.apple.com/contact/request/tap-to-pay-on-iphone/)
 2. 依序填寫必要資訊
@@ -15,6 +15,8 @@
 ### Install the SDK
 1. 進入TPT2P-Example，複製TPSDKT2P.framework到您的專案下
 2. 開啟您的專案，到Build Phases下，展開Link Binary With Libraries，點擊"+"並加入TPSDKT2P.framework
+
+---
 
 ### Setup entitlement file
 1. 新增T2P功能到開發用的Apple ID
@@ -38,8 +40,12 @@
     - 開啟該檔案，新增key為com.apple.developer.proximity-reader.payment.acceptance，value type為Boolean，value設定為true (P.S. 如果你的專案內已有.entitlements檔案，直接執行最後一步即可)<br><br>
     ![](./Images/Setup_Entitlements_File.png)
 
+---
+
 ### Setup Location Privacy Settings
 因收單銀行要求：為提升交易安全，交易收款需開啟定位服務，故須於Info.plist加入privacy setting "Privacy - Location When In Use Usage Description"
+
+---
 
 ### Sandbox環境測試用帳號建立與使用
 1. 登入[App Store Connect](https://appstoreconnect.apple.com/login)，進入到使用者與存取權限頁面<br><br>
