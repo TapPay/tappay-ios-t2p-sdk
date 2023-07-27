@@ -42,7 +42,7 @@
 因收單銀行要求：為提升交易安全，交易收款需開啟定位服務，故須於Info.plist加入privacy setting "Privacy - Location When In Use Usage Description"
 
 ### Sandbox環境測試用帳號建立與使用
-1. 登入https://appstoreconnect.apple.com/login，進入到使用者與存取權限頁面<br><br>
+1. 登入[App Store Connect](https://appstoreconnect.apple.com/login)，進入到使用者與存取權限頁面<br><br>
 ![](./Images/Sandbox_Test_Account_Create.png)<br><br>
 2. 點選沙箱技術測試人員
 3. 點選+號新增測試用帳號，輸入必要資訊並建立（輸入的email須不在“使用者與存取權限->人員”的名單中）
