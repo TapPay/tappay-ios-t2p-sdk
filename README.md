@@ -39,7 +39,7 @@
     ![](./Images/Setup_Entitlements_File.png)
 
 ### Setup Location Privacy Settings
-由於使用此SDK必須開啟GPS的功能，故須到Info.plist新增NSLocationWhenInUseUsageDescription
+因收單銀行要求：為提升交易安全，交易收款需開啟定位服務，故須於Info.plist加入privacy setting "Privacy - Location When In Use Usage Description"
 
 ---
 ## SDK initialize
