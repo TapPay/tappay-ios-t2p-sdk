@@ -52,7 +52,7 @@
 1. 登入[App Store Connect](https://appstoreconnect.apple.com/login)，進入到使用者與存取權限頁面<br><br>
 ![](./Images/Sandbox_Test_Account_Create.png)<br><br>
 2. 點選沙箱技術測試人員
-3. 點選+號新增測試用帳號，輸入必要資訊並建立（輸入的email須不在“使用者與存取權限->人員”的名單中）
+3. 點選+號新增測試用帳號，輸入必要資訊並建立（請使用未曾作為 Apple ID 或用來購買 iTunes 或 App Store 內容的電子郵件地址。建議你為每一位沙箱測試人員建立測試專用的電子郵件地址，詳細資訊可參考[建立沙箱 Apple ID](https://developer.apple.com/tw/help/app-store-connect/test-in-app-purchases-main/create-sandbox-apple-ids/)）
 4. 建立完成後，若要在sandbox環境測試，須於測試用的裝置登入此測試用Apple ID，並重新開機
 5. 屆時若需要切換為production環境測試，亦須於測試用的裝置登入非sandbox用Apple ID，並重新開機
 
