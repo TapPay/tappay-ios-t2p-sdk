@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
-// swift-module-flags: -target arm64-apple-ios16.4 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name TPSDKT2P
+// swift-module-flags: -target arm64-apple-ios16.4 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TPSDKT2P
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import CommonCrypto
 import CoreLocation
@@ -9,6 +9,7 @@ import PencilKit
 import ProximityReader
 import Swift
 @_exported import TPSDKT2P
+import TPT2PModel
 import UIKit
 import _Concurrency
 import _StringProcessing
@@ -29,9 +30,6 @@ public protocol TPT2PReaderDelegate {
   @objc deinit
   #if compiler(>=5.3) && $AsyncAwait
   public func configureReader() async throws
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
-  public func readCard(for amount: Foundation.Decimal) async throws -> Swift.String
   #endif
   #if compiler(>=5.3) && $AsyncAwait
   public func readCardAndAuthorization(for amount: Foundation.Decimal) async throws -> TPSDKT2P.Transaction?
@@ -118,6 +116,7 @@ public enum Language {
   public var minimumiOSVersion: Swift.String?
   public var latestSDKVersion: Swift.String?
   public static func shared() -> TPSDKT2P.TPT2PManager
+  public static func currentVersion() -> Swift.String
   #if compiler(>=5.3) && $AsyncAwait
   public static func setupWithAppKey(_ registeredAppKey: Swift.String!, _ environment: TPSDKT2P.Environment!) async throws
   #endif
@@ -131,9 +130,6 @@ extension TPSDKT2P.TPT2PManager : CoreLocation.CLLocationManagerDelegate {
 }
 @_hasMissingDesignatedInitializers public class TPT2PService {
   public static func shared() -> TPSDKT2P.TPT2PService
-  #if compiler(>=5.3) && $AsyncAwait
-  public func refreshToken() async throws
-  #endif
   #if compiler(>=5.3) && $AsyncAwait
   public func getBindingList(page: Swift.Int, countPerPage: Swift.Int) async throws -> [TPSDKT2P.BindItem]?
   #endif
@@ -219,12 +215,12 @@ public struct BindList : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct BindItem : Swift.Codable {
-  public let id: Swift.String?
+  public let id: Swift.String
   public let partnerId: Swift.Int
   public let acquirerId: Swift.Int
-  public let acquirerName: Swift.String?
-  public let acquirerIcon: Swift.String?
-  public let merchantId: Swift.String?
+  public let acquirerName: Swift.String
+  public let acquirerIcon: Swift.String
+  public let merchantId: Swift.String
   public let merchantAccount: Swift.String?
   public let terminalId: Swift.String?
   public let hash: Swift.String?
@@ -232,6 +228,7 @@ public struct BindItem : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct ApiErrorResponse : Swift.Codable, Swift.Error {
+  public let traceId: Swift.String
   public let errorCode: Swift.Int
   public let errorMessage: Swift.String
   public let errorDetail: Swift.String

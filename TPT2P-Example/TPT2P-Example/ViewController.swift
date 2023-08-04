@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setAllElementsHidden()
+        print("SDK Version: \(TPT2PManager.currentVersion())")
     }
     
     func setAllElementsHidden() {
@@ -121,12 +122,24 @@ class ViewController: UIViewController {
         if TPT2PReader.isReaderBinded == true {
             Task {
                 do {
-                    let result = try await TPT2PReader.shared().readCardAndAuthorization(for: 10)
+                    let result = try await TPT2PReader.shared().readCardAndAuthorization(for: 3001)
                     transactionResult = result
-                    DispatchQueue.main.async {
-                        self.authorizationResultLabel.isHidden = false
-                        self.getReceiptBtn.isHidden = false
-                        self.authorizationResultLabel.text = result?.transactionId
+                    if result?.needSignature == true {
+                        let controller = storyboard?.instantiateViewController(withIdentifier: "SignViewController") as? SignViewController
+                        controller?.receiptIdentifier = result?.receiptId
+                        controller?.modalPresentationStyle = .overFullScreen
+                        controller?.delegate = self
+                        if let controller {
+                            DispatchQueue.main.async {
+                                self.present(controller, animated: false)
+                            }
+                        }
+                    }else {
+                        DispatchQueue.main.async {
+                            self.authorizationResultLabel.isHidden = false
+                            self.getReceiptBtn.isHidden = false
+                            self.authorizationResultLabel.text = result?.transactionId
+                        }
                     }
                 }catch {
                     print(error)
@@ -145,7 +158,7 @@ class ViewController: UIViewController {
                         self.receiptUrlTextfield.text = receiptUrl
                     }
                 }catch {
-                    
+
                 }
             }
         }
@@ -205,4 +218,14 @@ extension ViewController: UITableViewDelegate {
         }
     }
     
+}
+
+extension ViewController: SignViewControllerDelegate {
+    func didFinishSigning(controller: SignViewController) {
+        DispatchQueue.main.async {
+            self.authorizationResultLabel.isHidden = false
+            self.getReceiptBtn.isHidden = false
+            self.authorizationResultLabel.text = self.transactionResult?.transactionId
+        }
+    }
 }
