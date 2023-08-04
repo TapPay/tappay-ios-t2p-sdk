@@ -9,7 +9,6 @@ import PencilKit
 import ProximityReader
 import Swift
 @_exported import TPSDKT2P
-import TPT2PModel
 import UIKit
 import _Concurrency
 import _StringProcessing

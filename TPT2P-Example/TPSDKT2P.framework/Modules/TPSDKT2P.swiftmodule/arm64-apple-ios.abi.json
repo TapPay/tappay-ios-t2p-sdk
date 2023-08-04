@@ -53,13 +53,6 @@
       },
       {
         "kind": "Import",
-        "name": "TPT2PModel",
-        "printedName": "TPT2PModel",
-        "declKind": "Import",
-        "moduleName": "TPSDKT2P"
-      },
-      {
-        "kind": "Import",
         "name": "ProximityReader",
         "printedName": "ProximityReader",
         "declKind": "Import",
@@ -1126,13 +1119,6 @@
       },
       {
         "kind": "Import",
-        "name": "TPT2PModel",
-        "printedName": "TPT2PModel",
-        "declKind": "Import",
-        "moduleName": "TPSDKT2P"
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -1140,13 +1126,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "TPT2PModel",
-        "printedName": "TPT2PModel",
-        "declKind": "Import",
-        "moduleName": "TPSDKT2P"
       },
       {
         "kind": "Import",
@@ -4718,13 +4697,6 @@
       },
       {
         "kind": "Import",
-        "name": "TPT2PModel",
-        "printedName": "TPT2PModel",
-        "declKind": "Import",
-        "moduleName": "TPSDKT2P"
-      },
-      {
-        "kind": "Import",
         "name": "ProximityReader",
         "printedName": "ProximityReader",
         "declKind": "Import",
@@ -8111,13 +8083,6 @@
       },
       {
         "kind": "Import",
-        "name": "TPT2PModel",
-        "printedName": "TPT2PModel",
-        "declKind": "Import",
-        "moduleName": "TPSDKT2P"
-      },
-      {
-        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -8152,13 +8117,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "TPT2PModel",
-        "printedName": "TPT2PModel",
-        "declKind": "Import",
-        "moduleName": "TPSDKT2P"
       },
       {
         "kind": "Import",
@@ -8736,119 +8694,119 @@
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 1118,
+      "offset": 1100,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 1122,
+      "offset": 1104,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 1170,
+      "offset": 1152,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 1174,
+      "offset": 1156,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 1226,
+      "offset": 1208,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 1230,
+      "offset": 1212,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 2147,
+      "offset": 2129,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "StringLiteral",
-      "offset": 5868,
+      "offset": 5850,
       "length": 5,
       "value": "\"TWD\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "StringLiteral",
-      "offset": 6046,
+      "offset": 6028,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "StringLiteral",
-      "offset": 6354,
+      "offset": 6336,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 6817,
+      "offset": 6799,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 7179,
+      "offset": 7161,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 8917,
+      "offset": 8899,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 8921,
+      "offset": 8903,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 894,
+      "offset": 876,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 906,
+      "offset": 888,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PDataManager.swift",
       "kind": "StringLiteral",
-      "offset": 922,
+      "offset": 904,
       "length": 2,
       "value": "\"\""
     },
@@ -8946,266 +8904,266 @@
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 376,
+      "offset": 358,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 409,
+      "offset": 391,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 446,
+      "offset": 428,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 905,
+      "offset": 887,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 944,
+      "offset": 926,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 1066,
+      "offset": 1048,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1099,
+      "offset": 1081,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 1442,
+      "offset": 1424,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1931,
+      "offset": 1913,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 2039,
+      "offset": 2021,
       "length": 5,
       "value": "-1009"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 2164,
+      "offset": 2146,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 4727,
+      "offset": 4709,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 4739,
+      "offset": 4721,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 4755,
+      "offset": 4737,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 5173,
+      "offset": 5155,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 5397,
+      "offset": 5379,
       "length": 5,
       "value": "\"lon\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 5411,
+      "offset": 5393,
       "length": 42,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 5452,
+      "offset": 5434,
       "length": 24,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 5475,
+      "offset": 5457,
       "length": 5,
       "value": "\"lat\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 5489,
+      "offset": 5471,
       "length": 41,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 5529,
+      "offset": 5511,
       "length": 3,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 5825,
+      "offset": 5807,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 5882,
+      "offset": 5864,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 5954,
+      "offset": 5936,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 6059,
+      "offset": 6041,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 6333,
+      "offset": 6315,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 6500,
+      "offset": 6482,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 6867,
+      "offset": 6849,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 7111,
+      "offset": 7093,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 7114,
+      "offset": 7096,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 7278,
+      "offset": 7260,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 7674,
+      "offset": 7656,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 7890,
+      "offset": 7872,
       "length": 3,
       "value": "500"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 8055,
+      "offset": 8037,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 8103,
+      "offset": 8085,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 9324,
+      "offset": 9306,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 9575,
+      "offset": 9557,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 9735,
+      "offset": 9717,
       "length": 1,
       "value": "1"
     },
@@ -9947,77 +9905,77 @@
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 256,
+      "offset": 238,
       "length": 15,
       "value": "\"\/loginWithKey\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 619,
+      "offset": 601,
       "length": 7,
       "value": "\"\/bind\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 795,
+      "offset": 777,
       "length": 7,
       "value": "\"\/bind\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 1110,
+      "offset": 1092,
       "length": 14,
       "value": "\"\/bind\/qrcode\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 1444,
+      "offset": 1426,
       "length": 7,
       "value": "\"\/bind\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 1697,
+      "offset": 1679,
       "length": 14,
       "value": "\"\/transaction\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 2041,
+      "offset": 2023,
       "length": 15,
       "value": "\"\/receipt\/sign\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 2440,
+      "offset": 2422,
       "length": 21,
       "value": "\"\/receipt\/cardholder\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 2806,
+      "offset": 2788,
       "length": 15,
       "value": "\"\/bind\/refresh\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 3049,
+      "offset": 3031,
       "length": 11,
       "value": "\"\/location\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 3218,
+      "offset": 3200,
       "length": 14,
       "value": "\"\/setting\/ios\""
     },
@@ -11480,266 +11438,266 @@
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1060,
+      "offset": 1042,
       "length": 7,
       "value": "\"https\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1093,
+      "offset": 1075,
       "length": 9,
       "value": "\"receipt\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 1107,
+      "offset": 1089,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1316,
+      "offset": 1298,
       "length": 6,
       "value": "\"\/sdk\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1425,
+      "offset": 1407,
       "length": 6,
       "value": "\"\/sdk\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1441,
+      "offset": 1423,
       "length": 3,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1551,
+      "offset": 1533,
       "length": 6,
       "value": "\"\/sdk\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1567,
+      "offset": 1549,
       "length": 3,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 1851,
+      "offset": 1833,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1924,
+      "offset": 1906,
       "length": 9,
       "value": "\"sdk-jwt\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 2001,
+      "offset": 1983,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 2180,
+      "offset": 2162,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2537,
+      "offset": 2519,
       "length": 17,
       "value": "\"Accept-Language\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2754,
+      "offset": 2736,
       "length": 18,
       "value": "\"application\/json\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2794,
+      "offset": 2776,
       "length": 14,
       "value": "\"Content-Type\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3032,
+      "offset": 3014,
       "length": 7,
       "value": "\"zh-tw\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3083,
+      "offset": 3065,
       "length": 7,
       "value": "\"en-us\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3214,
+      "offset": 3196,
       "length": 4,
       "value": "\"zh\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3245,
+      "offset": 3227,
       "length": 7,
       "value": "\"zh-tw\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3296,
+      "offset": 3278,
       "length": 7,
       "value": "\"en-us\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 3856,
+      "offset": 3838,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 3862,
+      "offset": 3844,
       "length": 3,
       "value": "201"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 4359,
+      "offset": 4341,
       "length": 7,
       "value": "\"login\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 4371,
+      "offset": 4353,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 4416,
+      "offset": 4398,
       "length": 8,
       "value": "\"qrcode\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 4429,
+      "offset": 4411,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 5355,
+      "offset": 5337,
       "length": 44,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 5386,
+      "offset": 5368,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 5388,
+      "offset": 5370,
       "length": 1,
       "value": "\",\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 5398,
+      "offset": 5380,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 5486,
+      "offset": 5468,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 5650,
+      "offset": 5632,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 5865,
+      "offset": 5847,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 5951,
+      "offset": 5933,
       "length": 27,
       "value": "\"sandbox-yms.tappaysdk.com\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6019,
+      "offset": 6001,
       "length": 24,
       "value": "\"prod-yms.tappaysdk.com\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6174,
+      "offset": 6156,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6260,
+      "offset": 6242,
       "length": 35,
       "value": "\"sandbox-yms-receipt.tappaysdk.com\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/TPT2P-Demo\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6336,
+      "offset": 6318,
       "length": 32,
       "value": "\"prod-yms-receipt.tappaysdk.com\""
     }
