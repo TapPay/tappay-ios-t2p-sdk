@@ -2,6 +2,10 @@
 
 ### The TapPay iOS SDK helps you build Tap to Pay on iPhone into your iOS app
 
+## Requirement
+
+- Tap to Pay on iPhone只支援 iPhone Xs 以上機型 和 iOS 16.4 以上版本
+
 ## How to start
 ---
 ### Apply for Tap to Pay on iPhone entitlement
