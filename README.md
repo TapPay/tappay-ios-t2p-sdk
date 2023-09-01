@@ -73,7 +73,7 @@
   ### Initialize service with app key
   #### Function
   ```swift
-  func setupWithAppKey(_ registeredAppKey: String!, _ environment: Environment!) async throws
+  func setupWithAppKey(_ registeredAppKey: String!,_ partnerAccount: String? = nil, _ environment: Environment!) async throws
   ```
   #### Sample
   ```swift
@@ -89,7 +89,7 @@
   #### Parameters
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
-  | registeredAppKey  | String | 用於SDK的驗證金鑰(取得方式待補) |
+  | registeredAppKey  | String | 用於SDK的驗證金鑰 |
   | partnerAccount  | String | (Optional) Partner Account |
   | environment  | Environment | 使用的伺服器種類<br>測試時請使用 Sandbox 環境 (Environment.sandbox, .sandbox)<br>實體上線後請切換至 Production 環境 (Environment.production, .production) |
 
@@ -98,7 +98,7 @@
   ### Get binding list
   #### Function
   ```swift
-  func getBindingList(page: Int, countPerPage: Int) async throws -> [BindItem]?
+  func getBindingList(page: Int, countPerPage: Int, merchantId: String? = nil, merchantAccount: String? = nil, terminalId: String? = nil) async throws -> [BindItem]?
   ```
   #### Sample
   ```swift
