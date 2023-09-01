@@ -117,7 +117,7 @@ public enum Language {
   public static func shared() -> TPSDKT2P.TPT2PManager
   public static func currentVersion() -> Swift.String
   #if compiler(>=5.3) && $AsyncAwait
-  public static func setupWithAppKey(_ registeredAppKey: Swift.String!, _ environment: TPSDKT2P.Environment!) async throws
+  public static func setupWithAppKey(_ registeredAppKey: Swift.String!, _ partnerAccount: Swift.String? = nil, _ environment: TPSDKT2P.Environment!) async throws
   #endif
   @objc deinit
 }
@@ -130,7 +130,7 @@ extension TPSDKT2P.TPT2PManager : CoreLocation.CLLocationManagerDelegate {
 @_hasMissingDesignatedInitializers public class TPT2PService {
   public static func shared() -> TPSDKT2P.TPT2PService
   #if compiler(>=5.3) && $AsyncAwait
-  public func getBindingList(page: Swift.Int, countPerPage: Swift.Int) async throws -> [TPSDKT2P.BindItem]?
+  public func getBindingList(page: Swift.Int, countPerPage: Swift.Int, merchantId: Swift.String? = nil, merchantAccount: Swift.String? = nil, terminalId: Swift.String? = nil) async throws -> [TPSDKT2P.BindItem]?
   #endif
   #if compiler(>=5.3) && $AsyncAwait
   public func bind(bindItem: TPSDKT2P.BindItem, description: Swift.String?) async throws
@@ -144,12 +144,10 @@ extension TPSDKT2P.TPT2PManager : CoreLocation.CLLocationManagerDelegate {
   #if compiler(>=5.3) && $AsyncAwait
   public func getReceipt(receiptIdentifier: Swift.String, type: Swift.Int?, email: Swift.String?) async throws -> Swift.String?
   #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getMinimumVersions() async throws -> TPSDKT2P.Version?
+  #endif
   @objc deinit
-}
-public struct TransactionBody : Swift.Codable {
-  public init(paymentData: Swift.String? = nil, orderNumber: Swift.String? = nil, orderUpdateTime: Swift.CLong? = nil)
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Transaction : Swift.Codable {
   public let receiptId: Swift.String
@@ -166,43 +164,12 @@ public struct Transaction : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public enum TransactionStateType : Swift.Codable {
-  case errorCase
-  case authSuccess
-  case voidSuccess
-  case settleSuccess
-  public static func == (a: TPSDKT2P.TransactionStateType, b: TPSDKT2P.TransactionStateType) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public func encode(to encoder: any Swift.Encoder) throws
-  public var hashValue: Swift.Int {
-    get
-  }
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct TransactionList : Swift.Codable {
-  public var itemList: [TPSDKT2P.TransactionItem] {
-    get
-  }
-  public var moreData: Swift.Bool {
-    get
-  }
-  public var totalCount: Swift.Int {
-    get
-  }
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct TransactionItem : Swift.Codable {
-  public let receiptId: Swift.String?
-  public let transactionId: Swift.String?
-  public let bankTransactionId: Swift.String?
-  public let orderNumber: Swift.String?
-  public let state: TPSDKT2P.TransactionStateType?
-  public let createTime: Swift.CLong?
-  public let amount: Swift.Double?
-  public let currency: Swift.String?
-  public let cardMask: Swift.String?
-  public let voidable: Swift.Bool?
+public struct Version : Swift.Codable {
+  public let minOsVersion: Swift.String
+  public let minSdkVersion: Swift.String
+  public let latestSdkVersion: Swift.String
+  public let minAppVersion: Swift.String
+  public let latestAppVersion: Swift.String
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -223,6 +190,7 @@ public struct BindItem : Swift.Codable {
   public let merchantAccount: Swift.String?
   public let terminalId: Swift.String?
   public let hash: Swift.String?
+  public init(id: Swift.String, partnerId: Swift.Int, acquirerId: Swift.Int, acquirerName: Swift.String, acquirerIcon: Swift.String, merchantId: Swift.String, merchantAccount: Swift.String?, terminalId: Swift.String?, hash: Swift.String?)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -262,7 +230,6 @@ public struct MerchantInfo : Swift.Codable {
   public let terminalId: Swift.String?
   public let description: Swift.String?
   public let partnerIcon: Swift.String?
-  public init(partnerName: Swift.String? = nil, acquirerName: Swift.String? = nil, acquirerIcon: Swift.String? = nil, terminalId: Swift.String? = nil, description: Swift.String? = nil, partnerIcon: Swift.String? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -270,5 +237,3 @@ extension TPSDKT2P.Environment : Swift.Equatable {}
 extension TPSDKT2P.Environment : Swift.Hashable {}
 extension TPSDKT2P.Language : Swift.Equatable {}
 extension TPSDKT2P.Language : Swift.Hashable {}
-extension TPSDKT2P.TransactionStateType : Swift.Equatable {}
-extension TPSDKT2P.TransactionStateType : Swift.Hashable {}

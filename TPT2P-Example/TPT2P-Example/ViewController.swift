@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     @IBAction func initialWithKey(_ sender: Any) {
         Task {
             do {
-                try await TPT2PManager.setupWithAppKey("", .sandbox)
+                try await TPT2PManager.setupWithAppKey("test", "test", .sandbox)
                 print("Initial success")
                 if TPT2PReader.isReaderBinded == true {
                     DispatchQueue.main.async {
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
         if TPT2PReader.isReaderBinded == false {
             Task {
                 do {
-                    let result = try await TPT2PService.shared().getBindingList(page: 0, countPerPage: 10)
+                    let result = try await TPT2PService.shared().getBindingList(page: 0, countPerPage: 10, merchantId: "test", merchantAccount: "test", terminalId: "test")
                     bindList = result
                     bindingListTableView.reloadData()
                     DispatchQueue.main.async {
