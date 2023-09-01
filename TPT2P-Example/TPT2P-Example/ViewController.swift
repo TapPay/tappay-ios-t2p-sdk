@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  TPT2P-Example
 //
-//
+// SDK Version: 1.0.2
 
 import UIKit
 import TPSDKT2P
