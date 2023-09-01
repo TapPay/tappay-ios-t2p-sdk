@@ -80,7 +80,7 @@
   // Sample code
   Task {
       do {
-          try await TPT2PManager.shared.setupWithAppKey("123456789", .production)
+          try await TPT2PManager.shared.setupWithAppKey("123456789", "partnerAccount",  .production)
       }catch {
           // error handling
       }
@@ -90,6 +90,7 @@
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
   | registeredAppKey  | String | 用於SDK的驗證金鑰(取得方式待補) |
+  | partnerAccount  | String | (Optional) Partner Account |
   | environment  | Environment | 使用的伺服器種類<br>測試時請使用 Sandbox 環境 (Environment.sandbox, .sandbox)<br>實體上線後請切換至 Production 環境 (Environment.production, .production) |
 
   ---
@@ -105,7 +106,7 @@
   Task {
       do {
           // Get 10 bind items per page, the first page of list
-          let bindList = try await TPT2PService.shared.getBindingList(page: 0, countPerPage: 10)
+          let bindList = try await TPT2PService.shared.getBindingList(page: 0, countPerPage: 10, merchantId: "merchantId", merchantAccount: "merchantAccount", terminalId: "terminalId")
       }catch {
           // error handling
       }
@@ -116,6 +117,9 @@
   |  :----  | :----  | :---- |
   | page  | Int | 第幾頁 |
   | countPerPage  | Int | 每頁筆數 |
+  | merchantId  | String | (Optional) TapPay商店代碼 |
+  | merchantAccount  | String | (Optional) 商店代號 |
+  | terminalId  | String | (Optional) 端末機代號 |
 
   ### Response
   #### Item detail
