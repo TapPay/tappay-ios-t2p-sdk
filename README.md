@@ -205,6 +205,31 @@
       }
   }
   ```
+  ### Get reader event
+  #### Function
+  ```swift
+  protocol TPT2PReaderDelegate {
+    func readerEventDidUpdated(event: (TPT2PReader.Event)?)
+  }
+  ```
+  #### Sample
+  ```swift
+  // Sample code
+  class ViewController: UIViewController, TPT2PReaderDelegate {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        TPT2PReader.shared().delegate = self
+    }
+
+    func readerEventDidUpdated(event: (TPSDKT2P.TPT2PReader.Event)?) {
+        // You can get reader events after updated here, for example
+        if case .updateProgress(let percentage) = event {
+            // Show a progress bar by percentage when the reader needs to update for seconds
+        }
+    }
+  }
+  ```
 ---
   ## Transaction
   ### Transaction authorization
