@@ -95,6 +95,20 @@
 
   ---
   ## Bind
+  ### Get binding status
+  ```swift
+  static var isReaderBinded: Bool
+  ```
+  #### Sample
+  ```swift
+  // Sample code
+  if TPT2PReader.isReaderBinded == false {
+      // Need to do bind process
+  }else {
+      // Terminal is binded already with this device
+      // Reader is ready for configuring
+  }
+  ```
   ### Get binding list
   #### Function
   ```swift
