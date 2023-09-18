@@ -351,4 +351,8 @@
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
   | receiptUrl  | String | 簽單URL |
+
+  ### Get receipt (For backend)
+  
+#### 請參考 [TapPay Tap to Pay on iPhone Document for Backend](https://cherricorp.gitbook.io/tappay-tap-to-pay-on-iphone-document-for-backend/)
 ---
