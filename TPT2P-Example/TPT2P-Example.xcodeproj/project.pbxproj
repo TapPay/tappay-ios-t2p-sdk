@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E26ECE72AE8C40900E815CD /* TPSDKT2P.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E26ECE62AE8C40900E815CD /* TPSDKT2P.xcframework */; };
 		0E3735FD2A7A6153005327FA /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3735FC2A7A6153005327FA /* SignViewController.swift */; };
-		0E7AF6562A711BEB000D0EBF /* TPSDKT2P.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7AF6552A711BEB000D0EBF /* TPSDKT2P.framework */; };
 		0EB0BE962A4E7C930042D5AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB0BE952A4E7C930042D5AC /* AppDelegate.swift */; };
 		0EB0BE982A4E7C930042D5AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB0BE972A4E7C930042D5AC /* SceneDelegate.swift */; };
 		0EB0BE9A2A4E7C930042D5AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB0BE992A4E7C930042D5AC /* ViewController.swift */; };
@@ -19,8 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E26ECE62AE8C40900E815CD /* TPSDKT2P.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TPSDKT2P.xcframework; sourceTree = "<group>"; };
 		0E3735FC2A7A6153005327FA /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
-		0E7AF6552A711BEB000D0EBF /* TPSDKT2P.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TPSDKT2P.framework; sourceTree = "<group>"; };
 		0EB0BE922A4E7C930042D5AC /* TPT2P-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TPT2P-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB0BE952A4E7C930042D5AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EB0BE972A4E7C930042D5AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E7AF6562A711BEB000D0EBF /* TPSDKT2P.framework in Frameworks */,
+				0E26ECE72AE8C40900E815CD /* TPSDKT2P.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +80,7 @@
 		0EB0BEAB2A4E7D490042D5AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0E7AF6552A711BEB000D0EBF /* TPSDKT2P.framework */,
+				0E26ECE62AE8C40900E815CD /* TPSDKT2P.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

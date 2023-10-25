@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     @IBAction func initialWithKey(_ sender: Any) {
         Task {
             do {
-                try await TPT2PManager.setupWithAppKey("test", "test", .sandbox)
+                try await TPT2PManager.setupWithAppKey(appKey: "Get the key by contact TapPay", environment: .sandbox)
                 print("Initial success")
                 if TPT2PReader.isReaderBinded == true {
                     DispatchQueue.main.async {
@@ -107,6 +107,7 @@ class ViewController: UIViewController {
             Task {
                 do {
                     try await TPT2PReader.shared().configureReader()
+                    TPT2PReader.shared().delegate = self
                     print("Ready")
                     DispatchQueue.main.async {
                         self.readCardBtn.isHidden = false
@@ -122,7 +123,7 @@ class ViewController: UIViewController {
         if TPT2PReader.isReaderBinded == true {
             Task {
                 do {
-                    let result = try await TPT2PReader.shared().readCardAndAuthorization(for: 3001)
+                    let result = try await TPT2PReader.shared().readCardAndAuthorization(amount: 3001, orderNumber: "test", bankTransactionId: "test", extensions: ["test": "test"])
                     transactionResult = result
                     if result?.needSignature == true {
                         let controller = storyboard?.instantiateViewController(withIdentifier: "SignViewController") as? SignViewController
@@ -228,4 +229,21 @@ extension ViewController: SignViewControllerDelegate {
             self.authorizationResultLabel.text = self.transactionResult?.transactionId
         }
     }
+}
+
+extension ViewController: TPT2PReaderDelegate {
+    
+    func readerEventDidUpdated(event: (TPSDKT2P.TPT2PReader.Event)?) {
+        // Get reader event here
+    }
+    
+    func startConfiguring(reader: TPSDKT2P.TPT2PReader) {
+        // Do something when reader started preparing, ex. show indicator
+    }
+    
+    func endConfiguring(reader: TPSDKT2P.TPT2PReader, error: TPSDKT2P.TPT2PError?) {
+        // Do something when reader finished preparing
+    }
+    
+    
 }
