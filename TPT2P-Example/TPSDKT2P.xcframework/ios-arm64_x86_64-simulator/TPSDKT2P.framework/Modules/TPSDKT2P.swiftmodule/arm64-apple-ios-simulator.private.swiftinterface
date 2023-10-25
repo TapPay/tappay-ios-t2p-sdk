@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
-// swift-module-flags: -target arm64-apple-ios16.4 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TPSDKT2P
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios16.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TPSDKT2P
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import CommonCrypto
 import CoreLocation
@@ -12,8 +12,11 @@ import Swift
 import UIKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 public protocol TPT2PReaderDelegate {
   func readerEventDidUpdated(event: (TPSDKT2P.TPT2PReader.Event)?)
+  func startConfiguring(reader: TPSDKT2P.TPT2PReader)
+  func endConfiguring(reader: TPSDKT2P.TPT2PReader, error: TPSDKT2P.TPT2PError?)
 }
 @objc @_inheritsConvenienceInitializers public class TPT2PReader : ObjectiveC.NSObject {
   public var delegate: (any TPSDKT2P.TPT2PReaderDelegate)?
@@ -31,17 +34,22 @@ public protocol TPT2PReaderDelegate {
   public func configureReader() async throws
   #endif
   #if compiler(>=5.3) && $AsyncAwait
-  public func readCardAndAuthorization(for amount: Foundation.Decimal) async throws -> TPSDKT2P.Transaction?
+  public func readCardAndAuthorization(amount: Foundation.Decimal, orderNumber: Swift.String? = nil, bankTransactionId: Swift.String? = nil, extensions: Swift.Dictionary<Swift.String, Any>? = nil) async throws -> TPSDKT2P.Transaction?
   #endif
   @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class TPT2PReaderButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) public var onClick: (() -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @objc deinit
 }
 public enum TPT2PError : Swift.Error, Swift.Sendable, Swift.Equatable {
   case tokenRefreshFail
   case tokenRevoked
-  case retry
   case gpsDisabled
   case locationNotAllowed
   case transactionFailed
+  case invalidParameterLength
   case requestFailed(Swift.String?)
   case emptySDKToken
   case notAllowed
@@ -117,18 +125,20 @@ public enum Language {
   public static func shared() -> TPSDKT2P.TPT2PManager
   public static func currentVersion() -> Swift.String
   #if compiler(>=5.3) && $AsyncAwait
-  public static func setupWithAppKey(_ registeredAppKey: Swift.String!, _ partnerAccount: Swift.String? = nil, _ environment: TPSDKT2P.Environment!) async throws
+  public static func setupWithAppKey(appKey: Swift.String!, environment: TPSDKT2P.Environment!, partnerAccount: Swift.String? = nil, isInherit: Swift.Bool? = nil) async throws
   #endif
   @objc deinit
 }
 extension TPSDKT2P.TPT2PManager : CoreLocation.CLLocationManagerDelegate {
   @objc dynamic public func locationManager(_ manager: CoreLocation.CLLocationManager, didUpdateLocations locations: [CoreLocation.CLLocation])
   @objc dynamic public func locationManager(_ manager: CoreLocation.CLLocationManager, didFailWithError error: any Swift.Error)
-  public func isLocationAuthroized() -> Swift.Bool
   public func getCurrentLocation() -> CoreLocation.CLLocation?
 }
 @_hasMissingDesignatedInitializers public class TPT2PService {
   public static func shared() -> TPSDKT2P.TPT2PService
+  #if compiler(>=5.3) && $AsyncAwait
+  public func refreshToken() async throws
+  #endif
   #if compiler(>=5.3) && $AsyncAwait
   public func getBindingList(page: Swift.Int, countPerPage: Swift.Int, merchantId: Swift.String? = nil, merchantAccount: Swift.String? = nil, terminalId: Swift.String? = nil) async throws -> [TPSDKT2P.BindItem]?
   #endif
@@ -153,7 +163,7 @@ public struct Transaction : Swift.Codable {
   public let receiptId: Swift.String
   public let transactionId: Swift.String
   public let bankTransactionId: Swift.String?
-  public let orderNumber: Swift.String
+  public let orderNumber: Swift.String?
   public let state: Swift.Int
   public let createTime: Swift.CLong
   public let amount: Swift.Double

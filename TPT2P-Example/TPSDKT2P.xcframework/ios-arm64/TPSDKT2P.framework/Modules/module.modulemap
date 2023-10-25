@@ -1,7 +1,7 @@
 framework module TPSDKT2P {
   umbrella header "TPSDKT2P.h"
-
   export *
+
   module * { export * }
 }
 

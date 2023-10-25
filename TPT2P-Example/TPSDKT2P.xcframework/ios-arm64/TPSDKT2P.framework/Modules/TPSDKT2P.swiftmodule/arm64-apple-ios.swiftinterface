@@ -1,0 +1,249 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios16.4 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TPSDKT2P
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import CommonCrypto
+import CoreLocation
+import Foundation
+import PencilKit
+import ProximityReader
+import Swift
+@_exported import TPSDKT2P
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public protocol TPT2PReaderDelegate {
+  func readerEventDidUpdated(event: (TPSDKT2P.TPT2PReader.Event)?)
+  func startConfiguring(reader: TPSDKT2P.TPT2PReader)
+  func endConfiguring(reader: TPSDKT2P.TPT2PReader, error: TPSDKT2P.TPT2PError?)
+}
+@objc @_inheritsConvenienceInitializers public class TPT2PReader : ObjectiveC.NSObject {
+  public var delegate: (any TPSDKT2P.TPT2PReaderDelegate)?
+  #if compiler(>=5.3) && $EffectfulProp
+  public var readerIdentifier: Swift.String? {
+    get async throws
+  }
+  #endif
+  public static var isReaderBinded: Swift.Bool {
+    get
+  }
+  public static func shared() -> TPSDKT2P.TPT2PReader
+  @objc deinit
+  #if compiler(>=5.3) && $AsyncAwait
+  public func configureReader() async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func readCardAndAuthorization(amount: Foundation.Decimal, orderNumber: Swift.String? = nil, bankTransactionId: Swift.String? = nil, extensions: Swift.Dictionary<Swift.String, Any>? = nil) async throws -> TPSDKT2P.Transaction?
+  #endif
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class TPT2PReaderButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) public var onClick: (() -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @objc deinit
+}
+public enum TPT2PError : Swift.Error, Swift.Sendable, Swift.Equatable {
+  case tokenRefreshFail
+  case tokenRevoked
+  case gpsDisabled
+  case locationNotAllowed
+  case transactionFailed
+  case invalidParameterLength
+  case requestFailed(Swift.String?)
+  case emptySDKToken
+  case notAllowed
+  case backgroundRequestNotAllowed
+  case unsupported
+  case osVersionNotSupported
+  case modelNotSupported
+  case passcodeDisabled
+  case networkError
+  case networkAuthenticationError
+  case serviceConnectionError
+  case notReady
+  case emptyReaderToken
+  case invalidReaderToken(Swift.String?)
+  case prepareFailed(Swift.String?)
+  case prepareExpired
+  case tokenExpired
+  case deviceBanned(Foundation.Date?)
+  case readerMemoryFull
+  case readerBusy
+  case accountNotLinked
+  case accountAlreadyLinked
+  case accountLinkingFailed
+  case accountLinkingRequiresiCloudSignIn
+  case accountLinkingCancelled
+  case merchantBlocked
+  case invalidMerchant
+  case readNotAllowed
+  case readFromBackgroundError
+  case readerServiceConnectionError
+  case readerServiceError
+  case noReaderSession
+  case readerSessionExpired
+  case readerTokenExpired
+  case readerSessionNetworkError
+  case readerSessionAuthenticationError
+  case readerSessionBusy
+  case readCancelled
+  case invalidAmount
+  case invalidCurrencyCode
+  case nfcDisabled
+  case readNotAllowedDuringCall
+  case cardReadFailed
+  case vasReadFail
+  case paymentReadFailed
+  case paymentCardDeclined
+  public static func == (a: TPSDKT2P.TPT2PError, b: TPSDKT2P.TPT2PError) -> Swift.Bool
+}
+public enum Environment {
+  case sandbox
+  case production
+  public static func == (a: TPSDKT2P.Environment, b: TPSDKT2P.Environment) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum Language {
+  case en
+  case zh
+  public static func == (a: TPSDKT2P.Language, b: TPSDKT2P.Language) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class TPT2PManager : ObjectiveC.NSObject {
+  public var merchantInfo: TPSDKT2P.MerchantInfo?
+  public var language: TPSDKT2P.Language?
+  public var minimumSDKVersion: Swift.String?
+  public var minimumiOSVersion: Swift.String?
+  public var latestSDKVersion: Swift.String?
+  public static func shared() -> TPSDKT2P.TPT2PManager
+  public static func currentVersion() -> Swift.String
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func setupWithAppKey(appKey: Swift.String!, environment: TPSDKT2P.Environment!, partnerAccount: Swift.String? = nil, isInherit: Swift.Bool? = nil) async throws
+  #endif
+  @objc deinit
+}
+extension TPSDKT2P.TPT2PManager : CoreLocation.CLLocationManagerDelegate {
+  @objc dynamic public func locationManager(_ manager: CoreLocation.CLLocationManager, didUpdateLocations locations: [CoreLocation.CLLocation])
+  @objc dynamic public func locationManager(_ manager: CoreLocation.CLLocationManager, didFailWithError error: any Swift.Error)
+  public func getCurrentLocation() -> CoreLocation.CLLocation?
+}
+@_hasMissingDesignatedInitializers public class TPT2PService {
+  public static func shared() -> TPSDKT2P.TPT2PService
+  #if compiler(>=5.3) && $AsyncAwait
+  public func refreshToken() async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getBindingList(page: Swift.Int, countPerPage: Swift.Int, merchantId: Swift.String? = nil, merchantAccount: Swift.String? = nil, terminalId: Swift.String? = nil) async throws -> [TPSDKT2P.BindItem]?
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func bind(bindItem: TPSDKT2P.BindItem, description: Swift.String?) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func bindDelete() async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func createElectronicSignature(receiptIdentifier: Swift.String, signCanvas: PencilKit.PKCanvasView) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getReceipt(receiptIdentifier: Swift.String, type: Swift.Int?, email: Swift.String?) async throws -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func getMinimumVersions() async throws -> TPSDKT2P.Version?
+  #endif
+  @objc deinit
+}
+public struct Transaction : Swift.Codable {
+  public let receiptId: Swift.String
+  public let transactionId: Swift.String
+  public let bankTransactionId: Swift.String?
+  public let orderNumber: Swift.String?
+  public let state: Swift.Int
+  public let createTime: Swift.CLong
+  public let amount: Swift.Double
+  public let currency: Swift.String
+  public let cardMask: Swift.String
+  public let authCode: Swift.String
+  public let needSignature: Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Version : Swift.Codable {
+  public let minOsVersion: Swift.String
+  public let minSdkVersion: Swift.String
+  public let latestSdkVersion: Swift.String
+  public let minAppVersion: Swift.String
+  public let latestAppVersion: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct BindList : Swift.Codable {
+  public var itemList: [TPSDKT2P.BindItem] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct BindItem : Swift.Codable {
+  public let id: Swift.String
+  public let partnerId: Swift.Int
+  public let acquirerId: Swift.Int
+  public let acquirerName: Swift.String
+  public let acquirerIcon: Swift.String
+  public let merchantId: Swift.String
+  public let merchantAccount: Swift.String?
+  public let terminalId: Swift.String?
+  public let hash: Swift.String?
+  public init(id: Swift.String, partnerId: Swift.Int, acquirerId: Swift.Int, acquirerName: Swift.String, acquirerIcon: Swift.String, merchantId: Swift.String, merchantAccount: Swift.String?, terminalId: Swift.String?, hash: Swift.String?)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ApiErrorResponse : Swift.Codable, Swift.Error {
+  public let traceId: Swift.String
+  public let errorCode: Swift.Int
+  public let errorMessage: Swift.String
+  public let errorDetail: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension TPSDKT2P.TPT2PReader {
+  public enum Event : Swift.Sendable, Swift.Equatable {
+    case updateProgress(Swift.Int)
+    case notReady
+    case readyForTap
+    case cardDetected
+    case removeCard
+    case readCompleted
+    case readRetry
+    case readCancelled
+    case readNotCompleted
+    case pinEntryRequested
+    case pinEntryCompleted
+    @available(iOS 16.4, *)
+    case userInterfaceDismissed
+    public var name: Swift.String {
+      get
+    }
+    public static func == (a: TPSDKT2P.TPT2PReader.Event, b: TPSDKT2P.TPT2PReader.Event) -> Swift.Bool
+  }
+}
+public struct MerchantInfo : Swift.Codable {
+  public let partnerName: Swift.String?
+  public let acquirerName: Swift.String?
+  public let acquirerIcon: Swift.String?
+  public let terminalId: Swift.String?
+  public let description: Swift.String?
+  public let partnerIcon: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension TPSDKT2P.Environment : Swift.Equatable {}
+extension TPSDKT2P.Environment : Swift.Hashable {}
+extension TPSDKT2P.Language : Swift.Equatable {}
+extension TPSDKT2P.Language : Swift.Hashable {}

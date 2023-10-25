@@ -1,0 +1,11 @@
+framework module TPSDKT2P {
+  umbrella header "TPSDKT2P.h"
+  export *
+
+  module * { export * }
+}
+
+module TPSDKT2P.Swift {
+  header "TPSDKT2P-Swift.h"
+  requires objc
+}

@@ -4,7 +4,7 @@
 //
 //  Copyright © 2023年 Cherri Tech, Inc. All rights reserved.
 //
-// SDK Version: 1.0.2
+// SDK Version: 1.0.5
 #import <Foundation/Foundation.h>
 
 // In this header, you should import all the public headers of your framework using statements like #import <TPSDKT2P/PublicHeader.h>

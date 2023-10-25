@@ -36,6 +36,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TPSDKT2P",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -81,6 +91,74 @@
             "declKind": "Func",
             "usr": "s:8TPSDKT2P19TPT2PReaderDelegateP21readerEventDidUpdated5eventyAA0bC0C0F0OSg_tF",
             "mangledName": "$s8TPSDKT2P19TPT2PReaderDelegateP21readerEventDidUpdated5eventyAA0bC0C0F0OSg_tF",
+            "moduleName": "TPSDKT2P",
+            "genericSig": "<τ_0_0 where τ_0_0 : TPSDKT2P.TPT2PReaderDelegate>",
+            "sugared_genericSig": "<Self where Self : TPSDKT2P.TPT2PReaderDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "startConfiguring",
+            "printedName": "startConfiguring(reader:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TPT2PReader",
+                "printedName": "TPSDKT2P.TPT2PReader",
+                "usr": "c:@M@TPSDKT2P@objc(cs)TPT2PReader"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8TPSDKT2P19TPT2PReaderDelegateP16startConfiguring6readeryAA0bC0C_tF",
+            "mangledName": "$s8TPSDKT2P19TPT2PReaderDelegateP16startConfiguring6readeryAA0bC0C_tF",
+            "moduleName": "TPSDKT2P",
+            "genericSig": "<τ_0_0 where τ_0_0 : TPSDKT2P.TPT2PReaderDelegate>",
+            "sugared_genericSig": "<Self where Self : TPSDKT2P.TPT2PReaderDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "endConfiguring",
+            "printedName": "endConfiguring(reader:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TPT2PReader",
+                "printedName": "TPSDKT2P.TPT2PReader",
+                "usr": "c:@M@TPSDKT2P@objc(cs)TPT2PReader"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TPSDKT2P.TPT2PError?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TPT2PError",
+                    "printedName": "TPSDKT2P.TPT2PError",
+                    "usr": "s:8TPSDKT2P10TPT2PErrorO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8TPSDKT2P19TPT2PReaderDelegateP14endConfiguring6reader5erroryAA0bC0C_AA0B6PErrorOSgtF",
+            "mangledName": "$s8TPSDKT2P19TPT2PReaderDelegateP14endConfiguring6reader5erroryAA0bC0C_AA0B6PErrorOSgtF",
             "moduleName": "TPSDKT2P",
             "genericSig": "<τ_0_0 where τ_0_0 : TPSDKT2P.TPT2PReaderDelegate>",
             "sugared_genericSig": "<Self where Self : TPSDKT2P.TPT2PReaderDelegate>",
@@ -366,7 +444,7 @@
           {
             "kind": "Function",
             "name": "readCardAndAuthorization",
-            "printedName": "readCardAndAuthorization(for:)",
+            "printedName": "readCardAndAuthorization(amount:orderNumber:bankTransactionId:extensions:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -387,11 +465,69 @@
                 "name": "Decimal",
                 "printedName": "Foundation.Decimal",
                 "usr": "c:@SA@NSDecimal"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:8TPSDKT2P11TPT2PReaderC24readCardAndAuthorization3forAA11TransactionVSgSo9NSDecimala_tYaKF",
-            "mangledName": "$s8TPSDKT2P11TPT2PReaderC24readCardAndAuthorization3forAA11TransactionVSgSo9NSDecimala_tYaKF",
+            "usr": "s:8TPSDKT2P11TPT2PReaderC24readCardAndAuthorization6amount11orderNumber17bankTransactionId10extensionsAA0L0VSgSo9NSDecimala_SSSgANSDySSypGSgtYaKF",
+            "mangledName": "$s8TPSDKT2P11TPT2PReaderC24readCardAndAuthorization6amount11orderNumber17bankTransactionId10extensionsAA0L0VSgSo9NSDecimala_SSSgANSDySSypGSgtYaKF",
             "moduleName": "TPSDKT2P",
             "declAttributes": [
               "AccessControl",
@@ -1091,6 +1227,267 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "TPT2PReaderButton",
+        "printedName": "TPT2PReaderButton",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "onClick",
+            "printedName": "onClick",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TPSDKT2P17TPT2PReaderButtonC7onClickyycSgvp",
+            "mangledName": "$s8TPSDKT2P17TPT2PReaderButtonC7onClickyycSgvp",
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "Custom",
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TPSDKT2P17TPT2PReaderButtonC7onClickyycSgvg",
+                "mangledName": "$s8TPSDKT2P17TPT2PReaderButtonC7onClickyycSgvg",
+                "moduleName": "TPSDKT2P",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TPSDKT2P17TPT2PReaderButtonC7onClickyycSgvs",
+                "mangledName": "$s8TPSDKT2P17TPT2PReaderButtonC7onClickyycSgvs",
+                "moduleName": "TPSDKT2P",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TPSDKT2P17TPT2PReaderButtonC7onClickyycSgvM",
+                "mangledName": "$s8TPSDKT2P17TPT2PReaderButtonC7onClickyycSgvM",
+                "moduleName": "TPSDKT2P",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "layoutSubviews",
+            "printedName": "layoutSubviews()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@TPSDKT2P@objc(cs)TPT2PReaderButton(im)layoutSubviews",
+            "mangledName": "$s8TPSDKT2P17TPT2PReaderButtonC14layoutSubviewsyyF",
+            "moduleName": "TPSDKT2P",
+            "overriding": true,
+            "objc_name": "layoutSubviews",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@TPSDKT2P@objc(cs)TPT2PReaderButton",
+        "mangledName": "$s8TPSDKT2P17TPT2PReaderButtonC",
+        "moduleName": "TPSDKT2P",
+        "declAttributes": [
+          "Custom",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIButton",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIButton",
+          "UIKit.UIControl",
+          "UIKit.UIView",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -1214,44 +1611,10 @@
             "declKind": "EnumElement",
             "usr": "s:8TPSDKT2P10TPT2PErrorO12tokenRevokedyA2CmF",
             "mangledName": "$s8TPSDKT2P10TPT2PErrorO12tokenRevokedyA2CmF",
-            "moduleName": "TPSDKT2P"
-          },
-          {
-            "kind": "Var",
-            "name": "retry",
-            "printedName": "retry",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TPSDKT2P.TPT2PError.Type) -> TPSDKT2P.TPT2PError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TPT2PError",
-                    "printedName": "TPSDKT2P.TPT2PError",
-                    "usr": "s:8TPSDKT2P10TPT2PErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TPSDKT2P.TPT2PError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TPT2PError",
-                        "printedName": "TPSDKT2P.TPT2PError",
-                        "usr": "s:8TPSDKT2P10TPT2PErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:8TPSDKT2P10TPT2PErrorO5retryyA2CmF",
-            "mangledName": "$s8TPSDKT2P10TPT2PErrorO5retryyA2CmF",
-            "moduleName": "TPSDKT2P"
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "RawDocComment"
+            ]
           },
           {
             "kind": "Var",
@@ -1288,7 +1651,10 @@
             "declKind": "EnumElement",
             "usr": "s:8TPSDKT2P10TPT2PErrorO11gpsDisabledyA2CmF",
             "mangledName": "$s8TPSDKT2P10TPT2PErrorO11gpsDisabledyA2CmF",
-            "moduleName": "TPSDKT2P"
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "RawDocComment"
+            ]
           },
           {
             "kind": "Var",
@@ -1325,7 +1691,10 @@
             "declKind": "EnumElement",
             "usr": "s:8TPSDKT2P10TPT2PErrorO18locationNotAllowedyA2CmF",
             "mangledName": "$s8TPSDKT2P10TPT2PErrorO18locationNotAllowedyA2CmF",
-            "moduleName": "TPSDKT2P"
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "RawDocComment"
+            ]
           },
           {
             "kind": "Var",
@@ -1362,7 +1731,50 @@
             "declKind": "EnumElement",
             "usr": "s:8TPSDKT2P10TPT2PErrorO17transactionFailedyA2CmF",
             "mangledName": "$s8TPSDKT2P10TPT2PErrorO17transactionFailedyA2CmF",
-            "moduleName": "TPSDKT2P"
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "invalidParameterLength",
+            "printedName": "invalidParameterLength",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TPSDKT2P.TPT2PError.Type) -> TPSDKT2P.TPT2PError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TPT2PError",
+                    "printedName": "TPSDKT2P.TPT2PError",
+                    "usr": "s:8TPSDKT2P10TPT2PErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TPSDKT2P.TPT2PError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TPT2PError",
+                        "printedName": "TPSDKT2P.TPT2PError",
+                        "usr": "s:8TPSDKT2P10TPT2PErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TPSDKT2P10TPT2PErrorO22invalidParameterLengthyA2CmF",
+            "mangledName": "$s8TPSDKT2P10TPT2PErrorO22invalidParameterLengthyA2CmF",
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "RawDocComment"
+            ]
           },
           {
             "kind": "Var",
@@ -1457,7 +1869,10 @@
             "declKind": "EnumElement",
             "usr": "s:8TPSDKT2P10TPT2PErrorO13emptySDKTokenyA2CmF",
             "mangledName": "$s8TPSDKT2P10TPT2PErrorO13emptySDKTokenyA2CmF",
-            "moduleName": "TPSDKT2P"
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "RawDocComment"
+            ]
           },
           {
             "kind": "Var",
@@ -4389,7 +4804,7 @@
           {
             "kind": "Function",
             "name": "setupWithAppKey",
-            "printedName": "setupWithAppKey(_:_:_:)",
+            "printedName": "setupWithAppKey(appKey:environment:partnerAccount:isInherit:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4412,6 +4827,20 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "TPSDKT2P.Environment?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Environment",
+                    "printedName": "TPSDKT2P.Environment",
+                    "usr": "s:8TPSDKT2P11EnvironmentO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "Optional",
                 "printedName": "Swift.String?",
                 "children": [
@@ -4427,22 +4856,23 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "ImplicitlyUnwrappedOptional",
-                "printedName": "TPSDKT2P.Environment?",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Environment",
-                    "printedName": "TPSDKT2P.Environment",
-                    "usr": "s:8TPSDKT2P11EnvironmentO"
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
                   }
                 ],
+                "hasDefaultArg": true,
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:8TPSDKT2P12TPT2PManagerC15setupWithAppKeyyySSSg_AeA11EnvironmentOSgtYaKFZ",
-            "mangledName": "$s8TPSDKT2P12TPT2PManagerC15setupWithAppKeyyySSSg_AeA11EnvironmentOSgtYaKFZ",
+            "usr": "s:8TPSDKT2P12TPT2PManagerC15setupWithAppKey03appG011environment14partnerAccount9isInheritySSSg_AA11EnvironmentOSgAISbSgtYaKFZ",
+            "mangledName": "$s8TPSDKT2P12TPT2PManagerC15setupWithAppKey03appG011environment14partnerAccount9isInheritySSSg_AA11EnvironmentOSgAISbSgtYaKFZ",
             "moduleName": "TPSDKT2P",
             "static": true,
             "declAttributes": [
@@ -4528,28 +4958,6 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "isLocationAuthroized",
-            "printedName": "isLocationAuthroized()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8TPSDKT2P12TPT2PManagerC20isLocationAuthroizedSbyF",
-            "mangledName": "$s8TPSDKT2P12TPT2PManagerC20isLocationAuthroizedSbyF",
-            "moduleName": "TPSDKT2P",
-            "declAttributes": [
               "AccessControl"
             ],
             "isFromExtension": true,
@@ -4744,6 +5152,28 @@
               "AccessControl",
               "RawDocComment"
             ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "refreshToken",
+            "printedName": "refreshToken()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8TPSDKT2P12TPT2PServiceC12refreshTokenyyYaKF",
+            "mangledName": "$s8TPSDKT2P12TPT2PServiceC12refreshTokenyyYaKF",
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -5076,6 +5506,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TPSDKT2P",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "Transaction",
         "printedName": "Transaction",
@@ -5235,14 +5675,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:8TPSDKT2P11TransactionV11orderNumberSSvp",
-            "mangledName": "$s8TPSDKT2P11TransactionV11orderNumberSSvp",
+            "usr": "s:8TPSDKT2P11TransactionV11orderNumberSSSgvp",
+            "mangledName": "$s8TPSDKT2P11TransactionV11orderNumberSSSgvp",
             "moduleName": "TPSDKT2P",
             "declAttributes": [
               "HasStorage",
@@ -5258,14 +5706,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8TPSDKT2P11TransactionV11orderNumberSSvg",
-                "mangledName": "$s8TPSDKT2P11TransactionV11orderNumberSSvg",
+                "usr": "s:8TPSDKT2P11TransactionV11orderNumberSSSgvg",
+                "mangledName": "$s8TPSDKT2P11TransactionV11orderNumberSSSgvg",
                 "moduleName": "TPSDKT2P",
                 "implicit": true,
                 "accessorKind": "get"
@@ -6795,13 +7251,6 @@
       },
       {
         "kind": "Import",
-        "name": "ProximityReader",
-        "printedName": "ProximityReader",
-        "declKind": "Import",
-        "moduleName": "TPSDKT2P"
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -7737,212 +8186,688 @@
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 1406,
+      "offset": 931,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 1410,
+      "offset": 1438,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 1458,
+      "offset": 1442,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 1462,
+      "offset": 1490,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 1514,
+      "offset": 1494,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 1518,
+      "offset": 1546,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1550,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 1606,
+      "length": 2,
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 2843,
+      "offset": 2897,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "StringLiteral",
-      "offset": 7291,
+      "offset": 3531,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 3889,
+      "length": 19,
+      "value": "\"Start preparing\n\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4041,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 5013,
+      "length": 17,
+      "value": "\"Prepare error: \""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 5033,
+      "length": 38,
+      "value": "\"invalidReaderToken(\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 5066,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 5069,
+      "length": 1,
+      "value": "\")\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 5074,
+      "length": 4,
+      "value": "\": \""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5211,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5275,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5686,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5832,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 6146,
+      "length": 17,
+      "value": "\"Prepare error: \""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 6166,
+      "length": 14,
+      "value": "\"tokenExpired\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 6183,
+      "length": 4,
+      "value": "\": \""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6320,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6384,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6795,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6941,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 7258,
+      "length": 17,
+      "value": "\"Prepare error: \""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 7278,
+      "length": 29,
+      "value": "\"backgroundRequestNotAllowed\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7667,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 7857,
+      "length": 17,
+      "value": "\"Prepare error: \""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 8046,
+      "length": 17,
+      "value": "\"Prepare error: \""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 8920,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 9087,
       "length": 5,
       "value": "\"TWD\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "StringLiteral",
-      "offset": 7469,
+      "offset": 9265,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "StringLiteral",
-      "offset": 7777,
+      "offset": 9367,
+      "length": 17,
+      "value": "\"Session error: \""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 9387,
+      "length": 15,
+      "value": "\"readCancelled\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 9625,
+      "length": 17,
+      "value": "\"Session error: \""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 9645,
+      "length": 17,
+      "value": "\"noReaderSession\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 9871,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 10103,
+      "length": 17,
+      "value": "\"Session error: \""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 10296,
+      "length": 17,
+      "value": "\"Session error: \""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10841,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10845,
+      "length": 2,
+      "value": "50"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10879,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10883,
+      "length": 2,
+      "value": "40"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 8240,
+      "offset": 11018,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 8602,
+      "offset": 11380,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 13402,
+      "offset": 11627,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PDataManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1077,
-      "length": 2,
-      "value": "\"\""
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11865,
+      "length": 1,
+      "value": "3"
     },
     {
-      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PDataManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1089,
-      "length": 2,
-      "value": "\"\""
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11925,
+      "length": 1,
+      "value": "1"
     },
     {
-      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PDataManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1105,
-      "length": 2,
-      "value": "\"\""
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12740,
+      "length": 1,
+      "value": "0"
     },
     {
-      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PDataManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1845,
-      "length": 2,
-      "value": "\"\""
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12848,
+      "length": 1,
+      "value": "0"
     },
     {
-      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PManager.swift",
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13018,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13078,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13386,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 16854,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "StringLiteral",
-      "offset": 1751,
+      "offset": 17330,
       "length": 7,
-      "value": "\"1.0.2\""
+      "value": "\"coder\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "FloatLiteral",
+      "offset": 17680,
+      "length": 4,
+      "value": "50.0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "FloatLiteral",
+      "offset": 17685,
+      "length": 5,
+      "value": "343.0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "FloatLiteral",
+      "offset": 17853,
+      "length": 4,
+      "value": "10.0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "FloatLiteral",
+      "offset": 17858,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "FloatLiteral",
+      "offset": 17872,
+      "length": 5,
+      "value": "122.0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "FloatLiteral",
+      "offset": 17878,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 17891,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 17903,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 17948,
+      "length": 26,
+      "value": "\"wave.3.right.circle.fill\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 18040,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 18049,
+      "length": 4,
+      "value": "-110"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "FloatLiteral",
+      "offset": 18085,
+      "length": 5,
+      "value": "343.0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 18100,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 18110,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 18234,
+      "length": 4,
+      "value": "\"zh\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 18268,
+      "length": 18,
+      "value": "\"iPhone 卡緊收\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 18344,
+      "length": 22,
+      "value": "\"Tap to Pay on iPhone\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 18475,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PDataManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1111,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PDataManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1123,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PDataManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1139,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 548,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PManager.swift",
       "kind": "StringLiteral",
-      "offset": 2890,
+      "offset": 1836,
+      "length": 7,
+      "value": "\"1.0.5\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2974,
       "length": 104,
       "value": "\"目前最低支援版本：SDK: \""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PManager.swift",
       "kind": "StringLiteral",
-      "offset": 2952,
+      "offset": 3036,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PManager.swift",
       "kind": "StringLiteral",
-      "offset": 2955,
+      "offset": 3039,
       "length": 1,
       "value": "\", iOS: \""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PManager.swift",
       "kind": "StringLiteral",
-      "offset": 2990,
+      "offset": 3074,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PManager.swift",
       "kind": "StringLiteral",
-      "offset": 2993,
+      "offset": 3077,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PManager.swift",
       "kind": "StringLiteral",
-      "offset": 3027,
+      "offset": 3111,
       "length": 63,
       "value": "\"目前最新版本：SDK: \""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PManager.swift",
       "kind": "StringLiteral",
-      "offset": 3086,
+      "offset": 3170,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PManager.swift",
       "kind": "StringLiteral",
-      "offset": 3089,
+      "offset": 3173,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PManager.swift",
       "kind": "StringLiteral",
-      "offset": 3140,
+      "offset": 3224,
       "length": 20,
       "value": "\"取得版本失敗\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PManager+Extension.swift",
       "kind": "BooleanLiteral",
-      "offset": 626,
+      "offset": 619,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PManager+Extension.swift",
       "kind": "BooleanLiteral",
-      "offset": 701,
+      "offset": 694,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PManager+Extension.swift",
       "kind": "BooleanLiteral",
-      "offset": 743,
+      "offset": 736,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PManager+Extension.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1007,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PManager+Extension.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1054,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PManager+Extension.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1381,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PManager+Extension.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1455,
+      "length": 1,
+      "value": "1"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
@@ -7968,280 +8893,315 @@
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 965,
+      "offset": 972,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 1004,
+      "offset": 1011,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 1126,
+      "offset": 1133,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1159,
+      "offset": 1166,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 1522,
+      "offset": 1529,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1946,
+      "offset": 1953,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 2054,
+      "offset": 2061,
       "length": 5,
       "value": "-1009"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 2179,
+      "offset": 2186,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 2866,
+      "offset": 2873,
       "length": 12,
       "value": "\"merchantId\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 2992,
+      "offset": 2999,
       "length": 17,
       "value": "\"merchantAccount\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 3123,
+      "offset": 3130,
       "length": 12,
       "value": "\"terminalId\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 5700,
+      "offset": 5707,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 5712,
+      "offset": 5719,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 5728,
+      "offset": 5735,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 6146,
+      "offset": 6153,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 6390,
+      "offset": 6397,
       "length": 5,
       "value": "\"lon\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 6404,
+      "offset": 6411,
       "length": 42,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 6445,
+      "offset": 6452,
       "length": 24,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 6468,
+      "offset": 6475,
       "length": 5,
       "value": "\"lat\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 6482,
+      "offset": 6489,
       "length": 41,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "StringLiteral",
-      "offset": 6522,
+      "offset": 6529,
       "length": 3,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 6818,
+      "offset": 6825,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 6875,
+      "offset": 6882,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 6947,
+      "offset": 6954,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 7052,
+      "offset": 7059,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 7326,
+      "offset": 7333,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 7493,
+      "offset": 7500,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 7860,
+      "offset": 7867,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 8104,
+      "offset": 8111,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 8107,
+      "offset": 8114,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 8271,
+      "offset": 8278,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 8667,
+      "offset": 8674,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 8883,
+      "offset": 8890,
       "length": 3,
       "value": "500"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 9048,
+      "offset": 9055,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "BooleanLiteral",
-      "offset": 9096,
+      "offset": 9103,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 11247,
+      "offset": 11540,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 11498,
+      "offset": 11791,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 11658,
+      "offset": 11951,
       "length": 1,
       "value": "1"
     },
     {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13862,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
+      "kind": "StringLiteral",
+      "offset": 13920,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
+      "kind": "StringLiteral",
+      "offset": 14185,
+      "length": 26,
+      "value": "\"yyyy-MM-dd HH:mm:ss.SSS \""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
+      "kind": "StringLiteral",
+      "offset": 14231,
+      "length": 46,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
+      "kind": "StringLiteral",
+      "offset": 14275,
+      "length": 1,
+      "value": "\" \""
+    },
+    {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/Model\/Transaction\/Transaction.swift",
       "kind": "StringLiteral",
-      "offset": 345,
+      "offset": 443,
       "length": 6,
       "value": "\"data\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/Model\/Transaction\/Transaction.swift",
       "kind": "StringLiteral",
-      "offset": 345,
+      "offset": 443,
       "length": 6,
       "value": "\"data\""
     },
@@ -8272,6 +9232,55 @@
       "offset": 971,
       "length": 3,
       "value": "\"&\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/Extension.swift",
+      "kind": "StringLiteral",
+      "offset": 1283,
+      "length": 13,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/Extension.swift",
+      "kind": "StringLiteral",
+      "offset": 1295,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/Extension.swift",
+      "kind": "Array",
+      "offset": 3469,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/Extension.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3497,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/Extension.swift",
+      "kind": "StringLiteral",
+      "offset": 5350,
+      "length": 20,
+      "value": "\"Invalid JSON value\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/Extension.swift",
+      "kind": "Array",
+      "offset": 6732,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/Extension.swift",
+      "kind": "StringLiteral",
+      "offset": 6862,
+      "length": 20,
+      "value": "\"Invalid JSON value\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/Extension\/URLRequest+Extension.swift",
@@ -8493,7 +9502,7 @@
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/TPT2PAuthManager.swift",
       "kind": "StringLiteral",
-      "offset": 1199,
+      "offset": 1268,
       "length": 9,
       "value": "\"success\""
     },
@@ -8927,65 +9936,72 @@
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 5841,
+      "offset": 6124,
       "length": 7,
       "value": "\"\/bind\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 6017,
+      "offset": 6300,
       "length": 7,
       "value": "\"\/bind\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 6332,
+      "offset": 6615,
       "length": 7,
       "value": "\"\/bind\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 6585,
+      "offset": 6868,
       "length": 14,
       "value": "\"\/transaction\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 6929,
+      "offset": 7212,
       "length": 15,
       "value": "\"\/receipt\/sign\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 7328,
+      "offset": 7611,
       "length": 21,
       "value": "\"\/receipt\/cardholder\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 7694,
+      "offset": 7977,
       "length": 15,
       "value": "\"\/bind\/refresh\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 7937,
+      "offset": 8220,
       "length": 11,
       "value": "\"\/location\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 8106,
+      "offset": 8389,
       "length": 14,
       "value": "\"\/setting\/ios\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 8561,
+      "length": 8,
+      "value": "\"\/error\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/Extension\/UIDevice+modelName.swift",
@@ -10592,141 +11608,127 @@
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 4086,
-      "length": 21,
-      "value": "\"API: \""
-    },
-    {
-      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 4106,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 4416,
+      "offset": 4450,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 4422,
+      "offset": 4456,
       "length": 3,
       "value": "201"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 4961,
+      "offset": 4995,
       "length": 7,
       "value": "\"login\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 4973,
+      "offset": 5007,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 5018,
+      "offset": 5052,
       "length": 8,
       "value": "\"qrcode\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 5031,
+      "offset": 5065,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 5957,
+      "offset": 5991,
       "length": 44,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 5988,
+      "offset": 6022,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 5990,
+      "offset": 6024,
       "length": 1,
       "value": "\",\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6000,
+      "offset": 6034,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 6088,
+      "offset": 6122,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 6252,
+      "offset": 6286,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6810,
+      "offset": 6844,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6896,
+      "offset": 6930,
       "length": 27,
       "value": "\"sandbox-yms.tappaysdk.com\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6964,
+      "offset": 6998,
       "length": 24,
       "value": "\"prod-yms.tappaysdk.com\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 7501,
+      "offset": 7535,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 7587,
+      "offset": 7621,
       "length": 35,
       "value": "\"sandbox-yms-receipt.tappaysdk.com\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader\/TPSDKT2P\/TPSDKT2P\/API\/APIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 7663,
+      "offset": 7697,
       "length": 32,
       "value": "\"prod-yms-receipt.tappaysdk.com\""
     }
