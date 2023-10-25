@@ -4,7 +4,7 @@
 
 ## Requirement
 
-- Tap to Pay on iPhone只支援 iPhone Xs 以上機型 和 iOS 16.4 以上版本
+- Tap to Pay on iPhone只支援 iPhone XS 以上機型 和 iOS 16.4 以上版本
 
 ## How to start
 ---
@@ -19,8 +19,8 @@
 #### 請洽TapPay業務
 ---
 ### Install the SDK
-1. 進入TPT2P-Example，複製TPSDKT2P.framework到您的專案下
-2. 開啟您的專案，到Build Phases下，展開Link Binary With Libraries，點擊"+"並加入TPSDKT2P.framework
+1. 進入TPT2P-Example，複製TPSDKT2P.xcframework到您的專案下
+2. 開啟您的專案，到Build Phases下，展開Link Binary With Libraries，點擊"+"並加入TPSDKT2P.xcframework
 ---
 
 ### Setup entitlement file
@@ -73,14 +73,14 @@
   ### Initialize service with app key
   #### Function
   ```swift
-  func setupWithAppKey(_ registeredAppKey: String!,_ partnerAccount: String? = nil, _ environment: Environment!) async throws
+  func setupWithAppKey(appKey: String!, environment: Environment!, partnerAccount: String? = nil, isInherit: Bool? = nil) async throws
   ```
   #### Sample
   ```swift
   // Sample code
   Task {
       do {
-          try await TPT2PManager.shared.setupWithAppKey("123456789", "partnerAccount",  .production)
+          try await TPT2PManager.shared.setupWithAppKey(appKey:"123456789", environment: .production, partnerAccount: "partnerAccount", isInherit: true)
       }catch {
           // error handling
       }
@@ -89,10 +89,11 @@
   #### Parameters
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
-  | registeredAppKey  | String | 用於SDK的驗證金鑰 |
-  | partnerAccount  | String | (Optional) Partner Account |
+  | appKey  | String | 用於SDK的驗證金鑰 |
   | environment  | Environment | 使用的伺服器種類<br>測試時請使用 Sandbox 環境 (Environment.sandbox, .sandbox)<br>實體上線後請切換至 Production 環境 (Environment.production, .production) |
-
+  | partnerAccount  | String | (Optional) Partner Account |
+  | isInherit  | Bool | (Optional) <br> true => 若該手機已有綁定terminal，SDK initialize時不會解綁該手機的綁定 <br> false => 若該手機已有綁定terminal，SDK initialize時會解綁該手機的綁定 |
+  
   ---
   ## Bind
   ### Get binding status
