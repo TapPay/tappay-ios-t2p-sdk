@@ -92,7 +92,7 @@
   | appKey  | String | 用於SDK的驗證金鑰 |
   | environment  | Environment | 使用的伺服器種類<br>測試時請使用 Sandbox 環境 (Environment.sandbox, .sandbox)<br>實體上線後請切換至 Production 環境 (Environment.production, .production) |
   | partnerAccount  | String | (Optional) Partner Account |
-  | isInherit  | Bool | (Optional) <br> true => SDK initialize時不進行解除幫定動作。(舉例應用)APP 處於登入狀態，且沿用目前綁定之Terminal <br> false => SDK initialize同時進行解除幫定動作。(舉例應用) APP 處於登出狀態，無法確定是否有綁定或綁定資訊是否正確 |
+  | isInherit  | Bool | (Optional) <br> true => SDK initialize時不進行解除綁定動作。(舉例應用)APP 處於登入狀態，且沿用目前綁定之Terminal <br> false => SDK initialize同時進行解除綁定動作。(舉例應用) APP 處於登出狀態，無法確定是否有綁定或綁定資訊是否正確 |
   
   ---
   ## Bind
@@ -220,6 +220,51 @@
       }
   }
   ```
+  ### Start configuring reader callback
+  #### Function
+  ```swift
+  protocol TPT2PReaderDelegate {
+    func startConfiguring(reader: TPT2PReader)
+  }
+  ```
+  #### Sample
+  ```swift
+  // Sample code
+  class ViewController: UIViewController, TPT2PReaderDelegate {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        TPT2PReader.shared().delegate = self
+    }
+
+    func startConfiguring(reader: TPT2PReader) {
+        // Do something when reader started preparing, ex. show indicator
+    }
+  }
+  ```
+  ### End configuring reader callback
+  #### Function
+  ```swift
+  protocol TPT2PReaderDelegate {
+    func endConfiguring(reader: TPT2PReader, error: TPT2PError?)
+  }
+  ```
+  #### Sample
+  ```swift
+  // Sample code
+  class ViewController: UIViewController, TPT2PReaderDelegate {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        TPT2PReader.shared().delegate = self
+    }
+
+    func endConfiguring(reader: TPSDKT2P.TPT2PReader, error: TPSDKT2P.TPT2PError?) {
+        // Do something when reader finished preparing
+    }
+  }
+  ```
+  
   ### Get reader event
   #### Function
   ```swift
@@ -245,19 +290,40 @@
     }
   }
   ```
+  ### Tap to Pay on iPhone Button
+  #### Sample
+  ```swift
+  // Sample code
+  class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let tapToPayButton = TPT2PReaderButton()
+        // The recommand width is 343, and you don't have to setup height because the button designed with a fix ratio
+        tapToPayButton.frame = CGRect(x: 0, y: 0, width: 343, height: 0)
+        tapToPayButton.center = view.center
+        view.addSubview(tapToPayButton)
+        tapToPayButton.onClick = {
+            // You can call read readCardAndAuthorization() in this closure
+        }
+    }
+
+  }
+  ```
 ---
   ## Transaction
   ### Transaction authorization
   #### Function
   ```swift
-  func readCardAndAuthorization(amount: Decimal) async throws -> Transaction?
+  func readCardAndAuthorization(amount: Decimal, orderNumber: String? = nil, bankTransactionId: String? = nil, extensions: Dictionary<String, Any>? = nil) async throws -> Transaction?
   ```
   #### Sample
   ```swift
   // Sample code
   Task {
       do {
-          let transactionResult = try await TPT2PReader.shared.readCardAndAuthorization(amount: 100)
+          let transactionResult = try await TPT2PReader.shared.readCardAndAuthorization(amount: 100, orderNumber: "orderNumber", bankTransactionId: "bankTransactionId", extensions: ["Other": "Set something you want to keep and query later"])
       }catch {
           // error handling
       }
@@ -267,6 +333,9 @@
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
   | amount  | Decimal | 交易金額 |
+  | orderNumber  | String | (Optional) 訂單編號（商戶系統帶入） |
+  | bankTransactionId  | String | (Optional) 銀行交易編號 |
+  | extensions  | Dictionary<String, Any> | (Optional) 備用交易資訊 |
 
   ### Response
   #### Item detail
