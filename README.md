@@ -92,7 +92,7 @@
   | appKey  | String | 用於SDK的驗證金鑰 |
   | environment  | Environment | 使用的伺服器種類<br>測試時請使用 Sandbox 環境 (Environment.sandbox, .sandbox)<br>實體上線後請切換至 Production 環境 (Environment.production, .production) |
   | partnerAccount  | String | (Optional) Partner Account |
-  | isInherit  | Bool | (Optional) <br> true => 若該手機已有綁定terminal，SDK initialize時不會解綁該手機的綁定 <br> false => 若該手機已有綁定terminal，SDK initialize時會解綁該手機的綁定 |
+  | isInherit  | Bool | (Optional) <br> true => SDK initialize時不進行解除幫定動作。(舉例應用)APP 處於登入狀態，且沿用目前綁定之Terminal <br> false => SDK initialize同時進行解除幫定動作。(舉例應用) APP 處於登出狀態，無法確定是否有綁定或綁定資訊是否正確 |
   
   ---
   ## Bind
