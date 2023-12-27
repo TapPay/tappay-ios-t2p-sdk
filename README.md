@@ -121,7 +121,7 @@
   Task {
       do {
           // Get 10 bind items per page, the first page of list
-          let bindList = try await TPT2PService.shared.getBindingList(page: 0, countPerPage: 10, merchantId: "merchantId", merchantAccount: "merchantAccount", terminalId: "terminalId")
+          let bindList = try await TPT2PService.shared.getBindingList(page: 0, countPerPage: 10, merchantAccount: "merchantAccount", terminalId: "terminalId")
       }catch {
           // error handling
       }
@@ -132,7 +132,6 @@
   |  :----  | :----  | :---- |
   | page  | Int | 第幾頁 |
   | countPerPage  | Int | 每頁筆數 |
-  | merchantId  | String | (Optional) TapPay商店代碼 |
   | merchantAccount  | String | (Optional) 商店代號 |
   | terminalId  | String | (Optional) 端末機代號 |
 
