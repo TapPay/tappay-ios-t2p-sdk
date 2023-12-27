@@ -113,7 +113,7 @@
   ### Get binding list
   #### Function
   ```swift
-  func getBindingList(page: Int, countPerPage: Int, merchantId: String? = nil, merchantAccount: String? = nil, terminalId: String? = nil) async throws -> [BindItem]?
+  func getBindingList(page: Int, countPerPage: Int, merchantAccount: String? = nil, terminalId: String? = nil) async throws -> [BindItem]?
   ```
   #### Sample
   ```swift
