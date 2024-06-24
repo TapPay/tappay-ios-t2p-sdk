@@ -312,17 +312,66 @@
   ```
 ---
   ## Transaction
-  ### Transaction authorization
+  ### Get installment info
   #### Function
   ```swift
-  func readCardAndAuthorization(amount: Decimal, orderNumber: String? = nil, bankTransactionId: String? = nil) async throws -> Transaction?
+  func getInstallmentInfo() async throws -> Installment?
   ```
   #### Sample
   ```swift
   // Sample code
   Task {
       do {
-          let transactionResult = try await TPT2PReader.shared.readCardAndAuthorization(amount: 100, orderNumber: "orderNumber", bankTransactionId: "bankTransactionId")
+          let transactionResult = try await TPT2PService.shared.getInstallmentInfo
+      }catch {
+          // error handling
+      }
+  }
+  ```
+
+  ### Response
+  #### Item detail
+  ```swift
+  struct Installment: Codable {
+    public let receiptId: String
+    public let transactionId: String
+    public let bankTransactionId: String
+    public let orderNumber: String
+    public let state: Int
+    public let createTime: CLong
+    public let amount: Double
+    public let currency: String
+    public let cardMask : String
+    public let authCode: String
+    public let needSignature: Bool
+  }
+  ```
+  #### Parameters
+  |  Parameter   | Type  |  Description   | 
+  |  :----  | :----  | :---- |
+  | receiptId  | String | 簽單編號 |
+  | transactionId  | String | 交易編號 |
+  | bankTransactionId  | String | 銀行交易編號 |
+  | orderNumber  | String | 訂單編號（商戶系統帶入）|
+  | state  | Int | 交易狀態<br>-1  : ERROR<br>0   : AUTH_SUCCESS<br>1   : SETTLE_SUCCESS<br>3  : CANCEL_SUCCESS |
+  | createTime  | CLong | 訂單時間 |
+  | amount  | Double | 交易金額 |
+  | currency  | String | 幣別 |
+  | cardMask  | String | 卡號資訊（屏蔽）|
+  | authCode  | String | 授權碼 |
+  | needSignature  | Bool | 交易需要簽名與否 |
+  
+  ### Transaction authorization
+  #### Function
+  ```swift
+  func readCardAndAuthorization(amount: Decimal, installmentCode: String? = nil, orderNumber: String? = nil, bankTransactionId: String? = nil) async throws -> Transaction?
+  ```
+  #### Sample
+  ```swift
+  // Sample code
+  Task {
+      do {
+          let transactionResult = try await TPT2PReader.shared.readCardAndAuthorization(amount: 100, installmentCode: "0300" orderNumber: "orderNumber", bankTransactionId: "bankTransactionId")
       }catch {
           // error handling
       }
@@ -332,6 +381,7 @@
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
   | amount  | Decimal | 交易金額 |
+  | installmentCode  | String | (Optional) 分期產品代碼<br>範例：3期：0300 |
   | orderNumber  | String | (Optional) 訂單編號（商戶系統帶入） |
   | bankTransactionId  | String | (Optional) 銀行交易編號 |
 
@@ -366,6 +416,23 @@
   | cardMask  | String | 卡號資訊（屏蔽）|
   | authCode  | String | 授權碼 |
   | needSignature  | Bool | 交易需要簽名與否 |
+
+  ### Cancel Read Process
+  #### Function
+  ```swift
+  func func cancelReadProcess() async throws
+  ```
+  #### Sample
+  ```swift
+  // Sample code
+  Task {
+      do {
+          try await TPT2PReader.shared.cancelReadProcess()
+      }catch {
+          // error handling
+      }
+  }
+  ```
 
   ### Upload signature
   #### Function
