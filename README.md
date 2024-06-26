@@ -313,9 +313,10 @@
 ---
   ## Transaction
   ### Get installment info
+  可以先透過 SDK 取得支援的發卡機構與分期期數，再由 APP 前端提供使用者選擇「發卡機構」、「期數」及支援的「分期產品代碼」，如：3期分期的產品代碼請帶入0300；12期分期的產品代碼請帶入1200。
   #### Function
   ```swift
-  func getInstallmentInfo() async throws -> Installment?
+  func getInstallmentInfo() async throws -> [IssuerItem]?
   ```
   #### Sample
   ```swift
@@ -330,36 +331,42 @@
   ```
 
   ### Response
-  #### Item detail
+  #### Issuer Item
   ```swift
-  struct Installment: Codable {
-    public let receiptId: String
-    public let transactionId: String
-    public let bankTransactionId: String
-    public let orderNumber: String
-    public let state: Int
-    public let createTime: CLong
-    public let amount: Double
-    public let currency: String
-    public let cardMask : String
-    public let authCode: String
-    public let needSignature: Bool
+  struct IssuerItem: Codable {
+    public let issuerCode: String?
+    public let name: String?
+    public let displayName: String?
+    public let icon: String?
+    public let codes:[CodeItem]?
   }
   ```
   #### Parameters
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
-  | receiptId  | String | 簽單編號 |
-  | transactionId  | String | 交易編號 |
-  | bankTransactionId  | String | 銀行交易編號 |
-  | orderNumber  | String | 訂單編號（商戶系統帶入）|
-  | state  | Int | 交易狀態<br>-1  : ERROR<br>0   : AUTH_SUCCESS<br>1   : SETTLE_SUCCESS<br>3  : CANCEL_SUCCESS |
-  | createTime  | CLong | 訂單時間 |
-  | amount  | Double | 交易金額 |
-  | currency  | String | 幣別 |
-  | cardMask  | String | 卡號資訊（屏蔽）|
-  | authCode  | String | 授權碼 |
-  | needSignature  | Bool | 交易需要簽名與否 |
+  | issuerCode  | String | 發卡行代碼 |
+  | name  | String | 發卡行名稱 |
+  | displayName  | String | 發卡行顯示名稱 |
+  | icon  | String | 發卡行icon |
+  | codes  | Array<CodeItem> | 所支援的分期產品代碼 |
+
+  #### Code Item
+  ```swift
+  struct CodeItem: Codable {
+    public let code: String
+    public let period: Int
+    public let name: String
+    public let description: String?
+  }
+  ```
+  #### Parameters
+  |  Parameter   | Type  |  Description   | 
+  |  :----  | :----  | :---- |
+  | code  | String | 分期產品代碼 |
+  | period  | Int | 分期期數 |
+  | displayName  | String | 發卡行顯示名稱 |
+  | name  | String | 分期名稱 |
+  | description  | String | 分期描述 |
   
   ### Transaction authorization
   #### Function
