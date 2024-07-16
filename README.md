@@ -132,35 +132,39 @@
   |  :----  | :----  | :---- |
   | page  | Int | 第幾頁 |
   | countPerPage  | Int | 每頁筆數 |
-  | merchantAccount  | String | (Optional) 商店代號 |
-  | terminalId  | String | (Optional) 端末機代號 |
+  | acquirerMerchantId  | String | (Optional) 收單機構商店代號 |
+  | acquirerTerminalId  | String | (Optional) 收單機構端末機代號 |
 
   ### Response
   #### Item detail
   ```swift
   struct BindItem: Codable {
-    public let id: String?
+    public let terminalId: Int
     public let partnerId: Int
     public let acquirerId: Int
-    public let acquirerName: String?
-    public let acquirerIcon: String?
-    public let merchantId: String?
-    public let merchantAccount: String?
-    public let terminalId: String?
-    public let hash: String?
+    public let acquirerName: String
+    public let acquirerIcon: String
+    public let acquirerMerchantId: String
+    public let acquirerTerminalId: String
+    public let type: Int
+    public let name: String?
+    public let description: String?
+    public let hash: String
   }
   ```
   #### Parameters
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
-  | id  | String | 綁定代號 |
+  | terminalId  | Int | 系統流水編號 |
   | partnerId  | Int | Partner代號 |
   | acquirerId  | Int | 收單機構代號 |
   | acquirerName  | Int | 收單機構名稱 |
-  | acquirerIcon  | String | 收單機構logo |
-  | merchantId  | String | TapPay商店代碼 |
-  | merchantAccount  | String | 商店代號 |
-  | terminalId  | String | 端末機代號 |
+  | acquirerIcon  | String | 收單機構圖示 |
+  | acquirerMerchantId  | String | 收單機構商店代號 |
+  | acquirerTerminalId  | String | 端末機代號 |
+  | type  | Int | 收單類型<br>0  : 一般交易<br>1   : 分期交易<br>2   : 一般/分期交易 |
+  | name  | String | 簽單顯示名稱 |
+  | description  | String | 端末機描述 |
   | hash  | String | 綁定資訊 |
 
   ### Bind
