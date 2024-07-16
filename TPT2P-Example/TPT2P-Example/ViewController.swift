@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  TPT2P-Example
 //
-// SDK Version: 1.0.2
+// SDK Version: 1.0.6
 
 import UIKit
 import TPSDKT2P
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
         if TPT2PReader.isReaderBinded == false {
             Task {
                 do {
-                    let result = try await TPT2PService.shared().getBindingList(page: 0, countPerPage: 10, merchantId: "test", merchantAccount: "test", terminalId: "test")
+                    let result = try await TPT2PService.shared().getBindingList(page: 0, countPerPage: 10)
                     bindList = result
                     bindingListTableView.reloadData()
                     DispatchQueue.main.async {
@@ -95,6 +95,11 @@ class ViewController: UIViewController {
                         self.bindingListTableView.isHidden = true
                         self.bindBtn.isHidden = true
                     }
+                  
+                  if TPT2PReader.isReaderBinded == true {
+                    let installmentInfo = try await TPT2PService.shared().getInstallmentInfo()
+                    print(installmentInfo)
+                  }
                 }catch {
                     print(error)
                 }
@@ -123,7 +128,7 @@ class ViewController: UIViewController {
         if TPT2PReader.isReaderBinded == true {
             Task {
                 do {
-                    let result = try await TPT2PReader.shared().readCardAndAuthorization(amount: 3001, orderNumber: "test", bankTransactionId: "test", extensions: ["test": "test"])
+                    let result = try await TPT2PReader.shared().readCardAndAuthorization(amount: 3001)
                     transactionResult = result
                     if result?.needSignature == true {
                         let controller = storyboard?.instantiateViewController(withIdentifier: "SignViewController") as? SignViewController
@@ -197,7 +202,7 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         if bindList?.count ?? 0 > indexPath.row {
             let bindItem = bindList![indexPath.row]
-            cell.textLabel?.text = bindItem.terminalId
+          cell.textLabel?.text = bindItem.acquirerTerminalId
         }
         if indexPath.row == selectedRow {
             cell.contentView.backgroundColor = .blue.withAlphaComponent(0.5)
