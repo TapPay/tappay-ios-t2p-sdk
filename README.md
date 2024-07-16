@@ -4,7 +4,7 @@
 
 ## Requirement
 
-- Tap to Pay on iPhone只支援 iPhone XS 以上機型 和 iOS 16.4 以上版本
+- Tap to Pay on iPhone只支援 iPhone XS 以上機型 和 iOS 16.7 以上版本
 
 ## How to start
 ---
