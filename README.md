@@ -498,6 +498,40 @@
   |  :----  | :----  | :---- |
   | receiptUrl  | String | 簽單URL |
 
+  ### Get receipt list
+  #### Function
+  ```swift
+  func getReceiptList(transactionIdentifier: String, transactionType: [TransactionType]? = nil) async throws -> ReceiptList?
+  ```
+  #### Sample
+  ```swift
+  // Sample code
+  Task {
+      do {
+          let receiptList = try await TPT2PService.shared.getReceiptList(transactionIdentifier: "XXX", transactionType: [.sale, .void])
+      }catch {
+          // error handling
+      }
+  }
+  ```
+  #### Parameters
+  |  Parameter   | Type  |  Description   | 
+  |  :----  | :----  | :---- |
+  | transactionIdentifier  | String | 交易編號 |
+  | transactionType  | TransactionType | 簽單類型<br>sale  : 銷售<br>void   : 取消授權 |
+
+  ### Response
+  #### Item detail
+  |  Parameter   | Type  |  Description   | 
+  |  :----  | :----  | :---- |
+  | receiptId  | String | 簽單編號 |
+  | transactionType  | TransactionType | 簽單類型<br>sale  : 銷售<br>void   : 取消授權 |
+  | createTime  | CLong | 簽單產生時間 |
+  | amount  | Double | 交易金額 |
+  | currency  | String | 幣別 |
+  | needSignature  | Bool | 交易需要簽名與否 |
+  | receiptUrl  | String | 簽單Url |
+
   ### Get receipt (For backend)
   
 #### 請參考 [TapPay Tap to Pay on iPhone Document for Backend](https://cherricorp.gitbook.io/tappay-tap-to-pay-on-iphone-document-for-backend/)
