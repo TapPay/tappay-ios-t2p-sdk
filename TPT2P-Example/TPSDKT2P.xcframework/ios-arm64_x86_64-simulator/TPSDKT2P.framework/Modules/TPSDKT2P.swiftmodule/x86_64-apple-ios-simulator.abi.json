@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "TPSDKT2P",
+    "printedName": "TPSDKT2P",
     "children": [
       {
         "kind": "Import",
@@ -163,6 +163,22 @@
         "moduleName": "TPSDKT2P",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -1172,6 +1188,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Sendable",
                 "printedName": "Sendable",
                 "usr": "s:s8SendableP",
@@ -1201,6 +1231,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -1294,8 +1338,9 @@
             "moduleName": "TPSDKT2P",
             "declAttributes": [
               "HasInitialValue",
-              "HasStorage",
+              "Preconcurrency",
               "Custom",
+              "HasStorage",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -1421,6 +1466,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Override",
               "AccessControl"
@@ -1433,6 +1479,7 @@
         "mangledName": "$s8TPSDKT2P17TPT2PReaderButtonC",
         "moduleName": "TPSDKT2P",
         "declAttributes": [
+          "Preconcurrency",
           "Custom",
           "AccessControl",
           "ObjC"
@@ -1448,6 +1495,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -1554,8 +1615,8 @@
         "children": [
           {
             "kind": "Var",
-            "name": "readerIDMissed",
-            "printedName": "readerIDMissed",
+            "name": "readerNotFound",
+            "printedName": "readerNotFound",
             "children": [
               {
                 "kind": "TypeFunc",
@@ -1585,8 +1646,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:8TPSDKT2P10TPT2PErrorO14readerIDMissedyA2CmF",
-            "mangledName": "$s8TPSDKT2P10TPT2PErrorO14readerIDMissedyA2CmF",
+            "usr": "s:8TPSDKT2P10TPT2PErrorO14readerNotFoundyA2CmF",
+            "mangledName": "$s8TPSDKT2P10TPT2PErrorO14readerNotFoundyA2CmF",
             "moduleName": "TPSDKT2P",
             "declAttributes": [
               "RawDocComment"
@@ -3958,6 +4019,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Error",
             "printedName": "Error",
             "usr": "s:s5ErrorP",
@@ -4197,6 +4272,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -4396,6 +4485,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -5229,6 +5332,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -5610,6 +5727,7 @@
                     "usr": "s:Si"
                   }
                 ],
+                "hasDefaultArg": true,
                 "usr": "s:Sq"
               },
               {
@@ -5634,6 +5752,65 @@
             "declAttributes": [
               "AccessControl",
               "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getReceiptList",
+            "printedName": "getReceiptList(transactionIdentifier:transactionType:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TPSDKT2P.ReceiptList?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReceiptList",
+                    "printedName": "TPSDKT2P.ReceiptList",
+                    "usr": "s:8TPSDKT2P11ReceiptListV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[TPSDKT2P.TransactionType]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[TPSDKT2P.TransactionType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TransactionType",
+                        "printedName": "TPSDKT2P.TransactionType",
+                        "usr": "s:8TPSDKT2P15TransactionTypeO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8TPSDKT2P12TPT2PServiceC14getReceiptList21transactionIdentifier0G4TypeAA0eF0VSgSS_SayAA011TransactionI0OGSgtYaKF",
+            "mangledName": "$s8TPSDKT2P12TPT2PServiceC14getReceiptList21transactionIdentifier0G4TypeAA0eF0VSgSS_SayAA011TransactionI0OGSgtYaKF",
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "AccessControl"
             ],
             "throwing": true,
             "funcSelfKind": "NonMutating"
@@ -5714,7 +5891,23 @@
         "declAttributes": [
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -6120,6 +6313,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -6773,6 +6980,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -6852,6 +7073,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Decodable",
@@ -7175,6 +7410,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -7321,6 +7570,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Decodable",
@@ -7973,6 +8236,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -8110,6 +8387,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Decodable",
@@ -8608,6 +8899,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -8934,6 +9239,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -8981,16 +9300,6 @@
         "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "TPSDKT2P"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "TPSDKT2P",
-        "declAttributes": [
-          "RawDocComment"
-        ]
       },
       {
         "kind": "Import",
@@ -9245,6 +9554,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -9281,6 +9604,1011 @@
         "moduleName": "TPSDKT2P",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TransactionType",
+        "printedName": "TransactionType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sale",
+            "printedName": "sale",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TPSDKT2P.TransactionType.Type) -> TPSDKT2P.TransactionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TransactionType",
+                    "printedName": "TPSDKT2P.TransactionType",
+                    "usr": "s:8TPSDKT2P15TransactionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TPSDKT2P.TransactionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TransactionType",
+                        "printedName": "TPSDKT2P.TransactionType",
+                        "usr": "s:8TPSDKT2P15TransactionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TPSDKT2P15TransactionTypeO4saleyA2CmF",
+            "mangledName": "$s8TPSDKT2P15TransactionTypeO4saleyA2CmF",
+            "moduleName": "TPSDKT2P"
+          },
+          {
+            "kind": "Var",
+            "name": "void",
+            "printedName": "void",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TPSDKT2P.TransactionType.Type) -> TPSDKT2P.TransactionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TransactionType",
+                    "printedName": "TPSDKT2P.TransactionType",
+                    "usr": "s:8TPSDKT2P15TransactionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TPSDKT2P.TransactionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TransactionType",
+                        "printedName": "TPSDKT2P.TransactionType",
+                        "usr": "s:8TPSDKT2P15TransactionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TPSDKT2P15TransactionTypeO4voidyA2CmF",
+            "mangledName": "$s8TPSDKT2P15TransactionTypeO4voidyA2CmF",
+            "moduleName": "TPSDKT2P"
+          },
+          {
+            "kind": "Var",
+            "name": "refund",
+            "printedName": "refund",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TPSDKT2P.TransactionType.Type) -> TPSDKT2P.TransactionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TransactionType",
+                    "printedName": "TPSDKT2P.TransactionType",
+                    "usr": "s:8TPSDKT2P15TransactionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TPSDKT2P.TransactionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TransactionType",
+                        "printedName": "TPSDKT2P.TransactionType",
+                        "usr": "s:8TPSDKT2P15TransactionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TPSDKT2P15TransactionTypeO6refundyA2CmF",
+            "mangledName": "$s8TPSDKT2P15TransactionTypeO6refundyA2CmF",
+            "moduleName": "TPSDKT2P"
+          },
+          {
+            "kind": "Var",
+            "name": "voidRefund",
+            "printedName": "voidRefund",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TPSDKT2P.TransactionType.Type) -> TPSDKT2P.TransactionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TransactionType",
+                    "printedName": "TPSDKT2P.TransactionType",
+                    "usr": "s:8TPSDKT2P15TransactionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TPSDKT2P.TransactionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TransactionType",
+                        "printedName": "TPSDKT2P.TransactionType",
+                        "usr": "s:8TPSDKT2P15TransactionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TPSDKT2P15TransactionTypeO10voidRefundyA2CmF",
+            "mangledName": "$s8TPSDKT2P15TransactionTypeO10voidRefundyA2CmF",
+            "moduleName": "TPSDKT2P"
+          },
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TPSDKT2P.TransactionType.Type) -> TPSDKT2P.TransactionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TransactionType",
+                    "printedName": "TPSDKT2P.TransactionType",
+                    "usr": "s:8TPSDKT2P15TransactionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TPSDKT2P.TransactionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TransactionType",
+                        "printedName": "TPSDKT2P.TransactionType",
+                        "usr": "s:8TPSDKT2P15TransactionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TPSDKT2P15TransactionTypeO7unknownyA2CmF",
+            "mangledName": "$s8TPSDKT2P15TransactionTypeO7unknownyA2CmF",
+            "moduleName": "TPSDKT2P"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TPSDKT2P.TransactionType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TransactionType",
+                    "printedName": "TPSDKT2P.TransactionType",
+                    "usr": "s:8TPSDKT2P15TransactionTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8TPSDKT2P15TransactionTypeO8rawValueACSgSi_tcfc",
+            "mangledName": "$s8TPSDKT2P15TransactionTypeO8rawValueACSgSi_tcfc",
+            "moduleName": "TPSDKT2P",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TPSDKT2P15TransactionTypeO8rawValueSivp",
+            "mangledName": "$s8TPSDKT2P15TransactionTypeO8rawValueSivp",
+            "moduleName": "TPSDKT2P",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TPSDKT2P15TransactionTypeO8rawValueSivg",
+                "mangledName": "$s8TPSDKT2P15TransactionTypeO8rawValueSivg",
+                "moduleName": "TPSDKT2P",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:8TPSDKT2P15TransactionTypeO",
+        "mangledName": "$s8TPSDKT2P15TransactionTypeO",
+        "moduleName": "TPSDKT2P",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ReceiptList",
+        "printedName": "ReceiptList",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "itemList",
+            "printedName": "itemList",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[TPSDKT2P.ReceiptItem]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReceiptItem",
+                    "printedName": "TPSDKT2P.ReceiptItem",
+                    "usr": "s:8TPSDKT2P11ReceiptItemV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TPSDKT2P11ReceiptListV04itemC0SayAA0B4ItemVGvp",
+            "mangledName": "$s8TPSDKT2P11ReceiptListV04itemC0SayAA0B4ItemVGvp",
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[TPSDKT2P.ReceiptItem]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReceiptItem",
+                        "printedName": "TPSDKT2P.ReceiptItem",
+                        "usr": "s:8TPSDKT2P11ReceiptItemV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TPSDKT2P11ReceiptListV04itemC0SayAA0B4ItemVGvg",
+                "mangledName": "$s8TPSDKT2P11ReceiptListV04itemC0SayAA0B4ItemVGvg",
+                "moduleName": "TPSDKT2P",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ReceiptList",
+                "printedName": "TPSDKT2P.ReceiptList",
+                "usr": "s:8TPSDKT2P11ReceiptListV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8TPSDKT2P11ReceiptListV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s8TPSDKT2P11ReceiptListV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "TPSDKT2P",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8TPSDKT2P11ReceiptListV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s8TPSDKT2P11ReceiptListV6encode2toys7Encoder_p_tKF",
+            "moduleName": "TPSDKT2P",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8TPSDKT2P11ReceiptListV",
+        "mangledName": "$s8TPSDKT2P11ReceiptListV",
+        "moduleName": "TPSDKT2P",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ReceiptItem",
+        "printedName": "ReceiptItem",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "receiptId",
+            "printedName": "receiptId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TPSDKT2P11ReceiptItemV9receiptIdSSSgvp",
+            "mangledName": "$s8TPSDKT2P11ReceiptItemV9receiptIdSSSgvp",
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TPSDKT2P11ReceiptItemV9receiptIdSSSgvg",
+                "mangledName": "$s8TPSDKT2P11ReceiptItemV9receiptIdSSSgvg",
+                "moduleName": "TPSDKT2P",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transactionType",
+            "printedName": "transactionType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TPSDKT2P.TransactionType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TransactionType",
+                    "printedName": "TPSDKT2P.TransactionType",
+                    "usr": "s:8TPSDKT2P15TransactionTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TPSDKT2P11ReceiptItemV15transactionTypeAA011TransactionE0OSgvp",
+            "mangledName": "$s8TPSDKT2P11ReceiptItemV15transactionTypeAA011TransactionE0OSgvp",
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "TPSDKT2P.TransactionType?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TransactionType",
+                        "printedName": "TPSDKT2P.TransactionType",
+                        "usr": "s:8TPSDKT2P15TransactionTypeO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TPSDKT2P11ReceiptItemV15transactionTypeAA011TransactionE0OSgvg",
+                "mangledName": "$s8TPSDKT2P11ReceiptItemV15transactionTypeAA011TransactionE0OSgvg",
+                "moduleName": "TPSDKT2P",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "createTime",
+            "printedName": "createTime",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TPSDKT2P11ReceiptItemV10createTimeSiSgvp",
+            "mangledName": "$s8TPSDKT2P11ReceiptItemV10createTimeSiSgvp",
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TPSDKT2P11ReceiptItemV10createTimeSiSgvg",
+                "mangledName": "$s8TPSDKT2P11ReceiptItemV10createTimeSiSgvg",
+                "moduleName": "TPSDKT2P",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "amount",
+            "printedName": "amount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TPSDKT2P11ReceiptItemV6amountSdSgvp",
+            "mangledName": "$s8TPSDKT2P11ReceiptItemV6amountSdSgvp",
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Double?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TPSDKT2P11ReceiptItemV6amountSdSgvg",
+                "mangledName": "$s8TPSDKT2P11ReceiptItemV6amountSdSgvg",
+                "moduleName": "TPSDKT2P",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "currency",
+            "printedName": "currency",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TPSDKT2P11ReceiptItemV8currencySSSgvp",
+            "mangledName": "$s8TPSDKT2P11ReceiptItemV8currencySSSgvp",
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TPSDKT2P11ReceiptItemV8currencySSSgvg",
+                "mangledName": "$s8TPSDKT2P11ReceiptItemV8currencySSSgvg",
+                "moduleName": "TPSDKT2P",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "needSignature",
+            "printedName": "needSignature",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TPSDKT2P11ReceiptItemV13needSignatureSbSgvp",
+            "mangledName": "$s8TPSDKT2P11ReceiptItemV13needSignatureSbSgvp",
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TPSDKT2P11ReceiptItemV13needSignatureSbSgvg",
+                "mangledName": "$s8TPSDKT2P11ReceiptItemV13needSignatureSbSgvg",
+                "moduleName": "TPSDKT2P",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "receiptUrl",
+            "printedName": "receiptUrl",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TPSDKT2P11ReceiptItemV10receiptUrlSSSgvp",
+            "mangledName": "$s8TPSDKT2P11ReceiptItemV10receiptUrlSSSgvp",
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TPSDKT2P11ReceiptItemV10receiptUrlSSSgvg",
+                "mangledName": "$s8TPSDKT2P11ReceiptItemV10receiptUrlSSSgvg",
+                "moduleName": "TPSDKT2P",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ReceiptItem",
+                "printedName": "TPSDKT2P.ReceiptItem",
+                "usr": "s:8TPSDKT2P11ReceiptItemV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8TPSDKT2P11ReceiptItemV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s8TPSDKT2P11ReceiptItemV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "TPSDKT2P",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8TPSDKT2P11ReceiptItemV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s8TPSDKT2P11ReceiptItemV6encode2toys7Encoder_p_tKF",
+            "moduleName": "TPSDKT2P",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8TPSDKT2P11ReceiptItemV",
+        "mangledName": "$s8TPSDKT2P11ReceiptItemV",
+        "moduleName": "TPSDKT2P",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
         ]
       },
       {
@@ -9851,6 +11179,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -9884,6 +11226,132 @@
       "value": "\"\""
     },
     {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "FloatLiteral",
+      "offset": 13703,
+      "length": 4,
+      "value": "50.0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "FloatLiteral",
+      "offset": 13708,
+      "length": 5,
+      "value": "343.0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "FloatLiteral",
+      "offset": 13868,
+      "length": 4,
+      "value": "10.0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "FloatLiteral",
+      "offset": 13873,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "FloatLiteral",
+      "offset": 13887,
+      "length": 5,
+      "value": "122.0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "FloatLiteral",
+      "offset": 13893,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13906,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13918,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 13959,
+      "length": 26,
+      "value": "\"wave.3.right.circle.fill\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14047,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14056,
+      "length": 4,
+      "value": "-110"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "FloatLiteral",
+      "offset": 14092,
+      "length": 5,
+      "value": "343.0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14107,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14117,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 14233,
+      "length": 4,
+      "value": "\"zh\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 14261,
+      "length": 18,
+      "value": "\"iPhone 卡緊收\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "StringLiteral",
+      "offset": 14327,
+      "length": 22,
+      "value": "\"Tap to Pay on iPhone\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14446,
+      "length": 2,
+      "value": "10"
+    },
+    {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PManager.swift",
       "kind": "IntegerLiteral",
       "offset": 532,
@@ -9914,16 +11382,44 @@
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/Model\/Transaction\/Transaction.swift",
       "kind": "StringLiteral",
-      "offset": 605,
+      "offset": 643,
       "length": 6,
       "value": "\"data\""
     },
     {
-      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/Model\/Transaction\/Transaction.swift",
-      "kind": "StringLiteral",
-      "offset": 605,
-      "length": 6,
-      "value": "\"data\""
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/Model\/Receipt\/Receipt.swift",
+      "kind": "IntegerLiteral",
+      "offset": 661,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/Model\/Receipt\/Receipt.swift",
+      "kind": "IntegerLiteral",
+      "offset": 677,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/Model\/Receipt\/Receipt.swift",
+      "kind": "IntegerLiteral",
+      "offset": 695,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/Model\/Receipt\/Receipt.swift",
+      "kind": "IntegerLiteral",
+      "offset": 717,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/Model\/Receipt\/Receipt.swift",
+      "kind": "IntegerLiteral",
+      "offset": 726,
+      "length": 7,
+      "value": "5"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
@@ -10222,84 +11718,91 @@
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 238,
+      "offset": 234,
       "length": 15,
       "value": "\"\/loginWithKey\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 637,
+      "offset": 609,
       "length": 11,
       "value": "\"\/terminal\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 817,
+      "offset": 781,
       "length": 16,
       "value": "\"\/terminal\/bind\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 1141,
+      "offset": 1083,
       "length": 16,
       "value": "\"\/terminal\/bind\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 1372,
+      "offset": 1306,
       "length": 16,
       "value": "\"\/terminal\/bind\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 1632,
+      "offset": 1556,
       "length": 14,
       "value": "\"\/transaction\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 1976,
+      "offset": 1878,
       "length": 15,
       "value": "\"\/receipt\/sign\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 2375,
+      "offset": 2253,
       "length": 21,
       "value": "\"\/receipt\/cardholder\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 2741,
+      "offset": 2667,
+      "length": 18,
+      "value": "\"\/receipt\/history\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 2880,
       "length": 15,
       "value": "\"\/bind\/refresh\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 2984,
+      "offset": 3113,
       "length": 11,
       "value": "\"\/location\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 3200,
+      "offset": 3321,
       "length": 14,
       "value": "\"\/setting\/ios\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 3419,
+      "offset": 3532,
       "length": 8,
       "value": "\"\/error\""
     },
