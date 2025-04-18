@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/TPSDKT2P.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		E58NSqA/x6/abGBqjeuZVU5VzhQ=
+		0EIrUJC15IK1AKCDo906hjdLkHg=
 		</data>
 		<key>Modules/TPSDKT2P.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/TPSDKT2P.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		44ZvFeBBlGEhAHvAhQCqIDWFALY=
+		VmmE9XS0dH8wNd+Qv+ibsxXpeWY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -84,11 +84,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			E58NSqA/x6/abGBqjeuZVU5VzhQ=
+			0EIrUJC15IK1AKCDo906hjdLkHg=
 			</data>
 			<key>hash2</key>
 			<data>
-			2BfuqG7PKdVogw7WqCbe3AeUTSno0CGDSiYjH9Ep7lo=
+			B1eKuDi7jlX7PyqdYenIwRbmyi1MUzxnS97PZ7KovIo=
 			</data>
 		</dict>
 		<key>Modules/TPSDKT2P.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -128,11 +128,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			44ZvFeBBlGEhAHvAhQCqIDWFALY=
+			VmmE9XS0dH8wNd+Qv+ibsxXpeWY=
 			</data>
 			<key>hash2</key>
 			<data>
-			60VgXOIwD4HIjC0MIAvPlXxG3mYjjiDM+2IaSSIh86U=
+			XjQgHVUBm61IBo+40Ti8kFP7DhckkDztMwt6kk1dJlo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

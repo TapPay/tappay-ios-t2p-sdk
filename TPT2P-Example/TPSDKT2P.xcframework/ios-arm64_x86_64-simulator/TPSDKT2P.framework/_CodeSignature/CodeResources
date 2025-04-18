@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/TPSDKT2P.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		E58NSqA/x6/abGBqjeuZVU5VzhQ=
+		0EIrUJC15IK1AKCDo906hjdLkHg=
 		</data>
 		<key>Modules/TPSDKT2P.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/TPSDKT2P.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		PsskXJ654RO4rjAecHGJDmMPOps=
+		rqUrwfNHrroCjq87IU3VQ5I1L1g=
 		</data>
 		<key>Modules/TPSDKT2P.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		E58NSqA/x6/abGBqjeuZVU5VzhQ=
+		0EIrUJC15IK1AKCDo906hjdLkHg=
 		</data>
 		<key>Modules/TPSDKT2P.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/TPSDKT2P.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		pAP9V37RXFlbjwsUG7eNEGOdZh0=
+		eI2z+uMHsz7yKZXX0BVF+FUD/kY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -104,11 +104,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			E58NSqA/x6/abGBqjeuZVU5VzhQ=
+			0EIrUJC15IK1AKCDo906hjdLkHg=
 			</data>
 			<key>hash2</key>
 			<data>
-			2BfuqG7PKdVogw7WqCbe3AeUTSno0CGDSiYjH9Ep7lo=
+			B1eKuDi7jlX7PyqdYenIwRbmyi1MUzxnS97PZ7KovIo=
 			</data>
 		</dict>
 		<key>Modules/TPSDKT2P.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -148,22 +148,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PsskXJ654RO4rjAecHGJDmMPOps=
+			rqUrwfNHrroCjq87IU3VQ5I1L1g=
 			</data>
 			<key>hash2</key>
 			<data>
-			1SgK11KGkCblDbESlonYE7XlhnlLKEeF65cImouDh/0=
+			HGZ7rJug2+I3yxA9bSpwevI9I48akFQhb0CwM1/QvPc=
 			</data>
 		</dict>
 		<key>Modules/TPSDKT2P.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			E58NSqA/x6/abGBqjeuZVU5VzhQ=
+			0EIrUJC15IK1AKCDo906hjdLkHg=
 			</data>
 			<key>hash2</key>
 			<data>
-			2BfuqG7PKdVogw7WqCbe3AeUTSno0CGDSiYjH9Ep7lo=
+			B1eKuDi7jlX7PyqdYenIwRbmyi1MUzxnS97PZ7KovIo=
 			</data>
 		</dict>
 		<key>Modules/TPSDKT2P.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -203,11 +203,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pAP9V37RXFlbjwsUG7eNEGOdZh0=
+			eI2z+uMHsz7yKZXX0BVF+FUD/kY=
 			</data>
 			<key>hash2</key>
 			<data>
-			JaTvwMmgcZgI1HTZqRoos02VbgcVokChMKDnurbOEZo=
+			RzUAlAn1Eb8lu3QgdErHpPheNGvO9bObyNkMfgUE1pg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
