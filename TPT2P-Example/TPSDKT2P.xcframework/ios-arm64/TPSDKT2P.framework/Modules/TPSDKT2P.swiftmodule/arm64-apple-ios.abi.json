@@ -11228,126 +11228,126 @@
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "FloatLiteral",
-      "offset": 13703,
+      "offset": 13839,
       "length": 4,
       "value": "50.0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "FloatLiteral",
-      "offset": 13708,
+      "offset": 13844,
       "length": 5,
       "value": "343.0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "FloatLiteral",
-      "offset": 13868,
+      "offset": 14004,
       "length": 4,
       "value": "10.0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "FloatLiteral",
-      "offset": 13873,
+      "offset": 14009,
       "length": 5,
       "value": "255.0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "FloatLiteral",
-      "offset": 13887,
+      "offset": 14023,
       "length": 5,
       "value": "122.0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "FloatLiteral",
-      "offset": 13893,
+      "offset": 14029,
       "length": 5,
       "value": "255.0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 13906,
+      "offset": 14042,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 13918,
+      "offset": 14054,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "StringLiteral",
-      "offset": 13959,
+      "offset": 14095,
       "length": 26,
       "value": "\"wave.3.right.circle.fill\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 14047,
+      "offset": 14183,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 14056,
+      "offset": 14192,
       "length": 4,
       "value": "-110"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "FloatLiteral",
-      "offset": 14092,
+      "offset": 14228,
       "length": 5,
       "value": "343.0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 14107,
+      "offset": 14243,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 14117,
+      "offset": 14253,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "StringLiteral",
-      "offset": 14233,
+      "offset": 14369,
       "length": 4,
       "value": "\"zh\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "StringLiteral",
-      "offset": 14261,
+      "offset": 14397,
       "length": 18,
       "value": "\"iPhone 卡緊收\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "StringLiteral",
-      "offset": 14327,
+      "offset": 14463,
       "length": 22,
       "value": "\"Tap to Pay on iPhone\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 14446,
+      "offset": 14582,
       "length": 2,
       "value": "10"
     },
@@ -11382,9 +11382,9 @@
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/Model\/Transaction\/Transaction.swift",
       "kind": "StringLiteral",
-      "offset": 643,
-      "length": 6,
-      "value": "\"data\""
+      "offset": 674,
+      "length": 17,
+      "value": "\"paymentCardData\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/Model\/Receipt\/Receipt.swift",
