@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  TPT2P-Example
 //
-// SDK Version: 1.0.7
+// SDK Version: 1.0.8
 
 import UIKit
 import TPSDKT2P
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     @IBAction func initialWithKey(_ sender: Any) {
         Task {
             do {
-                try await TPT2PManager.setupWithAppKey(appKey: "Get the key by contact TapPay", environment: .sandbox)
+                try await TPT2PManager.setupWithAppKey(appKey: "luke-use", environment: .sandbox)
                 print("Initial success")
                 if TPT2PReader.isReaderBinded == true {
                     DispatchQueue.main.async {
