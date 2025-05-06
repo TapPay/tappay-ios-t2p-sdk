@@ -39,6 +39,8 @@ public protocol TPT2PReaderDelegate {
   @objc deinit
 }
 public enum TPT2PError : Swift.Error, Swift.Sendable, Swift.Equatable {
+  case credentialMissed
+  case credentialWrong
   case readerNotFound
   case versionCheckFailed
   case sdkVersionNotSupported
@@ -111,18 +113,7 @@ public enum Environment {
     get
   }
 }
-public enum Language {
-  case en
-  case zh
-  public static func == (a: TPSDKT2P.Language, b: TPSDKT2P.Language) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class TPT2PManager : ObjectiveC.NSObject {
-  public var merchantInfo: TPSDKT2P.MerchantInfo?
-  public var language: TPSDKT2P.Language?
   public var minimumSDKVersion: Swift.String?
   public var minimumiOSVersion: Swift.String?
   public var latestSDKVersion: Swift.String?
@@ -138,12 +129,15 @@ extension TPSDKT2P.TPT2PManager : CoreLocation.CLLocationManagerDelegate {
 }
 @_hasMissingDesignatedInitializers public class TPT2PService {
   public static func shared() -> TPSDKT2P.TPT2PService
-  public func refreshToken() async throws
   public func getBindingList(page: Swift.Int, countPerPage: Swift.Int, acquirerMerchantId: Swift.String? = nil, acquirerTerminalId: Swift.String? = nil) async throws -> [TPSDKT2P.BindItem]?
-  public func bind(bindItem: TPSDKT2P.BindItem, description: Swift.String?) async throws
+  @available(*, deprecated, message: "This function using `description` will be deprecated. Please use the updated version without it.")
+  public func bind(bindItem: TPSDKT2P.BindItem, description: Swift.String? = nil) async throws
+  public func bind(bindItem: TPSDKT2P.BindItem) async throws
   public func bindDelete() async throws
   public func createElectronicSignature(receiptIdentifier: Swift.String, signCanvas: PencilKit.PKCanvasView) async throws
-  public func getReceipt(receiptIdentifier: Swift.String, type: Swift.Int? = nil, email: Swift.String?) async throws -> Swift.String?
+  @available(*, deprecated, message: "This function using `type` will be deprecated. Please use the updated version without it.")
+  public func getReceipt(receiptIdentifier: Swift.String, type: Swift.Int? = nil, email: Swift.String? = nil) async throws -> Swift.String?
+  public func getReceipt(receiptIdentifier: Swift.String, email: Swift.String? = nil) async throws -> Swift.String?
   public func getReceiptList(transactionIdentifier: Swift.String, transactionType: [TPSDKT2P.TransactionType]? = nil) async throws -> TPSDKT2P.ReceiptList?
   public func getMinimumVersions() async throws -> TPSDKT2P.Version?
   public func getInstallmentInfo() async throws -> [TPSDKT2P.IssuerItem]?
@@ -176,6 +170,7 @@ public struct Transaction : Swift.Codable {
   public let cardMask: Swift.String
   public let authCode: Swift.String
   public let needSignature: Swift.Bool
+  public let installment: TPSDKT2P.CodeItem?
   public var authCardType: TPSDKT2P.TransactionCardType {
     get
   }
@@ -302,20 +297,8 @@ extension TPSDKT2P.TPT2PReader {
     public static func == (a: TPSDKT2P.TPT2PReader.Event, b: TPSDKT2P.TPT2PReader.Event) -> Swift.Bool
   }
 }
-public struct MerchantInfo : Swift.Codable {
-  public let partnerName: Swift.String?
-  public let acquirerName: Swift.String?
-  public let acquirerIcon: Swift.String?
-  public let terminalId: Swift.String?
-  public let description: Swift.String?
-  public let partnerIcon: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
 extension TPSDKT2P.Environment : Swift.Equatable {}
 extension TPSDKT2P.Environment : Swift.Hashable {}
-extension TPSDKT2P.Language : Swift.Equatable {}
-extension TPSDKT2P.Language : Swift.Hashable {}
 extension TPSDKT2P.TransactionCardType : Swift.Equatable {}
 extension TPSDKT2P.TransactionCardType : Swift.Hashable {}
 extension TPSDKT2P.TransactionType : Swift.Equatable {}

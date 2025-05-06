@@ -49,6 +49,13 @@
         "moduleName": "TPSDKT2P"
       },
       {
+        "kind": "Import",
+        "name": "CoreLocation",
+        "printedName": "CoreLocation",
+        "declKind": "Import",
+        "moduleName": "TPSDKT2P"
+      },
+      {
         "kind": "TypeDecl",
         "name": "TPT2PReaderDelegate",
         "printedName": "TPT2PReaderDelegate",
@@ -1613,6 +1620,86 @@
         "name": "TPT2PError",
         "printedName": "TPT2PError",
         "children": [
+          {
+            "kind": "Var",
+            "name": "credentialMissed",
+            "printedName": "credentialMissed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TPSDKT2P.TPT2PError.Type) -> TPSDKT2P.TPT2PError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TPT2PError",
+                    "printedName": "TPSDKT2P.TPT2PError",
+                    "usr": "s:8TPSDKT2P10TPT2PErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TPSDKT2P.TPT2PError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TPT2PError",
+                        "printedName": "TPSDKT2P.TPT2PError",
+                        "usr": "s:8TPSDKT2P10TPT2PErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TPSDKT2P10TPT2PErrorO16credentialMissedyA2CmF",
+            "mangledName": "$s8TPSDKT2P10TPT2PErrorO16credentialMissedyA2CmF",
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "credentialWrong",
+            "printedName": "credentialWrong",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(TPSDKT2P.TPT2PError.Type) -> TPSDKT2P.TPT2PError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TPT2PError",
+                    "printedName": "TPSDKT2P.TPT2PError",
+                    "usr": "s:8TPSDKT2P10TPT2PErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "TPSDKT2P.TPT2PError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TPT2PError",
+                        "printedName": "TPSDKT2P.TPT2PError",
+                        "usr": "s:8TPSDKT2P10TPT2PErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8TPSDKT2P10TPT2PErrorO15credentialWrongyA2CmF",
+            "mangledName": "$s8TPSDKT2P10TPT2PErrorO15credentialWrongyA2CmF",
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
           {
             "kind": "Var",
             "name": "readerNotFound",
@@ -4302,445 +4389,9 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "Language",
-        "printedName": "Language",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "en",
-            "printedName": "en",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TPSDKT2P.Language.Type) -> TPSDKT2P.Language",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Language",
-                    "printedName": "TPSDKT2P.Language",
-                    "usr": "s:8TPSDKT2P8LanguageO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TPSDKT2P.Language.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Language",
-                        "printedName": "TPSDKT2P.Language",
-                        "usr": "s:8TPSDKT2P8LanguageO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:8TPSDKT2P8LanguageO2enyA2CmF",
-            "mangledName": "$s8TPSDKT2P8LanguageO2enyA2CmF",
-            "moduleName": "TPSDKT2P"
-          },
-          {
-            "kind": "Var",
-            "name": "zh",
-            "printedName": "zh",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(TPSDKT2P.Language.Type) -> TPSDKT2P.Language",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Language",
-                    "printedName": "TPSDKT2P.Language",
-                    "usr": "s:8TPSDKT2P8LanguageO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "TPSDKT2P.Language.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Language",
-                        "printedName": "TPSDKT2P.Language",
-                        "usr": "s:8TPSDKT2P8LanguageO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:8TPSDKT2P8LanguageO2zhyA2CmF",
-            "mangledName": "$s8TPSDKT2P8LanguageO2zhyA2CmF",
-            "moduleName": "TPSDKT2P"
-          },
-          {
-            "kind": "Function",
-            "name": "==",
-            "printedName": "==(_:_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Language",
-                "printedName": "TPSDKT2P.Language",
-                "usr": "s:8TPSDKT2P8LanguageO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Language",
-                "printedName": "TPSDKT2P.Language",
-                "usr": "s:8TPSDKT2P8LanguageO"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8TPSDKT2P8LanguageO2eeoiySbAC_ACtFZ",
-            "mangledName": "$s8TPSDKT2P8LanguageO2eeoiySbAC_ACtFZ",
-            "moduleName": "TPSDKT2P",
-            "static": true,
-            "implicit": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Var",
-            "name": "hashValue",
-            "printedName": "hashValue",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8TPSDKT2P8LanguageO9hashValueSivp",
-            "mangledName": "$s8TPSDKT2P8LanguageO9hashValueSivp",
-            "moduleName": "TPSDKT2P",
-            "implicit": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8TPSDKT2P8LanguageO9hashValueSivg",
-                "mangledName": "$s8TPSDKT2P8LanguageO9hashValueSivg",
-                "moduleName": "TPSDKT2P",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "hash",
-            "printedName": "hash(into:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Hasher",
-                "printedName": "Swift.Hasher",
-                "paramValueOwnership": "InOut",
-                "usr": "s:s6HasherV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8TPSDKT2P8LanguageO4hash4intoys6HasherVz_tF",
-            "mangledName": "$s8TPSDKT2P8LanguageO4hash4intoys6HasherVz_tF",
-            "moduleName": "TPSDKT2P",
-            "implicit": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Enum",
-        "usr": "s:8TPSDKT2P8LanguageO",
-        "mangledName": "$s8TPSDKT2P8LanguageO",
-        "moduleName": "TPSDKT2P",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
         "name": "TPT2PManager",
         "printedName": "TPT2PManager",
         "children": [
-          {
-            "kind": "Var",
-            "name": "merchantInfo",
-            "printedName": "merchantInfo",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "TPSDKT2P.MerchantInfo?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MerchantInfo",
-                    "printedName": "TPSDKT2P.MerchantInfo",
-                    "usr": "s:8TPSDKT2P12MerchantInfoV"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8TPSDKT2P12TPT2PManagerC12merchantInfoAA08MerchantE0VSgvp",
-            "mangledName": "$s8TPSDKT2P12TPT2PManagerC12merchantInfoAA08MerchantE0VSgvp",
-            "moduleName": "TPSDKT2P",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "TPSDKT2P.MerchantInfo?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MerchantInfo",
-                        "printedName": "TPSDKT2P.MerchantInfo",
-                        "usr": "s:8TPSDKT2P12MerchantInfoV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8TPSDKT2P12TPT2PManagerC12merchantInfoAA08MerchantE0VSgvg",
-                "mangledName": "$s8TPSDKT2P12TPT2PManagerC12merchantInfoAA08MerchantE0VSgvg",
-                "moduleName": "TPSDKT2P",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "TPSDKT2P.MerchantInfo?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MerchantInfo",
-                        "printedName": "TPSDKT2P.MerchantInfo",
-                        "usr": "s:8TPSDKT2P12MerchantInfoV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8TPSDKT2P12TPT2PManagerC12merchantInfoAA08MerchantE0VSgvs",
-                "mangledName": "$s8TPSDKT2P12TPT2PManagerC12merchantInfoAA08MerchantE0VSgvs",
-                "moduleName": "TPSDKT2P",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8TPSDKT2P12TPT2PManagerC12merchantInfoAA08MerchantE0VSgvM",
-                "mangledName": "$s8TPSDKT2P12TPT2PManagerC12merchantInfoAA08MerchantE0VSgvM",
-                "moduleName": "TPSDKT2P",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "language",
-            "printedName": "language",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "TPSDKT2P.Language?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Language",
-                    "printedName": "TPSDKT2P.Language",
-                    "usr": "s:8TPSDKT2P8LanguageO"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8TPSDKT2P12TPT2PManagerC8languageAA8LanguageOSgvp",
-            "mangledName": "$s8TPSDKT2P12TPT2PManagerC8languageAA8LanguageOSgvp",
-            "moduleName": "TPSDKT2P",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "TPSDKT2P.Language?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Language",
-                        "printedName": "TPSDKT2P.Language",
-                        "usr": "s:8TPSDKT2P8LanguageO"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8TPSDKT2P12TPT2PManagerC8languageAA8LanguageOSgvg",
-                "mangledName": "$s8TPSDKT2P12TPT2PManagerC8languageAA8LanguageOSgvg",
-                "moduleName": "TPSDKT2P",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "TPSDKT2P.Language?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Language",
-                        "printedName": "TPSDKT2P.Language",
-                        "usr": "s:8TPSDKT2P8LanguageO"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8TPSDKT2P12TPT2PManagerC8languageAA8LanguageOSgvs",
-                "mangledName": "$s8TPSDKT2P12TPT2PManagerC8languageAA8LanguageOSgvs",
-                "moduleName": "TPSDKT2P",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8TPSDKT2P12TPT2PManagerC8languageAA8LanguageOSgvM",
-                "mangledName": "$s8TPSDKT2P12TPT2PManagerC8languageAA8LanguageOSgvM",
-                "moduleName": "TPSDKT2P",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
           {
             "kind": "Var",
             "name": "minimumSDKVersion",
@@ -5491,28 +5142,6 @@
           },
           {
             "kind": "Function",
-            "name": "refreshToken",
-            "printedName": "refreshToken()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8TPSDKT2P12TPT2PServiceC12refreshTokenyyYaKF",
-            "mangledName": "$s8TPSDKT2P12TPT2PServiceC12refreshTokenyyYaKF",
-            "moduleName": "TPSDKT2P",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "getBindingList",
             "printedName": "getBindingList(page:countPerPage:acquirerMerchantId:acquirerTerminalId:)",
             "children": [
@@ -5620,6 +5249,7 @@
                     "usr": "s:SS"
                   }
                 ],
+                "hasDefaultArg": true,
                 "usr": "s:Sq"
               }
             ],
@@ -5627,9 +5257,38 @@
             "usr": "s:8TPSDKT2P12TPT2PServiceC4bind0D4Item11descriptionyAA04BindE0V_SSSgtYaKF",
             "mangledName": "$s8TPSDKT2P12TPT2PServiceC4bind0D4Item11descriptionyAA04BindE0V_SSSgtYaKF",
             "moduleName": "TPSDKT2P",
+            "deprecated": true,
             "declAttributes": [
               "AccessControl",
+              "Available",
               "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bind",
+            "printedName": "bind(bindItem:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BindItem",
+                "printedName": "TPSDKT2P.BindItem",
+                "usr": "s:8TPSDKT2P8BindItemV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8TPSDKT2P12TPT2PServiceC4bind0D4ItemyAA04BindE0V_tYaKF",
+            "mangledName": "$s8TPSDKT2P12TPT2PServiceC4bind0D4ItemyAA04BindE0V_tYaKF",
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "AccessControl"
             ],
             "throwing": true,
             "funcSelfKind": "NonMutating"
@@ -5742,6 +5401,7 @@
                     "usr": "s:SS"
                   }
                 ],
+                "hasDefaultArg": true,
                 "usr": "s:Sq"
               }
             ],
@@ -5749,9 +5409,62 @@
             "usr": "s:8TPSDKT2P12TPT2PServiceC10getReceipt17receiptIdentifier4type5emailSSSgSS_SiSgAHtYaKF",
             "mangledName": "$s8TPSDKT2P12TPT2PServiceC10getReceipt17receiptIdentifier4type5emailSSSgSS_SiSgAHtYaKF",
             "moduleName": "TPSDKT2P",
+            "deprecated": true,
             "declAttributes": [
               "AccessControl",
+              "Available",
               "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getReceipt",
+            "printedName": "getReceipt(receiptIdentifier:email:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8TPSDKT2P12TPT2PServiceC10getReceipt17receiptIdentifier5emailSSSgSS_AGtYaKF",
+            "mangledName": "$s8TPSDKT2P12TPT2PServiceC10getReceipt17receiptIdentifier5emailSSSgSS_AGtYaKF",
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "AccessControl"
             ],
             "throwing": true,
             "funcSelfKind": "NonMutating"
@@ -6872,6 +6585,66 @@
                 "declKind": "Accessor",
                 "usr": "s:8TPSDKT2P11TransactionV13needSignatureSbvg",
                 "mangledName": "$s8TPSDKT2P11TransactionV13needSignatureSbvg",
+                "moduleName": "TPSDKT2P",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "installment",
+            "printedName": "installment",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "TPSDKT2P.CodeItem?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CodeItem",
+                    "printedName": "TPSDKT2P.CodeItem",
+                    "usr": "s:8TPSDKT2P8CodeItemV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TPSDKT2P11TransactionV11installmentAA8CodeItemVSgvp",
+            "mangledName": "$s8TPSDKT2P11TransactionV11installmentAA8CodeItemVSgvp",
+            "moduleName": "TPSDKT2P",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "TPSDKT2P.CodeItem?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodeItem",
+                        "printedName": "TPSDKT2P.CodeItem",
+                        "usr": "s:8TPSDKT2P8CodeItemV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TPSDKT2P11TransactionV11installmentAA8CodeItemVSgvg",
+                "mangledName": "$s8TPSDKT2P11TransactionV11installmentAA8CodeItemVSgvg",
                 "moduleName": "TPSDKT2P",
                 "implicit": true,
                 "accessorKind": "get"
@@ -10660,16 +10433,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "TPSDKT2P",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -10750,461 +10513,6 @@
         "moduleName": "TPSDKT2P",
         "declAttributes": [
           "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "MerchantInfo",
-        "printedName": "MerchantInfo",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "partnerName",
-            "printedName": "partnerName",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8TPSDKT2P12MerchantInfoV11partnerNameSSSgvp",
-            "mangledName": "$s8TPSDKT2P12MerchantInfoV11partnerNameSSSgvp",
-            "moduleName": "TPSDKT2P",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8TPSDKT2P12MerchantInfoV11partnerNameSSSgvg",
-                "mangledName": "$s8TPSDKT2P12MerchantInfoV11partnerNameSSSgvg",
-                "moduleName": "TPSDKT2P",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "acquirerName",
-            "printedName": "acquirerName",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8TPSDKT2P12MerchantInfoV12acquirerNameSSSgvp",
-            "mangledName": "$s8TPSDKT2P12MerchantInfoV12acquirerNameSSSgvp",
-            "moduleName": "TPSDKT2P",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8TPSDKT2P12MerchantInfoV12acquirerNameSSSgvg",
-                "mangledName": "$s8TPSDKT2P12MerchantInfoV12acquirerNameSSSgvg",
-                "moduleName": "TPSDKT2P",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "acquirerIcon",
-            "printedName": "acquirerIcon",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8TPSDKT2P12MerchantInfoV12acquirerIconSSSgvp",
-            "mangledName": "$s8TPSDKT2P12MerchantInfoV12acquirerIconSSSgvp",
-            "moduleName": "TPSDKT2P",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8TPSDKT2P12MerchantInfoV12acquirerIconSSSgvg",
-                "mangledName": "$s8TPSDKT2P12MerchantInfoV12acquirerIconSSSgvg",
-                "moduleName": "TPSDKT2P",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "terminalId",
-            "printedName": "terminalId",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8TPSDKT2P12MerchantInfoV10terminalIdSSSgvp",
-            "mangledName": "$s8TPSDKT2P12MerchantInfoV10terminalIdSSSgvp",
-            "moduleName": "TPSDKT2P",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8TPSDKT2P12MerchantInfoV10terminalIdSSSgvg",
-                "mangledName": "$s8TPSDKT2P12MerchantInfoV10terminalIdSSSgvg",
-                "moduleName": "TPSDKT2P",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "description",
-            "printedName": "description",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8TPSDKT2P12MerchantInfoV11descriptionSSSgvp",
-            "mangledName": "$s8TPSDKT2P12MerchantInfoV11descriptionSSSgvp",
-            "moduleName": "TPSDKT2P",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8TPSDKT2P12MerchantInfoV11descriptionSSSgvg",
-                "mangledName": "$s8TPSDKT2P12MerchantInfoV11descriptionSSSgvg",
-                "moduleName": "TPSDKT2P",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "partnerIcon",
-            "printedName": "partnerIcon",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8TPSDKT2P12MerchantInfoV11partnerIconSSSgvp",
-            "mangledName": "$s8TPSDKT2P12MerchantInfoV11partnerIconSSSgvp",
-            "moduleName": "TPSDKT2P",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8TPSDKT2P12MerchantInfoV11partnerIconSSSgvg",
-                "mangledName": "$s8TPSDKT2P12MerchantInfoV11partnerIconSSSgvg",
-                "moduleName": "TPSDKT2P",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(from:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "MerchantInfo",
-                "printedName": "TPSDKT2P.MerchantInfo",
-                "usr": "s:8TPSDKT2P12MerchantInfoV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Decoder",
-                "printedName": "any Swift.Decoder",
-                "usr": "s:s7DecoderP"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:8TPSDKT2P12MerchantInfoV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s8TPSDKT2P12MerchantInfoV4fromACs7Decoder_p_tKcfc",
-            "moduleName": "TPSDKT2P",
-            "implicit": true,
-            "throwing": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "encode",
-            "printedName": "encode(to:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Encoder",
-                "printedName": "any Swift.Encoder",
-                "usr": "s:s7EncoderP"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8TPSDKT2P12MerchantInfoV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s8TPSDKT2P12MerchantInfoV6encode2toys7Encoder_p_tKF",
-            "moduleName": "TPSDKT2P",
-            "implicit": true,
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:8TPSDKT2P12MerchantInfoV",
-        "mangledName": "$s8TPSDKT2P12MerchantInfoV",
-        "moduleName": "TPSDKT2P",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
-          }
         ]
       }
     ],
@@ -11214,147 +10522,147 @@
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 889,
+      "offset": 909,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "StringLiteral",
-      "offset": 1311,
+      "offset": 1286,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "FloatLiteral",
-      "offset": 13839,
+      "offset": 14051,
       "length": 4,
       "value": "50.0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "FloatLiteral",
-      "offset": 13844,
+      "offset": 14056,
       "length": 5,
       "value": "343.0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "FloatLiteral",
-      "offset": 14004,
+      "offset": 14216,
       "length": 4,
       "value": "10.0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "FloatLiteral",
-      "offset": 14009,
+      "offset": 14221,
       "length": 5,
       "value": "255.0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "FloatLiteral",
-      "offset": 14023,
+      "offset": 14235,
       "length": 5,
       "value": "122.0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "FloatLiteral",
-      "offset": 14029,
+      "offset": 14241,
       "length": 5,
       "value": "255.0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 14042,
+      "offset": 14254,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 14054,
+      "offset": 14266,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "StringLiteral",
-      "offset": 14095,
+      "offset": 14307,
       "length": 26,
       "value": "\"wave.3.right.circle.fill\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 14183,
+      "offset": 14395,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 14192,
+      "offset": 14404,
       "length": 4,
       "value": "-110"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "FloatLiteral",
-      "offset": 14228,
+      "offset": 14440,
       "length": 5,
       "value": "343.0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 14243,
+      "offset": 14455,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 14253,
+      "offset": 14465,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "StringLiteral",
-      "offset": 14369,
+      "offset": 14581,
       "length": 4,
       "value": "\"zh\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "StringLiteral",
-      "offset": 14397,
+      "offset": 14609,
       "length": 18,
       "value": "\"iPhone 卡緊收\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "StringLiteral",
-      "offset": 14463,
+      "offset": 14675,
       "length": 22,
       "value": "\"Tap to Pay on iPhone\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 14582,
+      "offset": 14794,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 532,
+      "offset": 492,
       "length": 1,
       "value": "0"
     },
@@ -11367,22 +10675,15 @@
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
-      "kind": "BooleanLiteral",
-      "offset": 383,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PService.swift",
       "kind": "IntegerLiteral",
-      "offset": 418,
+      "offset": 387,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/Model\/Transaction\/Transaction.swift",
       "kind": "StringLiteral",
-      "offset": 710,
+      "offset": 669,
       "length": 17,
       "value": "\"paymentCardData\""
     },
@@ -11529,280 +10830,315 @@
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 1340,
+      "offset": 1337,
+      "length": 4,
+      "value": "1099"
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1405,
       "length": 4,
       "value": "1101"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 1408,
+      "offset": 1473,
       "length": 4,
       "value": "1201"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 1473,
+      "offset": 1538,
       "length": 4,
       "value": "1202"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 1538,
+      "offset": 1603,
       "length": 4,
       "value": "1203"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 1603,
+      "offset": 1668,
       "length": 4,
       "value": "1204"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 1671,
+      "offset": 1736,
       "length": 4,
       "value": "1301"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 1736,
+      "offset": 1801,
       "length": 4,
       "value": "1302"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 1804,
+      "offset": 1869,
       "length": 4,
       "value": "1401"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 1869,
+      "offset": 1934,
       "length": 4,
       "value": "1402"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 1934,
+      "offset": 1999,
       "length": 4,
       "value": "1403"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 2002,
+      "offset": 2067,
       "length": 4,
       "value": "1501"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 2067,
+      "offset": 2132,
       "length": 4,
       "value": "1502"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 2132,
+      "offset": 2197,
       "length": 4,
       "value": "1503"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 2197,
+      "offset": 2262,
       "length": 4,
       "value": "1504"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 2262,
+      "offset": 2327,
       "length": 4,
       "value": "1505"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 2330,
+      "offset": 2395,
       "length": 4,
       "value": "1601"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 2395,
+      "offset": 2460,
       "length": 4,
       "value": "1602"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 2463,
+      "offset": 2528,
       "length": 4,
       "value": "1701"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 2531,
+      "offset": 2596,
       "length": 4,
       "value": "1901"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 2596,
+      "offset": 2661,
       "length": 4,
       "value": "1902"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 2661,
+      "offset": 2726,
       "length": 4,
       "value": "1903"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "IntegerLiteral",
-      "offset": 2726,
+      "offset": 2791,
       "length": 4,
       "value": "1904"
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "StringLiteral",
-      "offset": 2775,
+      "offset": 2840,
       "length": 9,
       "value": "\"sdk-jwt\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "StringLiteral",
-      "offset": 2814,
+      "offset": 2879,
       "length": 13,
       "value": "\"refresh-jwt\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "StringLiteral",
-      "offset": 2857,
+      "offset": 2922,
       "length": 13,
       "value": "\"sdk-version\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "StringLiteral",
-      "offset": 2900,
+      "offset": 2965,
       "length": 13,
       "value": "\"app-version\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
       "kind": "StringLiteral",
-      "offset": 2944,
+      "offset": 3009,
       "length": 14,
       "value": "\"trace-device\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
+      "kind": "StringLiteral",
+      "offset": 3052,
+      "length": 13,
+      "value": "\"sdk-session\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/TPT2PConstant.swift",
+      "kind": "StringLiteral",
+      "offset": 3095,
+      "length": 13,
+      "value": "\"partner-key\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
       "offset": 234,
-      "length": 15,
-      "value": "\"\/loginWithKey\""
+      "length": 28,
+      "value": "\"\/conversation\/loginWithKey\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 609,
+      "offset": 617,
       "length": 11,
       "value": "\"\/terminal\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 781,
+      "offset": 789,
+      "length": 20,
+      "value": "\"\/conversation\/bind\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 1098,
       "length": 16,
       "value": "\"\/terminal\/bind\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 1083,
+      "offset": 1321,
       "length": 16,
       "value": "\"\/terminal\/bind\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 1306,
-      "length": 16,
-      "value": "\"\/terminal\/bind\""
-    },
-    {
-      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
-      "kind": "StringLiteral",
-      "offset": 1556,
+      "offset": 1571,
       "length": 14,
       "value": "\"\/transaction\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 1878,
+      "offset": 1893,
       "length": 15,
       "value": "\"\/receipt\/sign\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 2253,
+      "offset": 2219,
+      "length": 19,
+      "value": "\"\/transaction\/poll\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 2592,
       "length": 21,
       "value": "\"\/receipt\/cardholder\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 2667,
+      "offset": 3006,
       "length": 18,
       "value": "\"\/receipt\/history\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 2880,
+      "offset": 3219,
       "length": 15,
       "value": "\"\/bind\/refresh\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 3113,
+      "offset": 3404,
+      "length": 16,
+      "value": "\"\/apple\/refresh\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
+      "kind": "StringLiteral",
+      "offset": 3641,
       "length": 11,
       "value": "\"\/location\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 3321,
+      "offset": 3849,
       "length": 14,
       "value": "\"\/setting\/ios\""
     },
     {
       "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/API\/APIService.swift",
       "kind": "StringLiteral",
-      "offset": 3532,
+      "offset": 4060,
       "length": 8,
       "value": "\"\/error\""
     },
@@ -13233,6 +12569,13 @@
       "offset": 7314,
       "length": 1,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/lukecho\/Desktop\/work\/yms-reader-sdk\/TPSDKT2P\/TPSDKT2P\/Model\/TokenHandling\/Token.swift",
+      "kind": "StringLiteral",
+      "offset": 246,
+      "length": 5,
+      "value": "\"jwt\""
     }
   ]
 }
