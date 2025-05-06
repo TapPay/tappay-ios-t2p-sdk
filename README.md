@@ -87,12 +87,12 @@
   }
   ```
   #### Parameters
-  |  Parameter   | Type  |  Description   | 
-  |  :----  | :----  | :---- |
-  | appKey  | String | 用於SDK的驗證金鑰 |
-  | environment  | Environment | 使用的伺服器種類<br>測試時請使用 Sandbox 環境 (Environment.sandbox, .sandbox)<br>實體上線後請切換至 Production 環境 (Environment.production, .production) |
-  | partnerAccount  | String | (Optional) Partner Account |
-  | isInherit  | Bool | (Optional) <br> true => SDK initialize時不進行解除綁定動作。(舉例應用)APP 處於登入狀態，且沿用目前綁定之Terminal <br> false => SDK initialize同時進行解除綁定動作。(舉例應用) 如無法確定是否有綁定或綁定資訊是否正確，建議一律解綁 |
+  |  Parameter   | Type  | Required  |  Description   | 
+  |  :----  | :---- | :---- | :---- |
+  | appKey  | String | Y | 用於SDK的驗證金鑰 |
+  | environment  | Environment | Y | 使用的伺服器種類<br>測試時請使用 Sandbox 環境 (Environment.sandbox, .sandbox)<br>實體上線後請切換至 Production 環境 (Environment.production, .production) |
+  | partnerAccount  | String | N | Partner Account |
+  | isInherit  | Bool | N | true => SDK initialize時不進行解除綁定動作。(舉例應用)APP 處於登入狀態，且沿用目前綁定之Terminal <br> false => SDK initialize同時進行解除綁定動作。(舉例應用) 如無法確定是否有綁定或綁定資訊是否正確，建議一律解綁 |
   
   ---
   ## Bind
@@ -128,12 +128,12 @@
   }
   ```
   #### Parameters
-  |  Parameter   | Type  |  Description   | 
-  |  :----  | :----  | :---- |
-  | page  | Int | 第幾頁 |
-  | countPerPage  | Int | 每頁筆數 |
-  | acquirerMerchantId  | String | (Optional) 收單機構商店代號 |
-  | acquirerTerminalId  | String | (Optional) 收單機構端末機代號 |
+  |  Parameter   | Type  | Required |  Description   | 
+  |  :----  | :---- | :---- | :---- |
+  | page  | Int | Y | 第幾頁 |
+  | countPerPage  | Int | Y | 每頁筆數 |
+  | acquirerMerchantId  | String | N | 收單機構商店代號 |
+  | acquirerTerminalId  | String | N | 收單機構端末機代號 |
 
   ### Response
   #### Item detail
@@ -170,24 +170,25 @@
   ### Bind
   #### Function
   ```swift
-  func bind(bindItem: BindItem, description: String?) async throws
+  func bind(bindItem: BindItem, description: String? = nil) async throws // It will be deprecated in the next version.
+  func bind(bindItem: BindItem) async throws
   ```
   #### Sample
   ```swift
   // Sample code
   Task {
       do {
-          try await TPT2PService.shared.bind(bindItem: BindItem(), description: "123456")
+          try await TPT2PService.shared.bind(bindItem: BindItem())
       }catch {
           // error handling
       }
   }
   ```
   #### Parameters
-  |  Parameter   | Type  |  Description   | 
-  |  :----  | :----  | :---- |
-  | bindItem  | BindItem | 綁定資訊 |
-  | description  | String | 端末機備註 |
+  |  Parameter   | Type  | Required |  Description   | 
+  |  :----  | :----  | :---- | :---- |
+  | bindItem  | BindItem | Y | 綁定資訊 |
+  | description  | String | N | 端末機備註 |
 
   ### Bind delete
   #### Function
@@ -327,7 +328,7 @@
   // Sample code
   Task {
       do {
-          let transactionResult = try await TPT2PService.shared.getInstallmentInfo
+          let transactionResult = try await TPT2PService.shared.getInstallmentInfo()
       }catch {
           // error handling
       }
@@ -389,12 +390,12 @@
   }
   ```
   #### Parameters
-  |  Parameter   | Type  |  Description   | 
-  |  :----  | :----  | :---- |
-  | amount  | Decimal | 交易金額 |
-  | installmentCode  | String | (Optional) 分期產品代碼<br>範例：3期：0300 |
-  | orderNumber  | String | (Optional) 訂單編號（商戶系統帶入） |
-  | bankTransactionId  | String | (Optional) 銀行交易編號 |
+  |  Parameter   | Type  | Required |  Description   | 
+  |  :----  | :----  | :---- | :---- |
+  | amount  | Decimal | Y | 交易金額 |
+  | installmentCode  | String | N | 分期產品代碼<br>範例：3期：0300 |
+  | orderNumber  | String | N | 訂單編號（商戶系統帶入） |
+  | bankTransactionId  | String | N | 銀行交易編號 |
 
   ### Response
   #### Item detail
@@ -462,35 +463,36 @@
   }
   ```
   #### Parameters
-  |  Parameter   | Type  |  Description   | 
-  |  :----  | :----  | :---- |
-  | receiptIdentifier  | String | 簽單編號 |
-  | signCanvas  | PKCanvasView | 簽名 |
+  |  Parameter   | Type  | Required |  Description   | 
+  |  :----  | :----  | :---- | :---- |
+  | receiptIdentifier  | String | Y | 簽單編號 |
+  | signCanvas  | PKCanvasView | Y | 簽名 |
 
 ---
   ## Receipt
   ### Get receipt
   #### Function
   ```swift
-  func getReceipt(receiptIdentifier: String, type: Int, email: String?) async throws -> String
+  func getReceipt(receiptIdentifier: String, type: Int? = nil, email: String? = nil) async throws -> String // It will be deprecated in the next version.
+  func getReceipt(receiptIdentifier: String, email: String? = nil) async throws -> String
   ```
   #### Sample
   ```swift
   // Sample code
   Task {
       do {
-          let receiptUrl = try await TPT2PService.shared.getReceipt(receiptIdentifier: "123456", type: 1, email: "test@test.com")
+          let receiptUrl = try await TPT2PService.shared.getReceipt(receiptIdentifier: "123456", email: "test@test.com")
       }catch {
           // error handling
       }
   }
   ```
   #### Parameters
-  |  Parameter   | Type  |  Description   | 
-  |  :----  | :----  | :---- |
-  | receiptIdentifier  | String | 簽單編號 |
-  | type  | Int | 簽單瀏覽格式<br>1 : html<br>2 : pkpass |
-  | email  | String | 欲收到簽單的信箱 |
+  |  Parameter   | Type  | Required |  Description   | 
+  |  :----  | :----  | :---- | :---- |
+  | receiptIdentifier  | String | Y | 簽單編號 |
+  | type  | Int | N | 簽單瀏覽格式<br>1 : html<br>2 : pkpass |
+  | email  | String | N | 欲收到簽單的信箱 |
 
   ### Response
   #### Item detail
@@ -515,10 +517,10 @@
   }
   ```
   #### Parameters
-  |  Parameter   | Type  |  Description   | 
-  |  :----  | :----  | :---- |
-  | transactionIdentifier  | String | 交易編號 |
-  | transactionType  | TransactionType | 簽單類型<br>sale  : 銷售<br>void   : 取消授權 |
+  |  Parameter   | Type  | Required |  Description   | 
+  |  :----  | :----  | :---- | :---- |
+  | transactionIdentifier  | String | Y | 交易編號 |
+  | transactionType  | TransactionType | N | 簽單類型<br>sale  : 銷售<br>void   : 取消授權 |
 
   ### Response
   #### Item detail
