@@ -69,7 +69,7 @@ To enhance transaction security, location services must be enabled for payment p
 
 ---
 ## SDK initialize
-![](./Images/SDK_Initialize.png) <br><br>
+![](./Images/SDK_Initialize.jpg) <br><br>
 ## Start to use SDK
 ![](./Images/T2P_SDK_Flow.svg)
 ![](./Images/TPSDKT2P_Flow.png)
