@@ -4,61 +4,68 @@
 
 ## Requirement
 
-- Tap to Pay on iPhone只支援 iPhone XS 以上機型 和 iOS 16.7 以上版本
+- Tap to Pay on iPhone is only supported on iPhone XS or later models and requires iOS version 16.7 or above.
 
 ## How to start
 ---
 ### Apply for Tap to Pay on iPhone entitlement
-1. 使用account holder的帳號登入[申請頁面](https://developer.apple.com/contact/request/tap-to-pay-on-iphone/)
-2. 依序填寫必要資訊
-3. 在PSP的欄位中，於下圖中框選的區域填入 **"TapPay"** <br><br>
+1. Log in to the [application page](https://developer.apple.com/contact/request/tap-to-pay-on-iphone/) using the account holder's credentials.
+2. Fill in the required information in order.
+3. In the PSP field, enter **"TapPay"** in the area highlighted in the image below.  <br><br>
 ![](./Images/Tap_to_Pay_on_iPhone_Entitlement_application_PSP.png)<br><br>
-4. 填寫完畢後送出，申請結果通知約需等待2~5個工作天
+4. Once completed, submit the application. It will take approximately 2 to 5 business days to receive the application results.
 ---
 ### Get your App key
-#### 請洽TapPay業務
+#### Please contact the TapPay sales representative.
 ---
 ### Install the SDK
-1. 進入TPT2P-Example，複製TPSDKT2P.xcframework到您的專案下
-2. 開啟您的專案，到Build Phases下，展開Link Binary With Libraries，點擊"+"並加入TPSDKT2P.xcframework
+1. Go to TPT2P-Example and copy TPSDKT2P.xcframework into your project directory.
+2. Open your project, navigate to Build Phases, expand Link Binary With Libraries, click the “+” button, and add TPSDKT2P.xcframework.
 ---
 
 ### Setup entitlement file
-1. 新增T2P功能到開發用的Apple ID
-    - 登入[Apple Developer](https://developer.apple.com/account)帳號，點選Certificates, Identifiers & Profiles
-    - 在側邊欄點選Identifiers
-    - 從列表中選取要導入T2P功能的App
-    - 選擇Additional Capabilities<br><br>
+1. Add the T2P feature to your development Apple ID
+    - Log in to your [Apple Developer](https://developer.apple.com/account) account and navigate to Certificates, Identifiers & Profiles.
+    - In the sidebar, click Identifiers.
+    - From the list, select the app to which you want to add the T2P feature.
+    - Scroll down and enable Additional Capabilities.<br><br>
     ![](./Images/App_ID_Configuration.png)<br><br>
-    - 勾選T2P
-    - 儲存設定
-    - 新增配置該App ID的provisioning profile，下載並開啟，在App專案內選擇使用該provisioning profile (如果已經新增過該provisioning profile，重新下載即可)<br><br>
-2. 新增entitlements file到App專案內<br><br>
+    - Check T2P to enable the feature.
+    - Save the configuration.
+    - Create a new provisioning profile for the updated App ID, download and open it.
+    - In your Xcode project, select this provisioning profile for the app. 
+ (If the provisioning profile has already been created, simply re-download it.)<br><br>
+2. Add an entitlements file to your app project.<br><br>
 ![](./Images/Create_Entitlements_File.png)<br><br>
-    - 在App專案內新增檔案，新增一個property list
-    - 將檔名替換為 ___________.entitlements (檔案格式依舊為.plist)，空白部分請填入App專案名稱
-    - 到Project Editor，點選Build Settings
-    - 點選All和點選Combined
-    - 搜尋Code Signing Entitlements<br><br>
+    - In your app project, add a new file and choose Property List as the file type.
+    - Rename the file to ____________. entitlements (the file format remains .plist). Replace ____________ with the actual name of your app project.
+    - Go to the Project Editor and select the Build Settings tab.
+    - Make sure both All and Combined are selected.
+    - Search for Code Signing Entitlements.<br><br>
     ![](./Images/Setup_Entitlements_Path.png)<br><br>
-    - 輸入剛剛產生的檔案的路徑
-    - 開啟該檔案，新增key為com.apple.developer.proximity-reader.payment.acceptance，value type為Boolean，value設定為true (P.S. 如果你的專案內已有.entitlements檔案，直接執行最後一步即可)<br><br>
+    - Enter the file path of the entitlements file you just created.
+    - Open the file and add a new key: 
+ com.apple.developer.proximity-reader.payment.acceptance 
+ Set the value type to Boolean, and the value to true. 
+ (P.S. If your project already has an existing. entitlements file; you can skip the earlier steps and proceed directly with this key addition.)<br><br>
     ![](./Images/Setup_Entitlements_File.png)
 
 ---
 
 ### Setup Location Privacy Settings
-因收單銀行要求：為提升交易安全，交易收款需開啟定位服務，故須於Info.plist加入privacy setting "Privacy - Location When In Use Usage Description"
+Due to acquiring bank requirements: 
+To enhance transaction security, location services must be enabled for payment processing. Therefore, you need to add the following privacy setting to Info.plist: Privacy - Location When In Use Usage Description
 
 ---
 
-### Sandbox環境測試用帳號建立與使用
-1. 登入[App Store Connect](https://appstoreconnect.apple.com/login)，進入到使用者與存取權限頁面<br><br>
+### Creating and Using a Sandbox Test Account
+1. Log in to [App Store Connect](https://appstoreconnect.apple.com/login) and navigate to the Users and Access page.<br><br>
 ![](./Images/Sandbox_Test_Account_Create.png)<br><br>
-2. 點選沙箱技術測試人員
-3. 點選+號新增測試用帳號，輸入必要資訊並建立（請使用未曾作為 Apple ID 或用來購買 iTunes 或 App Store 內容的電子郵件地址。建議你為每一位沙箱測試人員建立測試專用的電子郵件地址，詳細資訊可參考[建立沙箱 Apple ID](https://developer.apple.com/tw/help/app-store-connect/test-in-app-purchases-main/create-sandbox-apple-ids/)）
-4. 建立完成後，若要在sandbox環境測試，須於測試用的裝置登入此測試用Apple ID，並重新開機
-5. 屆時若需要切換為production環境測試，亦須於測試用的裝置登入非sandbox用Apple ID，並重新開機
+2. Click on Sandbox Testers.
+3. Click the “+” button to add a new test account. Enter the required information and create an account. 
+ (Please use an email address that has never been used as an Apple ID or for purchasing content from iTunes or the App Store. It is recommended to create a dedicated email address for each sandbox test. For more information, refer to [Creating a Sandbox Apple ID](https://developer.apple.com/tw/help/app-store-connect/test-in-app-purchases-main/create-sandbox-apple-ids/).)
+4. Once the account is created, to perform testing in the sandbox environment, sign in to the test device using the sandbox Apple ID and restart the device.
+5. If you need to switch back to production environment testing, sign in to the test device using a non-sandbox Apple ID and restart the device.
 
 ---
 ## SDK initialize
@@ -89,10 +96,10 @@
   #### Parameters
   |  Parameter   | Type  | Required  |  Description   | 
   |  :----  | :---- | :---- | :---- |
-  | appKey  | String | Y | 用於SDK的驗證金鑰 |
-  | environment  | Environment | Y | 使用的伺服器種類<br>測試時請使用 Sandbox 環境 (Environment.sandbox, .sandbox)<br>實體上線後請切換至 Production 環境 (Environment.production, .production) |
+  | appKey  | String | Y | The credential key used for SDK authentication. |
+  | environment  | Environment | Y | The server environment type.<br>Use the Sandbox environment for testing: Environment.sandbox, .sandbox<br>Switch to Production for live environment: Environment.production, .production |
   | partnerAccount  | String | N | Partner Account |
-  | isInherit  | Bool | N | true => SDK initialize時不進行解除綁定動作。(舉例應用)APP 處於登入狀態，且沿用目前綁定之Terminal <br> false => SDK initialize同時進行解除綁定動作。(舉例應用) 如無法確定是否有綁定或綁定資訊是否正確，建議一律解綁 |
+  | isInherit  | Bool | N | Determines whether to skip unbinding during SDK initialization.<br>true → The SDK will not unbind during initialize. (e.g., use case: the app is already logged in, and a terminal is already bound)<br> false → The SDK will unbind during initialize. (e.g., use case: you want to ensure whether the current binding status is correct. It's recommended to unbind first.) |
   
   ---
   ## Bind
@@ -130,10 +137,10 @@
   #### Parameters
   |  Parameter   | Type  | Required |  Description   | 
   |  :----  | :---- | :---- | :---- |
-  | page  | Int | Y | 第幾頁 |
-  | countPerPage  | Int | Y | 每頁筆數 |
-  | acquirerMerchantId  | String | N | 收單機構商店代號 |
-  | acquirerTerminalId  | String | N | 收單機構端末機代號 |
+  | page  | Int | Y | Page number. |
+  | countPerPage  | Int | Y | Number of records per page. |
+  | acquirerMerchantId  | String | N | Acquiring institution’s merchant ID. |
+  | acquirerTerminalId  | String | N | Acquiring institution’s terminal ID. |
 
   ### Response
   #### Item detail
@@ -155,17 +162,17 @@
   #### Parameters
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
-  | terminalId  | Int | 系統流水編號 |
-  | partnerId  | Int | Partner代號 |
-  | acquirerId  | Int | 收單機構代號 |
-  | acquirerName  | Int | 收單機構名稱 |
-  | acquirerIcon  | String | 收單機構圖示 |
-  | acquirerMerchantId  | String | 收單機構商店代號 |
-  | acquirerTerminalId  | String | 端末機代號 |
-  | type  | Int | 收單類型<br>0  : 一般交易<br>1   : 分期交易<br>2   : 一般/分期交易 |
-  | name  | String | 簽單顯示名稱 |
-  | description  | String | 端末機描述 |
-  | hash  | String | 綁定資訊 |
+  | terminalId  | Int | System transaction sequence number. |
+  | partnerId  | Int | Partner ID. |
+  | acquirerId  | Int | Acquire institution ID. |
+  | acquirerName  | Int | Acquire institution name. |
+  | acquirerIcon  | String | Acquire institution icon. |
+  | acquirerMerchantId  | String | Acquire institution’s merchant ID. |
+  | acquirerTerminalId  | String | Acquire terminal ID. |
+  | type  | Int | Acquire transaction type:<br>0: General transaction<br>1: Installment transaction<br>2: General + Installment transaction |
+  | name  | String | Name to be displayed on the terminal. |
+  | description  | String | Terminal description. |
+  | hash  | String | Binding token data. |
 
   ### Bind
   #### Function
@@ -187,8 +194,8 @@
   #### Parameters
   |  Parameter   | Type  | Required |  Description   | 
   |  :----  | :----  | :---- | :---- |
-  | bindItem  | BindItem | Y | 綁定資訊 |
-  | description  | String | N | 端末機備註 |
+  | bindItem  | BindItem | Y | Binding information. |
+  | description  | String | N | Terminal description. |
 
   ### Bind delete
   #### Function
@@ -318,7 +325,9 @@
 ---
   ## Transaction
   ### Get installment info
-  可以先透過 SDK 取得支援的發卡機構與分期期數，再由 APP 前端提供使用者選擇「發卡機構」、「期數」及支援的「分期產品代碼」，如：3期分期的產品代碼請帶入0300；12期分期的產品代碼請帶入1200。
+  You can first use the SDK to retrieve the list of supported issuers and installment periods.<br>The app frontend can then present the user with options to select the issuer, installment period, and the corresponding installment product code.<br>For example:<br>
+  - Use 0300 for 3-month installments.
+  - Use 1200 for 12-month installments.
   #### Function
   ```swift
   func getInstallmentInfo() async throws -> [IssuerItem]?
@@ -349,11 +358,11 @@
   #### Parameters
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
-  | issuerCode  | String | 發卡行代碼 |
-  | name  | String | 發卡行名稱 |
-  | displayName  | String | 發卡行顯示名稱 |
-  | icon  | String | 發卡行icon |
-  | codes  | Array<CodeItem> | 所支援的分期產品代碼 |
+  | issuerCode  | String | Issuer code. |
+  | name  | String | Issuer name. |
+  | displayName  | String | Issuer display name. |
+  | icon  | String | Issuer icon. |
+  | codes  | Array<CodeItem> | Supported installment product codes. |
 
   #### Code Item
   ```swift
@@ -367,11 +376,11 @@
   #### Parameters
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
-  | code  | String | 分期產品代碼 |
-  | period  | Int | 分期期數 |
-  | displayName  | String | 發卡行顯示名稱 |
-  | name  | String | 分期名稱 |
-  | description  | String | 分期描述 |
+  | code  | String | Installment product code. |
+  | period  | Int | Number of installment periods. |
+  | displayName  | String | Issuer display name.  |
+  | name  | String | Installment name. |
+  | description  | String | Installment description. |
   
   ### Transaction authorization
   #### Function
@@ -392,10 +401,10 @@
   #### Parameters
   |  Parameter   | Type  | Required |  Description   | 
   |  :----  | :----  | :---- | :---- |
-  | amount  | Decimal | Y | 交易金額 |
-  | installmentCode  | String | N | 分期產品代碼<br>範例：3期：0300 |
-  | orderNumber  | String | N | 訂單編號（商戶系統帶入） |
-  | bankTransactionId  | String | N | 銀行交易編號 |
+  | amount  | Decimal | Y | Transaction amount. |
+  | installmentCode  | String | N | Installment product code.<br>Example: 3 installments → 0300 |
+  | orderNumber  | String | N | Order number (provided by merchant system). |
+  | bankTransactionId  | String | N | Bank transaction ID. |
 
   ### Response
   #### Item detail
@@ -417,17 +426,17 @@
   #### Parameters
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
-  | receiptId  | String | 簽單編號 |
-  | transactionId  | String | 交易編號 |
-  | bankTransactionId  | String | 銀行交易編號 |
-  | orderNumber  | String | 訂單編號（商戶系統帶入）|
-  | state  | Int | 交易狀態<br>-1  : ERROR<br>0   : AUTH_SUCCESS<br>1   : SETTLE_SUCCESS<br>3  : CANCEL_SUCCESS |
-  | createTime  | CLong | 訂單時間 |
-  | amount  | Double | 交易金額 |
-  | currency  | String | 幣別 |
-  | cardMask  | String | 卡號資訊（屏蔽）|
-  | authCode  | String | 授權碼 |
-  | needSignature  | Bool | 交易需要簽名與否 |
+  | receiptId  | String | Receipt ID. |
+  | transactionId  | String | Transaction ID. |
+  | bankTransactionId  | String | Bank transaction ID. |
+  | orderNumber  | String | Order number (provided by merchant system). |
+  | state  | Int | Transaction status:<br>-1  : ERROR<br>0   : AUTH_SUCCESS<br>1   : SETTLE_SUCCESS<br>3  : CANCEL_SUCCESS |
+  | createTime  | CLong | Transaction timestamp. |
+  | amount  | Double | Transaction amount. |
+  | currency  | String | Currency. |
+  | cardMask  | String | Masked card number (for display). |
+  | authCode  | String | Authorization code. |
+  | needSignature  | Bool | Whether a signature is required. |
 
   ### Cancel Read Process
   #### Function
@@ -465,8 +474,8 @@
   #### Parameters
   |  Parameter   | Type  | Required |  Description   | 
   |  :----  | :----  | :---- | :---- |
-  | receiptIdentifier  | String | Y | 簽單編號 |
-  | signCanvas  | PKCanvasView | Y | 簽名 |
+  | receiptIdentifier  | String | Y | Receipt identifier. |
+  | signCanvas  | PKCanvasView | Y | Signature. |
 
 ---
   ## Receipt
@@ -490,15 +499,15 @@
   #### Parameters
   |  Parameter   | Type  | Required |  Description   | 
   |  :----  | :----  | :---- | :---- |
-  | receiptIdentifier  | String | Y | 簽單編號 |
-  | type  | Int | N | 簽單瀏覽格式<br>1 : html<br>2 : pkpass |
-  | email  | String | N | 欲收到簽單的信箱 |
+  | receiptIdentifier  | String | Y | Receipt identifier. |
+  | type  | Int | N | Receipt viewing format:<br>1 : html<br>2 : pkpass |
+  | email  | String | N | Email address to receive the receipt. |
 
   ### Response
   #### Item detail
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
-  | receiptUrl  | String | 簽單URL |
+  | receiptUrl  | String | Receipt URL. |
 
   ### Get receipt list
   #### Function
@@ -519,20 +528,20 @@
   #### Parameters
   |  Parameter   | Type  | Required |  Description   | 
   |  :----  | :----  | :---- | :---- |
-  | transactionIdentifier  | String | Y | 交易編號 |
-  | transactionType  | TransactionType | N | 簽單類型<br>sale  : 銷售<br>void   : 取消授權 |
+  | transactionIdentifier  | String | Y | Transaction identifier. |
+  | transactionType  | TransactionType | N | Transaction type:<br>sale: Sale<br>void : Authorization cancellation |
 
   ### Response
   #### Item detail
   |  Parameter   | Type  |  Description   | 
   |  :----  | :----  | :---- |
-  | receiptId  | String | 簽單編號 |
-  | transactionType  | TransactionType | 簽單類型<br>sale  : 銷售<br>void   : 取消授權 |
-  | createTime  | CLong | 簽單產生時間 |
-  | amount  | Double | 交易金額 |
-  | currency  | String | 幣別 |
-  | needSignature  | Bool | 交易需要簽名與否 |
-  | receiptUrl  | String | 簽單Url |
+  | receiptId  | String | Receipt identifier. |
+  | transactionType  | TransactionType | Transaction type:<br>sale: Sale<br>void: Authorization cancellation |
+  | createTime  | CLong | Receipt creation timestamp. |
+  | amount  | Double | Transaction amount. |
+  | currency  | String | Currency. |
+  | needSignature  | Bool | Whether a signature is required. |
+  | receiptUrl  | String | Receipt URL. |
 
   ### Get receipt (For backend)
   

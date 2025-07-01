@@ -1,6 +1,6 @@
 # tappay-ios-t2p-sdk
 
-- [English](README_en.md)
+- [English version](README_en.md)
 
 ### The TapPay iOS SDK helps you build Tap to Pay on iPhone into your iOS app
 
