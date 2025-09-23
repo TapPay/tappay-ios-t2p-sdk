@@ -352,7 +352,7 @@
   |  :----  | :----  | :---- |
   | issuerCode  | String | 發卡行代碼 |
   | name  | String | 發卡行名稱 |
-  | displayName  | String | 發卡行顯示名稱 |
+  | displayName  | String | 發卡行顯示名稱（畫面顯示請用此參數） |
   | icon  | String | 發卡行icon |
   | codes  | Array<CodeItem> | 所支援的分期產品代碼 |
 
