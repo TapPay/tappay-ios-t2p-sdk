@@ -113,7 +113,7 @@ Apple automatically detects devices that require an iOS update. If a device must
 
 Below is an example of the reminder prompt from Apple:
 
-
+![](./Images/Tap_to_Pay_on_iPhone_duplicate_hint.png)
 
   ### Get available OS version details
 
@@ -159,6 +159,7 @@ Below is an example of the reminder prompt from Apple:
   | releaseTime  | CLong | Release time of the iOS version. |
   | deprecationTime  | CLong | Deprecation time of the iOS version. |
 
+---
 
   ## Bind
   ### Get binding status
