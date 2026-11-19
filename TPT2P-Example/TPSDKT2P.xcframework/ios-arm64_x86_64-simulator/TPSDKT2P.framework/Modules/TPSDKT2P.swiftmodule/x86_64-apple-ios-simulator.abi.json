@@ -5576,7 +5576,8 @@
             "mangledName": "$s8TPSDKT2P12TPT2PServiceC43getTapToPayTransactionOrderAuthorizedResult11orderNumberAA0H0VSgSS_tYaKF",
             "moduleName": "TPSDKT2P",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "throwing": true,
             "funcSelfKind": "NonMutating"
