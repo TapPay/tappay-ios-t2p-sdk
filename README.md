@@ -99,6 +99,13 @@
 
   ## OS Version Detail
 
+  Apple 系統會自動偵測需要更新 iOS 的裝置。若裝置必須升級至指定版本才能繼續運作，系統將依以下頻率發送推播通知：
+  * **移除日前 90 天起**：每週提醒 1 次 
+  * **移除日前 3 天起**：
+  每日提醒 1 次 以下為 Apple 系統的提醒訊息畫面範例：
+
+  ![](./Images/Tap_to_Pay_on_iPhone_duplicate_hint.png)
+
   ### Get available OS version details
 
   取得 iPhone 卡緊收在**所有** iOS 版本的釋出與棄用時間資訊。<br>
@@ -142,6 +149,8 @@
   | iosVersion  | String | iOS 版本號 |
   | releaseTime  | CLong | 該 iOS 版本的釋出時間 |
   | deprecationTime  | CLong | 該 iOS 版本的棄用（deprecate）時間 |
+
+  ---
 
   ## Bind
   ### Get binding status
