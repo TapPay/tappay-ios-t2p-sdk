@@ -96,6 +96,53 @@
   | isInherit  | Bool | N | true => SDK initialize時不進行解除綁定動作。(舉例應用)APP 處於登入狀態，且沿用目前綁定之Terminal <br> false => SDK initialize同時進行解除綁定動作。(舉例應用) 如無法確定是否有綁定或綁定資訊是否正確，建議一律解綁 |
   
   ---
+
+  ## OS Version Detail
+
+  ### Get available OS version details
+
+  取得 iPhone 卡緊收在**所有** iOS 版本的釋出與棄用時間資訊。<br>
+  需先成功呼叫 `setupWithAppKey(appKey:environment:partnerAccount:isInherit:)`，否則回傳 `nil`。
+  #### Function
+  ```swift
+  func availableOSVersionDetails() -> [OSVersionDetail]?
+  ```
+  #### Sample
+  ```swift
+  // Sample code
+  let osVersionDetails = TPT2PManager.shared().availableOSVersionDetails()
+  ```
+
+  ### Get current device OS version detail
+
+  取得 iPhone 卡緊收在**當前裝置** iOS 版本的釋出與棄用時間資訊。<br>
+  需先成功呼叫 `setupWithAppKey(appKey:environment:partnerAccount:isInherit:)`；若尚未呼叫，或清單中找不到當前裝置的 iOS 版本，則回傳 `nil`。
+  #### Function
+  ```swift
+  func currentDeviceOSVersionDetail() -> OSVersionDetail?
+  ```
+  #### Sample
+  ```swift
+  // Sample code
+  let currentDetail = TPT2PManager.shared().currentDeviceOSVersionDetail()
+  ```
+
+  ### Response
+  #### Item detail
+  ```swift
+  public struct OSVersionDetail: Codable {
+    public let iosVersion: String
+    public let releaseTime: CLong
+    public let deprecationTime: CLong
+  }
+  ```
+  #### Parameters
+  |  Parameter   | Type  |  Description   |
+  |  :----  | :----  | :---- |
+  | iosVersion  | String | iOS 版本號 |
+  | releaseTime  | CLong | 該 iOS 版本的釋出時間 |
+  | deprecationTime  | CLong | 該 iOS 版本的棄用（deprecate）時間 |
+
   ## Bind
   ### Get binding status
   ```swift
@@ -421,7 +468,7 @@
   | receiptId  | String | 簽單編號 |
   | transactionId  | String | 交易編號 |
   | bankTransactionId  | String | 銀行交易編號 |
-  | orderNumber  | String | 訂單編號（商戶系統帶入）|
+  | orderNumber  | String | 訂單編號（商戶系統帶入）<br>格式：英數字、`-`、`_`，長度 1 ~ 50|
   | state  | Int | 交易狀態<br>-1  : ERROR<br>0   : AUTH_SUCCESS<br>1   : SETTLE_SUCCESS<br>3  : CANCEL_SUCCESS |
   | createTime  | CLong | 訂單時間 |
   | amount  | Double | 交易金額 |
@@ -429,6 +476,59 @@
   | cardMask  | String | 卡號資訊（屏蔽）|
   | authCode  | String | 授權碼 |
   | needSignature  | Bool | 交易需要簽名與否 |
+
+  ### Unique order number blocking
+
+  如需要請求重複性檢查機制，請於申請時，向業務人員與營運人員提出需求。
+  預設為不開啟。
+  將於開始啟用時，啟動請求重複性檢查機制。
+  如要關閉該機制，請洽TapPay營運人員。
+
+  當收單終端於後台設定「訂單編號須為唯一值」時，若以相同的 `orderNumber` 重複進行授權，將會被阻擋。<br>
+  APP 可於綁定（bind）成功後，透過 `hasClientOrder` 得知目前綁定的終端是否啟用此設定，以決定是否需於前端自行管理訂單編號的唯一性。
+  #### Property
+  ```swift
+  public var hasClientOrder: Bool
+  ```
+  #### Sample
+  ```swift
+  // Sample code
+  // 須於 bind 成功後讀取
+  if TPT2PService.shared().hasClientOrder {
+      // 此終端要求訂單編號為唯一值，請確保每筆授權使用不同的 orderNumber
+  }
+  ```
+  #### Description
+  |  Property   | Type  |  Description   |
+  |  :----  | :----  | :---- |
+  | hasClientOrder  | Bool | 綁定終端是否要求訂單編號為唯一值<br>true：須為唯一值，重複授權會被阻擋<br>false：無此限制<br>（預設為 false，於 bind 成功後更新）|
+
+  ### Get authorized result by order number
+
+  使用訂單編號反查該筆交易的授權結果。<br>
+  須先完成綁定（bind）與 Session 建立，否則將拋出對應錯誤。
+  #### Function
+  ```swift
+  func getTapToPayTransactionOrderAuthorizedResult(orderNumber: String) async throws -> Transaction?
+  ```
+  #### Sample
+  ```swift
+  // Sample code
+  Task {
+      do {
+          let transaction = try await TPT2PService.shared().getTapToPayTransactionOrderAuthorizedResult(orderNumber: "orderNumber")
+      }catch {
+          // error handling
+      }
+  }
+  ```
+  #### Parameters
+  |  Parameter   | Type  | Required |  Description   |
+  |  :----  | :----  | :---- | :---- |
+  | orderNumber  | String | Y | 訂單編號（商戶系統帶入）<br>格式：英數字、`-`、`_`，長度 1 ~ 50 |
+
+  ### Response
+  Response 為 `Transaction`，欄位說明請參考 [Transaction authorization](README.md#transaction-authorization) 的回傳物件。
 
   ### Cancel Read Process
   #### Function
