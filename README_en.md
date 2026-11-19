@@ -102,6 +102,64 @@ To enhance transaction security, location services must be enabled for payment p
   | isInherit  | Bool | N | Determines whether to skip unbinding during SDK initialization.<br>true → The SDK will not unbind during initialize. (e.g., use case: the app is already logged in, and a terminal is already bound)<br> false → The SDK will unbind during initialize. (e.g., use case: you want to ensure whether the current binding status is correct. It's recommended to unbind first.) |
   
   ---
+
+  ## OS Version Detail
+
+Apple automatically detects devices that require an iOS update. If a device must be upgraded to a supported iOS version to continue operating, push notifications will be sent according to the following schedule: 
+
+* **90 days before the removal date**: Once a week 
+
+* **3 days before the removal date**: Once a day 
+
+Below is an example of the reminder prompt from Apple:
+
+
+
+  ### Get available OS version details
+
+  Retrieve the release and deprecation times of Tap to Pay on iPhone for **all** iOS versions.<br>
+  `setupWithAppKey(appKey:environment:partnerAccount:isInherit:)` must have been called successfully; otherwise `nil` is returned.
+  #### Function
+  ```swift
+  func availableOSVersionDetails() -> [OSVersionDetail]?
+  ```
+  #### Sample
+  ```swift
+  // Sample code
+  let osVersionDetails = TPT2PManager.shared().availableOSVersionDetails()
+  ```
+
+  ### Get current device OS version detail
+
+  Retrieve the release and deprecation times of Tap to Pay on iPhone for the **current device's** iOS version.<br>
+  `setupWithAppKey(appKey:environment:partnerAccount:isInherit:)` must have been called successfully; `nil` is returned if it has not been called, or if the current device's iOS version is not found in the list.
+  #### Function
+  ```swift
+  func currentDeviceOSVersionDetail() -> OSVersionDetail?
+  ```
+  #### Sample
+  ```swift
+  // Sample code
+  let currentDetail = TPT2PManager.shared().currentDeviceOSVersionDetail()
+  ```
+
+  ### Response
+  #### Item detail
+  ```swift
+  public struct OSVersionDetail: Codable {
+    public let iosVersion: String
+    public let releaseTime: CLong
+    public let deprecationTime: CLong
+  }
+  ```
+  #### Parameters
+  |  Parameter   | Type  |  Description   |
+  |  :----  | :----  | :---- |
+  | iosVersion  | String | iOS version number. |
+  | releaseTime  | CLong | Release time of the iOS version. |
+  | deprecationTime  | CLong | Deprecation time of the iOS version. |
+
+
   ## Bind
   ### Get binding status
   ```swift
@@ -429,7 +487,7 @@ To enhance transaction security, location services must be enabled for payment p
   | receiptId  | String | Receipt ID. |
   | transactionId  | String | Transaction ID. |
   | bankTransactionId  | String | Bank transaction ID. |
-  | orderNumber  | String | Order number (provided by merchant system). |
+  | orderNumber  | String | Order number (provided by the merchant system).<br>Format: alphanumeric, `-`, `_`, length 1 to 50. |
   | state  | Int | Transaction status:<br>-1  : ERROR<br>0   : AUTH_SUCCESS<br>1   : SETTLE_SUCCESS<br>3  : CANCEL_SUCCESS |
   | createTime  | CLong | Transaction timestamp. |
   | amount  | Double | Transaction amount. |
@@ -437,6 +495,64 @@ To enhance transaction security, location services must be enabled for payment p
   | cardMask  | String | Masked card number (for display). |
   | authCode  | String | Authorization code. |
   | needSignature  | Bool | Whether a signature is required. |
+
+  ### Order number format restriction
+
+If you require the duplicate request check mechanism, please inform our Sales and Operations teams during the application process.
+
+* **Default:** Disabled
+* **Activation:** Enabled upon service activation.
+* **Deactivation:** Please contact the TapPay Operations team if you wish to disable this mechanism.
+
+  Starting from this version, the `orderNumber` passed to `readCardAndAuthorization(amount:installmentCode:orderNumber:bankTransactionId:)` and to `getTapToPayTransactionOrderAuthorizedResult(orderNumber:)` is validated first.<br>  
+
+  ### Unique order number blocking
+
+  When the acquiring terminal is configured as "order number must be unique" on the backend, authorizing again with the same `orderNumber` will be blocked.<br>
+  After a successful bind, the app can check `hasClientOrder` to know whether the currently bound terminal has this setting enabled, and decide whether it needs to manage order number uniqueness on the frontend.
+  #### Property
+  ```swift
+  public var hasClientOrder: Bool
+  ```
+  #### Sample
+  ```swift
+  // Sample code
+  // Must be read after a successful bind
+  if TPT2PService.shared().hasClientOrder {
+      // This terminal requires a unique order number; make sure each authorization uses a different orderNumber
+  }
+  ```
+  #### Description
+  |  Property   | Type  |  Description   |
+  |  :----  | :----  | :---- |
+  | hasClientOrder  | Bool | Whether the bound terminal requires the order number to be unique.<br>true: must be unique; authorizing with a duplicate is blocked.<br>false: no such restriction.<br>(Defaults to false, updated after a successful bind.) |
+
+  ### Get authorized result by order number
+  Look up a transaction's authorization result using its order number.<br>
+  Bind and session establishment must be completed first; otherwise the corresponding error is thrown.
+  #### Function
+  ```swift
+  func getTapToPayTransactionOrderAuthorizedResult(orderNumber: String) async throws -> Transaction?
+  ```
+  #### Sample
+  ```swift
+  // Sample code
+  Task {
+      do {
+          let transaction = try await TPT2PService.shared().getTapToPayTransactionOrderAuthorizedResult(orderNumber: "orderNumber")
+      }catch {
+          // error handling
+      }
+  }
+  ```
+  #### Parameters
+  |  Parameter   | Type  | Required |  Description   |
+  |  :----  | :----  | :---- | :---- |
+  | orderNumber  | String | Y | Order number (provided by the merchant system).<br>Format: alphanumeric, `-`, `_`, length 1 to 50. |
+
+  ### Response
+  The response is a `Transaction`. For the field descriptions, refer to the returned object in [Transaction authorization](README_en.md#transaction-authorization).
+
 
   ### Cancel Read Process
   #### Function
