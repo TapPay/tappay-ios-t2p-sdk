@@ -7,5 +7,4 @@ framework module TPSDKT2P {
 
 module TPSDKT2P.Swift {
   header "TPSDKT2P-Swift.h"
-  requires objc
 }
